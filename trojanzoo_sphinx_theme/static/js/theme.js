@@ -87,11 +87,11 @@ window.utilities = {
   },
 
   headersHeight: function() {
-    if (document.getElementById("pytorch-left-menu").classList.contains("make-fixed")) {
-      return document.getElementById("pytorch-page-level-bar").offsetHeight;
+    if (document.getElementById("trojanzoo-left-menu").classList.contains("make-fixed")) {
+      return document.getElementById("trojanzoo-page-level-bar").offsetHeight;
     } else {
       return document.getElementById("header-holder").offsetHeight +
-             document.getElementById("pytorch-page-level-bar").offsetHeight;
+             document.getElementById("trojanzoo-page-level-bar").offsetHeight;
     }
   },
 
@@ -212,8 +212,8 @@ window.filterTags = {
 },{}],4:[function(require,module,exports){
 // Modified from https://stackoverflow.com/a/32396543
 window.highlightNavigation = {
-  navigationListItems: document.querySelectorAll("#pytorch-right-menu li"),
-  sections: document.querySelectorAll(".pytorch-article .section"),
+  navigationListItems: document.querySelectorAll("#trojanzoo-right-menu li"),
+  sections: document.querySelectorAll(".trojanzoo-article .section"),
   sectionIdTonavigationLink: {},
 
   bind: function() {
@@ -224,14 +224,14 @@ window.highlightNavigation = {
     for (var i = 0; i < highlightNavigation.sections.length; i++) {
       var id = highlightNavigation.sections[i].id;
       highlightNavigation.sectionIdTonavigationLink[id] =
-        document.querySelectorAll('#pytorch-right-menu li a[href="#' + id + '"]')[0];
+        document.querySelectorAll('#trojanzoo-right-menu li a[href="#' + id + '"]')[0];
     }
 
     $(window).scroll(utilities.throttle(highlightNavigation.highlight, 100));
   },
 
   highlight: function() {
-    var rightMenu = document.getElementById("pytorch-right-menu");
+    var rightMenu = document.getElementById("trojanzoo-right-menu");
 
     // If right menu is not on the screen don't bother
     if (rightMenu.offsetWidth === 0 && rightMenu.offsetHeight === 0) {
@@ -241,7 +241,7 @@ window.highlightNavigation = {
     var scrollPosition = utilities.scrollTop();
     var OFFSET_TOP_PADDING = 25;
     var offset = document.getElementById("header-holder").offsetHeight +
-                 document.getElementById("pytorch-page-level-bar").offsetHeight +
+                 document.getElementById("trojanzoo-page-level-bar").offsetHeight +
                  OFFSET_TOP_PADDING;
 
     var sections = highlightNavigation.sections;
@@ -266,12 +266,12 @@ window.highlightNavigation = {
 
           // Scroll to active item. Not a requested feature but we could revive it. Needs work.
 
-          // var menuTop = $("#pytorch-right-menu").position().top;
+          // var menuTop = $("#trojanzoo-right-menu").position().top;
           // var itemTop = navigationListItem.getBoundingClientRect().top;
           // var TOP_PADDING = 20
-          // var newActiveTop = $("#pytorch-side-scroll-right").scrollTop() + itemTop - menuTop - TOP_PADDING;
+          // var newActiveTop = $("#trojanzoo-side-scroll-right").scrollTop() + itemTop - menuTop - TOP_PADDING;
 
-          // $("#pytorch-side-scroll-right").animate({
+          // $("#trojanzoo-side-scroll-right").animate({
           //   scrollTop: newActiveTop
           // }, 100);
         }
@@ -351,12 +351,12 @@ window.mobileTOC = {
 
       if ($parent.hasClass("is-open")) {
         $parent.removeClass("is-open");
-        $(".pytorch-left-menu").slideUp(200, function() {
+        $(".trojanzoo-left-menu").slideUp(200, function() {
           $(this).css({display: ""});
         });
       } else {
         $parent.addClass("is-open");
-        $(".pytorch-left-menu").slideDown(200);
+        $(".trojanzoo-left-menu").slideDown(200);
       }
     });
   }
@@ -368,7 +368,7 @@ window.pytorchAnchors = {
     // Replace Sphinx-generated anchors with anchorjs ones
     $(".headerlink").text("");
 
-    window.anchors.add(".pytorch-article .headerlink");
+    window.anchors.add(".trojanzoo-article .headerlink");
 
     $(".anchorjs-link").each(function() {
       var $headerLink = $(this).closest(".headerlink");
@@ -410,7 +410,7 @@ window.scrollToAnchor = {
         // This interferes with clicks below it, causing a double fire
         // $(window).on('hashchange', $.proxy(this, 'scrollToCurrent'));
         $('body').on('click', 'a', $.proxy(this, 'delegateAnchors'));
-        $('body').on('click', '#pytorch-right-menu li span', $.proxy(this, 'delegateSpans'));
+        $('body').on('click', '#trojanzoo-right-menu li span', $.proxy(this, 'delegateSpans'));
       },
 
       /**
@@ -486,7 +486,7 @@ window.scrollToAnchor = {
 },{}],10:[function(require,module,exports){
 window.sideMenus = {
   rightMenuIsOnScreen: function() {
-    return document.getElementById("pytorch-content-right").offsetParent !== null;
+    return document.getElementById("trojanzoo-content-right").offsetParent !== null;
   },
 
   isFixedToBottom: false,
@@ -494,7 +494,7 @@ window.sideMenus = {
   bind: function() {
     sideMenus.handleLeftMenu();
 
-    var rightMenuLinks = document.querySelectorAll("#pytorch-right-menu li");
+    var rightMenuLinks = document.querySelectorAll("#trojanzoo-right-menu li");
     var rightMenuHasLinks = rightMenuLinks.length > 1;
 
     if (!rightMenuHasLinks) {
@@ -505,14 +505,14 @@ window.sideMenus = {
 
     if (rightMenuHasLinks) {
       // Don't show the Shortcuts menu title text unless there are menu items
-      document.getElementById("pytorch-shortcuts-wrapper").style.display = "block";
+      document.getElementById("trojanzoo-shortcuts-wrapper").style.display = "block";
 
       // We are hiding the titles of the pages in the right side menu but there are a few
       // pages that include other pages in the right side menu (see 'torch.nn' in the docs)
       // so if we exclude those it looks confusing. Here we add a 'title-link' class to these
       // links so we can exclude them from normal right side menu link operations
       var titleLinks = document.querySelectorAll(
-        "#pytorch-right-menu #pytorch-side-scroll-right \
+        "#trojanzoo-right-menu #trojanzoo-side-scroll-right \
          > ul > li > a.reference.internal"
       );
 
@@ -532,7 +532,7 @@ window.sideMenus = {
 
       // Add + expansion signifiers to normal right menu links that have sub menus
       var menuLinks = document.querySelectorAll(
-        "#pytorch-right-menu ul li ul li a.reference.internal"
+        "#trojanzoo-right-menu ul li ul li a.reference.internal"
       );
 
       for (var i = 0; i < menuLinks.length; i++) {
@@ -547,7 +547,7 @@ window.sideMenus = {
       // If a hash is present on page load recursively expand menu items leading to selected item
       var linkWithHash =
         document.querySelector(
-          "#pytorch-right-menu a[href=\"" + window.location.hash + "\"]"
+          "#trojanzoo-right-menu a[href=\"" + window.location.hash + "\"]"
         );
 
       if (linkWithHash) {
@@ -566,7 +566,7 @@ window.sideMenus = {
       }
 
       // Bind click events on right menu links
-      $("#pytorch-right-menu a.reference.internal").on("click", function() {
+      $("#trojanzoo-right-menu a.reference.internal").on("click", function() {
         if (this.classList.contains("expanded")) {
           this.nextElementSibling.style.display = "none";
           this.classList.remove("expanded");
@@ -593,7 +593,7 @@ window.sideMenus = {
   },
 
   leftMenuIsFixed: function() {
-    return document.getElementById("pytorch-left-menu").classList.contains("make-fixed");
+    return document.getElementById("trojanzoo-left-menu").classList.contains("make-fixed");
   },
 
   handleNavBar: function() {
@@ -601,11 +601,11 @@ window.sideMenus = {
 
     // If we are scrolled past the main navigation header fix the sub menu bar to top of page
     if (utilities.scrollTop() >= mainHeaderHeight) {
-      document.getElementById("pytorch-left-menu").classList.add("make-fixed");
-      document.getElementById("pytorch-page-level-bar").classList.add("left-menu-is-fixed");
+      document.getElementById("trojanzoo-left-menu").classList.add("make-fixed");
+      document.getElementById("trojanzoo-page-level-bar").classList.add("left-menu-is-fixed");
     } else {
-      document.getElementById("pytorch-left-menu").classList.remove("make-fixed");
-      document.getElementById("pytorch-page-level-bar").classList.remove("left-menu-is-fixed");
+      document.getElementById("trojanzoo-left-menu").classList.remove("make-fixed");
+      document.getElementById("trojanzoo-page-level-bar").classList.remove("left-menu-is-fixed");
     }
   },
 
@@ -637,19 +637,19 @@ window.sideMenus = {
     var topOfFooterRelativeToWindow = document.getElementById("docs-tutorials-resources").getBoundingClientRect().top;
 
     if (topOfFooterRelativeToWindow >= windowHeight) {
-      document.getElementById("pytorch-left-menu").style.height = "100%";
+      document.getElementById("trojanzoo-left-menu").style.height = "100%";
     } else {
       var howManyPixelsOfTheFooterAreInTheWindow = windowHeight - topOfFooterRelativeToWindow;
       var leftMenuDifference = howManyPixelsOfTheFooterAreInTheWindow;
-      document.getElementById("pytorch-left-menu").style.height = (windowHeight - leftMenuDifference) + "px";
+      document.getElementById("trojanzoo-left-menu").style.height = (windowHeight - leftMenuDifference) + "px";
     }
   },
 
   handleRightMenu: function() {
-    var rightMenuWrapper = document.getElementById("pytorch-content-right");
-    var rightMenu = document.getElementById("pytorch-right-menu");
+    var rightMenuWrapper = document.getElementById("trojanzoo-content-right");
+    var rightMenu = document.getElementById("trojanzoo-right-menu");
     var rightMenuList = rightMenu.getElementsByTagName("ul")[0];
-    var article = document.getElementById("pytorch-article");
+    var article = document.getElementById("trojanzoo-article");
     var articleHeight = article.offsetHeight;
     var articleBottom = utilities.offset(article).top + articleHeight;
     var mainHeaderHeight = document.getElementById('header-holder').offsetHeight;
@@ -685,14 +685,14 @@ window.sideMenus = {
       }
     }
 
-    var rightMenuSideScroll = document.getElementById("pytorch-side-scroll-right");
+    var rightMenuSideScroll = document.getElementById("trojanzoo-side-scroll-right");
     var sideScrollFromWindowTop = rightMenuSideScroll.getBoundingClientRect().top;
 
     rightMenuSideScroll.style.height = utilities.windowHeight() - sideScrollFromWindowTop + "px";
   }
 };
 
-},{}],"pytorch-sphinx-theme":[function(require,module,exports){
+},{}],"trojanzoo-sphinx-theme":[function(require,module,exports){
 var jQuery = (typeof(window) != 'undefined') ? window.jQuery : require('jquery');
 
 // Sphinx theme nav state
@@ -768,19 +768,19 @@ function ThemeNav () {
         var doc = $(document),
             self = this;
 
-        this.navBar = $('div.pytorch-side-scroll:first');
+        this.navBar = $('div.trojanzoo-side-scroll:first');
         this.win = $(window);
 
         // Set up javascript UX bits
         $(document)
             // Shift nav in mobile when clicking the menu.
-            .on('click', "[data-toggle='pytorch-left-menu-nav-top']", function() {
+            .on('click', "[data-toggle='trojanzoo-left-menu-nav-top']", function() {
                 $("[data-toggle='wy-nav-shift']").toggleClass("shift");
                 $("[data-toggle='rst-versions']").toggleClass("shift");
             })
 
             // Nav menu link click operations
-            .on('click', ".pytorch-menu-vertical .current ul li a", function() {
+            .on('click', ".trojanzoo-menu-vertical .current ul li a", function() {
                 var target = $(this);
                 // Close menu when you click a link.
                 $("[data-toggle='wy-nav-shift']").removeClass("shift");
@@ -805,7 +805,7 @@ function ThemeNav () {
             .wrap("<div class='wy-table-responsive citation'></div>");
 
         // Add expand links to all parents of nested ul
-        $('.pytorch-menu-vertical ul').not('.simple').siblings('a').each(function () {
+        $('.trojanzoo-menu-vertical ul').not('.simple').siblings('a').each(function () {
             var link = $(this);
                 expand = $('<span class="toctree-expand"></span>');
             expand.on('click', function (ev) {
@@ -822,7 +822,7 @@ function ThemeNav () {
         var anchor = encodeURI(window.location.hash) || '#';
 
         try {
-            var vmenu = $('.pytorch-menu-vertical');
+            var vmenu = $('.trojanzoo-menu-vertical');
             var link = vmenu.find('[href="' + anchor + '"]');
             if (link.length === 0) {
                 // this link was not found in the sidebar.
@@ -839,7 +839,7 @@ function ThemeNav () {
             // If we found a matching link then reset current and re-apply
             // otherwise retain the existing match
             if (link.length > 0) {
-                $('.pytorch-menu-vertical .current').removeClass('current');
+                $('.trojanzoo-menu-vertical .current').removeClass('current');
                 link.addClass('current');
                 link.closest('li.toctree-l1').addClass('current');
                 link.closest('li.toctree-l1').parent().addClass('current');
@@ -945,22 +945,22 @@ if (downloadNote.length >= 1) {
     var tutorialUrlArray = $("#tutorial-type").text().split('/');
         tutorialUrlArray[0] = tutorialUrlArray[0] + "_source"
 
-    var githubLink = "https://github.com/pytorch/tutorials/blob/master/" + tutorialUrlArray.join("/") + ".py",
+    var githubLink = "https://github.com/trojanzoo/tutorials/blob/master/" + tutorialUrlArray.join("/") + ".py",
         notebookLink = $(".reference.download")[1].href,
         notebookDownloadPath = notebookLink.split('_downloads')[1],
-        colabLink = "https://colab.research.google.com/github/pytorch/tutorials/blob/gh-pages/_downloads" + notebookDownloadPath;
+        colabLink = "https://colab.research.google.com/github/trojanzoo/tutorials/blob/gh-pages/_downloads" + notebookDownloadPath;
 
     $("#google-colab-link").wrap("<a href=" + colabLink + " data-behavior='call-to-action-event' data-response='Run in Google Colab' target='_blank'/>");
     $("#download-notebook-link").wrap("<a href=" + notebookLink + " data-behavior='call-to-action-event' data-response='Download Notebook'/>");
     $("#github-view-link").wrap("<a href=" + githubLink + " data-behavior='call-to-action-event' data-response='View on Github' target='_blank'/>");
 } else {
-    $(".pytorch-call-to-action-links").hide();
+    $(".trojanzoo-call-to-action-links").hide();
 }
 
 //This code handles the Expand/Hide toggle for the Docs/Tutorials left nav items
 
 $(document).ready(function() {
-  var caption = "#pytorch-left-menu p.caption";
+  var caption = "#trojanzoo-left-menu p.caption";
   var collapseAdded = $(this).not("checked");
   $(caption).each(function () {
     var menuName = this.innerText.replace(/[^\w\s]/gi, "").trim();
@@ -1085,7 +1085,7 @@ $(".stars-outer > i").on("click", function() {
     });
 })
 
-$("#pytorch-side-scroll-right li a").on("click", function (e) {
+$("#trojanzoo-side-scroll-right li a").on("click", function (e) {
   var href = $(this).attr("href");
   $('html, body').stop().animate({
     scrollTop: $(href).offset().top - 100
@@ -1094,7 +1094,7 @@ $("#pytorch-side-scroll-right li a").on("click", function (e) {
 });
 
 var lastId,
-  topMenu = $("#pytorch-side-scroll-right"),
+  topMenu = $("#trojanzoo-side-scroll-right"),
   topMenuHeight = topMenu.outerHeight() + 1,
   // All sidenav items
   menuItems = topMenu.find("a"),
@@ -1124,4 +1124,4 @@ $(window).scroll(function () {
   });
 });
 
-},{"jquery":"jquery"}]},{},[1,2,3,4,5,6,7,8,9,10,"pytorch-sphinx-theme"]);
+},{"jquery":"jquery"}]},{},[1,2,3,4,5,6,7,8,9,10,"trojanzoo-sphinx-theme"]);

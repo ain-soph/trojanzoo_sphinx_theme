@@ -1,6 +1,6 @@
 window.sideMenus = {
   rightMenuIsOnScreen: function() {
-    return document.getElementById("pytorch-content-right").offsetParent !== null;
+    return document.getElementById("trojanzoo-content-right").offsetParent !== null;
   },
 
   isFixedToBottom: false,
@@ -8,7 +8,7 @@ window.sideMenus = {
   bind: function() {
     sideMenus.handleLeftMenu();
 
-    var rightMenuLinks = document.querySelectorAll("#pytorch-right-menu li");
+    var rightMenuLinks = document.querySelectorAll("#trojanzoo-right-menu li");
     var rightMenuHasLinks = rightMenuLinks.length > 1;
 
     if (!rightMenuHasLinks) {
@@ -19,14 +19,14 @@ window.sideMenus = {
 
     if (rightMenuHasLinks) {
       // Don't show the Shortcuts menu title text unless there are menu items
-      document.getElementById("pytorch-shortcuts-wrapper").style.display = "block";
+      document.getElementById("trojanzoo-shortcuts-wrapper").style.display = "block";
 
       // We are hiding the titles of the pages in the right side menu but there are a few
       // pages that include other pages in the right side menu (see 'torch.nn' in the docs)
       // so if we exclude those it looks confusing. Here we add a 'title-link' class to these
       // links so we can exclude them from normal right side menu link operations
       var titleLinks = document.querySelectorAll(
-        "#pytorch-right-menu #pytorch-side-scroll-right \
+        "#trojanzoo-right-menu #trojanzoo-side-scroll-right \
          > ul > li > a.reference.internal"
       );
 
@@ -46,7 +46,7 @@ window.sideMenus = {
 
       // Add + expansion signifiers to normal right menu links that have sub menus
       var menuLinks = document.querySelectorAll(
-        "#pytorch-right-menu ul li ul li a.reference.internal"
+        "#trojanzoo-right-menu ul li ul li a.reference.internal"
       );
 
       for (var i = 0; i < menuLinks.length; i++) {
@@ -61,7 +61,7 @@ window.sideMenus = {
       // If a hash is present on page load recursively expand menu items leading to selected item
       var linkWithHash =
         document.querySelector(
-          "#pytorch-right-menu a[href=\"" + window.location.hash + "\"]"
+          "#trojanzoo-right-menu a[href=\"" + window.location.hash + "\"]"
         );
 
       if (linkWithHash) {
@@ -80,7 +80,7 @@ window.sideMenus = {
       }
 
       // Bind click events on right menu links
-      $("#pytorch-right-menu a.reference.internal").on("click", function() {
+      $("#trojanzoo-right-menu a.reference.internal").on("click", function() {
         if (this.classList.contains("expanded")) {
           this.nextElementSibling.style.display = "none";
           this.classList.remove("expanded");
@@ -107,7 +107,7 @@ window.sideMenus = {
   },
 
   leftMenuIsFixed: function() {
-    return document.getElementById("pytorch-left-menu").classList.contains("make-fixed");
+    return document.getElementById("trojanzoo-left-menu").classList.contains("make-fixed");
   },
 
   handleNavBar: function() {
@@ -115,11 +115,11 @@ window.sideMenus = {
 
     // If we are scrolled past the main navigation header fix the sub menu bar to top of page
     if (utilities.scrollTop() >= mainHeaderHeight) {
-      document.getElementById("pytorch-left-menu").classList.add("make-fixed");
-      document.getElementById("pytorch-page-level-bar").classList.add("left-menu-is-fixed");
+      document.getElementById("trojanzoo-left-menu").classList.add("make-fixed");
+      document.getElementById("trojanzoo-page-level-bar").classList.add("left-menu-is-fixed");
     } else {
-      document.getElementById("pytorch-left-menu").classList.remove("make-fixed");
-      document.getElementById("pytorch-page-level-bar").classList.remove("left-menu-is-fixed");
+      document.getElementById("trojanzoo-left-menu").classList.remove("make-fixed");
+      document.getElementById("trojanzoo-page-level-bar").classList.remove("left-menu-is-fixed");
     }
   },
 
@@ -151,19 +151,19 @@ window.sideMenus = {
     var topOfFooterRelativeToWindow = document.getElementById("docs-tutorials-resources").getBoundingClientRect().top;
 
     if (topOfFooterRelativeToWindow >= windowHeight) {
-      document.getElementById("pytorch-left-menu").style.height = "100%";
+      document.getElementById("trojanzoo-left-menu").style.height = "100%";
     } else {
       var howManyPixelsOfTheFooterAreInTheWindow = windowHeight - topOfFooterRelativeToWindow;
       var leftMenuDifference = howManyPixelsOfTheFooterAreInTheWindow;
-      document.getElementById("pytorch-left-menu").style.height = (windowHeight - leftMenuDifference) + "px";
+      document.getElementById("trojanzoo-left-menu").style.height = (windowHeight - leftMenuDifference) + "px";
     }
   },
 
   handleRightMenu: function() {
-    var rightMenuWrapper = document.getElementById("pytorch-content-right");
-    var rightMenu = document.getElementById("pytorch-right-menu");
+    var rightMenuWrapper = document.getElementById("trojanzoo-content-right");
+    var rightMenu = document.getElementById("trojanzoo-right-menu");
     var rightMenuList = rightMenu.getElementsByTagName("ul")[0];
-    var article = document.getElementById("pytorch-article");
+    var article = document.getElementById("trojanzoo-article");
     var articleHeight = article.offsetHeight;
     var articleBottom = utilities.offset(article).top + articleHeight;
     var mainHeaderHeight = document.getElementById('header-holder').offsetHeight;
@@ -199,7 +199,7 @@ window.sideMenus = {
       }
     }
 
-    var rightMenuSideScroll = document.getElementById("pytorch-side-scroll-right");
+    var rightMenuSideScroll = document.getElementById("trojanzoo-side-scroll-right");
     var sideScrollFromWindowTop = rightMenuSideScroll.getBoundingClientRect().top;
 
     rightMenuSideScroll.style.height = utilities.windowHeight() - sideScrollFromWindowTop + "px";

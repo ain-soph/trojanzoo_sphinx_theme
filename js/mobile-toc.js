@@ -7,12 +7,12 @@ window.mobileTOC = {
 
       if ($parent.hasClass("is-open")) {
         $parent.removeClass("is-open");
-        $(".pytorch-left-menu").slideUp(200, function() {
+        $(".trojanzoo-left-menu").slideUp(200, function() {
           $(this).css({display: ""});
         });
       } else {
         $parent.addClass("is-open");
-        $(".pytorch-left-menu").slideDown(200);
+        $(".trojanzoo-left-menu").slideDown(200);
       }
     });
   }

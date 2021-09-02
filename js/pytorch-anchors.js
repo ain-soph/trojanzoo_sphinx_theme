@@ -3,7 +3,7 @@ window.pytorchAnchors = {
     // Replace Sphinx-generated anchors with anchorjs ones
     $(".headerlink").text("");
 
-    window.anchors.add(".pytorch-article .headerlink");
+    window.anchors.add(".trojanzoo-article .headerlink");
 
     $(".anchorjs-link").each(function() {
       var $headerLink = $(this).closest(".headerlink");
