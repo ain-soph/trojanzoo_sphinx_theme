@@ -21,7 +21,7 @@ jobs:
           pip install -r ./docs/requirements.txt
       - name: Install trojanzoo-sphinx-theme
         run: |
-          python setup.py
+          python setup.py install
       - name: Compile Sphinx Docs
         run: |
           cd ./docs/
