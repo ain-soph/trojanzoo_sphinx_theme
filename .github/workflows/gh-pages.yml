@@ -1,0 +1,37 @@
+name: demo
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install requirements
+        run: |
+          pip install --upgrade pip
+          pip install -r ./docs/requirements.txt
+      - name: Install trojanzoo-sphinx-theme
+        run: |
+          python setup.py
+      - name: Compile Sphinx Docs
+        run: |
+          cd ./docs/
+          make html
+          touch ./build/html/.nojekyll
+      - name: Check GitHub Pages status
+        uses: crazy-max/ghaction-github-status@v2.2.0
+        with:
+          pages_threshold: major_outage
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2.3.0
+        with:
+          target_branch: demo
+          build_dir: ./docs/build/html
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
