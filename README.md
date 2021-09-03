@@ -10,7 +10,7 @@ Run python setup:
 python setup.py install
 ```
 
-and install the dependencies using `pip install -r docs/requirements.txt`
+and install the dependencies using `pip install -r requirements.txt`
 
 In the root directory install the `package.json`:
 
