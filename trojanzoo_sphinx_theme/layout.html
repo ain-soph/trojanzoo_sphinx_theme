@@ -98,7 +98,7 @@
                 Docs
               </a>
               <div class="resources-dropdown-menu">
-                {%- for k,v in theme_variables.external_urls['items'] %}
+                {%- for k,v in theme_variables.external_urls['items'].items() %}
                 <a class="doc-dropdown-option nav-dropdown-item" href="{{ v }}">
                   <span class="dropdown-title">{{ k }}</span>
                   <p></p>
@@ -313,7 +313,7 @@
           </li>
           {%- if theme_variables.external_urls['items']|length > 0 %}
           <ul class="resources-mobile-menu-items">
-            {%- for k,v in theme_variables.external_urls['items'] %}
+            {%- for k,v in theme_variables.external_urls['items'].items() %}
             <li>
               <a href="{{ v }}">{{ k }}</a>
             </li>
