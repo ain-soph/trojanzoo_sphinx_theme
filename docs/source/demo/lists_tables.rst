@@ -153,7 +153,7 @@ Second list level
       
       heh heh. child. try to beat this embed:
 
-      .. literalinclude:: test_py_module/test.py
+      .. literalinclude:: ../test_py_module/test.py
           :language: python
           :linenos:
           :lines: 1-10
