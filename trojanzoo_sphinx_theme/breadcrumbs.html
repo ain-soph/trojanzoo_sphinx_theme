@@ -26,17 +26,9 @@
 
 <div role="navigation" aria-label="breadcrumbs navigation">
 
-  <ul class="trojanzoo-breadcrumbs">
+  <ul class="sphinx-template-breadcrumbs">
     {% block breadcrumbs %}
-      <li>
-        <a href="{{ pathto(master_doc) }}">
-          {% if theme_trojanzoo_project == 'tutorials' %}
-            Tutorials
-          {% else %}
-            Docs
-          {% endif %}
-        </a> &gt;
-      </li>
+      <li><a href="{{ pathto(root_doc) }}">Docs</a> &gt;</li>
 
         {% for doc in parents %}
           <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> &gt;</li>
@@ -44,7 +36,7 @@
       <li>{{ title }}</li>
     {% endblock %}
     {% block breadcrumbs_aside %}
-      <li class="trojanzoo-breadcrumbs-aside">
+      <li class="sphinx-template-breadcrumbs-aside">
         {% if hasdoc(pagename) %}
             {% if display_github %}
             {% if check_meta and 'github_url' in meta %}

@@ -73,19 +73,19 @@ function ThemeNav () {
         var doc = $(document),
             self = this;
 
-        this.navBar = $('div.trojanzoo-side-scroll:first');
+        this.navBar = $('div.sphinx-template-side-scroll:first');
         this.win = $(window);
 
         // Set up javascript UX bits
         $(document)
             // Shift nav in mobile when clicking the menu.
-            .on('click', "[data-toggle='trojanzoo-left-menu-nav-top']", function() {
+            .on('click', "[data-toggle='sphinx-template-left-menu-nav-top']", function() {
                 $("[data-toggle='wy-nav-shift']").toggleClass("shift");
                 $("[data-toggle='rst-versions']").toggleClass("shift");
             })
 
             // Nav menu link click operations
-            .on('click', ".trojanzoo-menu-vertical .current ul li a", function() {
+            .on('click', ".sphinx-template-menu-vertical .current ul li a", function() {
                 var target = $(this);
                 // Close menu when you click a link.
                 $("[data-toggle='wy-nav-shift']").removeClass("shift");
@@ -110,7 +110,7 @@ function ThemeNav () {
             .wrap("<div class='wy-table-responsive citation'></div>");
 
         // Add expand links to all parents of nested ul
-        $('.trojanzoo-menu-vertical ul').not('.simple').siblings('a').each(function () {
+        $('.sphinx-template-menu-vertical ul').not('.simple').siblings('a').each(function () {
             var link = $(this);
                 expand = $('<span class="toctree-expand"></span>');
             expand.on('click', function (ev) {
@@ -127,7 +127,7 @@ function ThemeNav () {
         var anchor = encodeURI(window.location.hash) || '#';
 
         try {
-            var vmenu = $('.trojanzoo-menu-vertical');
+            var vmenu = $('.sphinx-template-menu-vertical');
             var link = vmenu.find('[href="' + anchor + '"]');
             if (link.length === 0) {
                 // this link was not found in the sidebar.
@@ -144,7 +144,7 @@ function ThemeNav () {
             // If we found a matching link then reset current and re-apply
             // otherwise retain the existing match
             if (link.length > 0) {
-                $('.trojanzoo-menu-vertical .current').removeClass('current');
+                $('.sphinx-template-menu-vertical .current').removeClass('current');
                 link.addClass('current');
                 link.closest('li.toctree-l1').addClass('current');
                 link.closest('li.toctree-l1').parent().addClass('current');
@@ -250,22 +250,22 @@ if (downloadNote.length >= 1) {
     var tutorialUrlArray = $("#tutorial-type").text().split('/');
         tutorialUrlArray[0] = tutorialUrlArray[0] + "_source"
 
-    var githubLink = "https://github.com/trojanzoo/tutorials/blob/master/" + tutorialUrlArray.join("/") + ".py",
+    var githubLink = "https://github.com/pytorch/tutorials/blob/master/" + tutorialUrlArray.join("/") + ".py",
         notebookLink = $(".reference.download")[1].href,
         notebookDownloadPath = notebookLink.split('_downloads')[1],
-        colabLink = "https://colab.research.google.com/github/trojanzoo/tutorials/blob/gh-pages/_downloads" + notebookDownloadPath;
+        colabLink = "https://colab.research.google.com/github/pytorch/tutorials/blob/gh-pages/_downloads" + notebookDownloadPath;
 
     $("#google-colab-link").wrap("<a href=" + colabLink + " data-behavior='call-to-action-event' data-response='Run in Google Colab' target='_blank'/>");
     $("#download-notebook-link").wrap("<a href=" + notebookLink + " data-behavior='call-to-action-event' data-response='Download Notebook'/>");
     $("#github-view-link").wrap("<a href=" + githubLink + " data-behavior='call-to-action-event' data-response='View on Github' target='_blank'/>");
 } else {
-    $(".trojanzoo-call-to-action-links").hide();
+    $(".sphinx-template-call-to-action-links").hide();
 }
 
 //This code handles the Expand/Hide toggle for the Docs/Tutorials left nav items
 
 $(document).ready(function() {
-  var caption = "#trojanzoo-left-menu p.caption";
+  var caption = "#sphinx-template-left-menu p.caption";
   var collapseAdded = $(this).not("checked");
   $(caption).each(function () {
     var menuName = this.innerText.replace(/[^\w\s]/gi, "").trim();
@@ -390,7 +390,7 @@ $(".stars-outer > i").on("click", function() {
     });
 })
 
-$("#trojanzoo-side-scroll-right li a").on("click", function (e) {
+$("#sphinx-template-side-scroll-right li a").on("click", function (e) {
   var href = $(this).attr("href");
   $('html, body').stop().animate({
     scrollTop: $(href).offset().top - 100
@@ -399,7 +399,7 @@ $("#trojanzoo-side-scroll-right li a").on("click", function (e) {
 });
 
 var lastId,
-  topMenu = $("#trojanzoo-side-scroll-right"),
+  topMenu = $("#sphinx-template-side-scroll-right"),
   topMenuHeight = topMenu.outerHeight() + 1,
   // All sidenav items
   menuItems = topMenu.find("a"),

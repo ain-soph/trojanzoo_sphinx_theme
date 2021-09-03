@@ -9626,7 +9626,7 @@ a.with-right-arrow, .btn.with-right-arrow {
   }
 }
 
-.trojanzoo-article #table-of-contents {
+.sphinx-template-article #table-of-contents {
   display: none;
 }
 
@@ -9736,7 +9736,7 @@ pre {
 .header-logo {
   height: 23px;
   width: 93px;
-  background-image: url("../images/logo.svg");
+  /* background-image: url("../images/trojanzoo-logo.svg"); */
   background-repeat: no-repeat;
   background-size: 93px 23px;
   display: block;
@@ -10052,7 +10052,7 @@ pre {
 }
 
 .footer-logo {
-  background-image: url("../images/logo-icon.svg");
+  /* background-image: url("../images/trojanzoo-logo-icon.svg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20px 24px;
@@ -10143,113 +10143,113 @@ pre {
   margin-top: -2px;
 }
 
-article.trojanzoo-article {
+article.sphinx-template-article {
   max-width: 920px;
   margin: 0 auto;
 }
-article.trojanzoo-article h2,
-article.trojanzoo-article h3,
-article.trojanzoo-article h4,
-article.trojanzoo-article h5,
-article.trojanzoo-article h6 {
+article.sphinx-template-article h2,
+article.sphinx-template-article h3,
+article.sphinx-template-article h4,
+article.sphinx-template-article h5,
+article.sphinx-template-article h6 {
   margin: 1.375rem 0;
   color: #262626;
 }
-article.trojanzoo-article h2 {
+article.sphinx-template-article h2 {
   font-size: 1.625rem;
   letter-spacing: 1.33px;
   line-height: 2rem;
   text-transform: none;
 }
-article.trojanzoo-article h3 {
+article.sphinx-template-article h3 {
   font-size: 1.5rem;
   letter-spacing: -0.25px;
   line-height: 1.875rem;
   text-transform: none;
 }
-article.trojanzoo-article h4,
-article.trojanzoo-article h5,
-article.trojanzoo-article h6 {
+article.sphinx-template-article h4,
+article.sphinx-template-article h5,
+article.sphinx-template-article h6 {
   font-size: 1.125rem;
   letter-spacing: -0.19px;
   line-height: 1.875rem;
 }
-article.trojanzoo-article p {
+article.sphinx-template-article p {
   margin-bottom: 1.125rem;
 }
-article.trojanzoo-article p,
-article.trojanzoo-article ul li,
-article.trojanzoo-article ol li,
-article.trojanzoo-article dl dt,
-article.trojanzoo-article dl dd,
-article.trojanzoo-article blockquote {
+article.sphinx-template-article p,
+article.sphinx-template-article ul li,
+article.sphinx-template-article ol li,
+article.sphinx-template-article dl dt,
+article.sphinx-template-article dl dd,
+article.sphinx-template-article blockquote {
   font-size: 1rem;
   line-height: 1.375rem;
   color: #262626;
   letter-spacing: 0.01px;
   font-weight: 500;
 }
-article.trojanzoo-article table {
+article.sphinx-template-article table {
   margin-bottom: 2.5rem;
   width: 100%;
 }
-article.trojanzoo-article table thead {
+article.sphinx-template-article table thead {
   border-bottom: 1px solid #cacaca;
 }
-article.trojanzoo-article table th {
+article.sphinx-template-article table th {
   padding: 0.625rem;
   color: #262626;
 }
-article.trojanzoo-article table td {
+article.sphinx-template-article table td {
   padding: 0.3125rem;
 }
-article.trojanzoo-article table tr th:first-of-type,
-article.trojanzoo-article table tr td:first-of-type {
+article.sphinx-template-article table tr th:first-of-type,
+article.sphinx-template-article table tr td:first-of-type {
   padding-left: 0;
 }
-article.trojanzoo-article table.docutils.field-list th.field-name {
+article.sphinx-template-article table.docutils.field-list th.field-name {
   padding: 0.3125rem;
   padding-left: 0;
 }
-article.trojanzoo-article table.docutils.field-list td.field-body {
+article.sphinx-template-article table.docutils.field-list td.field-body {
   padding: 0.3125rem;
 }
-article.trojanzoo-article table.docutils.field-list td.field-body p:last-of-type {
+article.sphinx-template-article table.docutils.field-list td.field-body p:last-of-type {
   margin-bottom: 0;
 }
-article.trojanzoo-article ul,
-article.trojanzoo-article ol {
+article.sphinx-template-article ul,
+article.sphinx-template-article ol {
   margin: 1.5rem 0 3.125rem 0;
 }
 @media screen and (min-width: 768px) {
-  article.trojanzoo-article ul,
-  article.trojanzoo-article ol {
+  article.sphinx-template-article ul,
+  article.sphinx-template-article ol {
     padding-left: 6.25rem;
   }
 }
-article.trojanzoo-article ul li,
-article.trojanzoo-article ol li {
+article.sphinx-template-article ul li,
+article.sphinx-template-article ol li {
   margin-bottom: 0.625rem;
 }
-article.trojanzoo-article dl {
+article.sphinx-template-article dl {
   margin-bottom: 1.5rem;
 }
-article.trojanzoo-article dl dt {
+article.sphinx-template-article dl dt {
   margin-bottom: 0.75rem;
 }
-article.trojanzoo-article pre {
+article.sphinx-template-article pre {
   margin-bottom: 2.5rem;
 }
-article.trojanzoo-article hr {
+article.sphinx-template-article hr {
   margin-top: 4.6875rem;
   margin-bottom: 4.6875rem;
 }
-article.trojanzoo-article blockquote {
+article.sphinx-template-article blockquote {
   margin: 0 auto;
   margin-bottom: 2.5rem;
   width: 65%;
 }
-article.trojanzoo-article img {
+article.sphinx-template-article img {
   width: 100%;
 }
 
@@ -10297,15 +10297,15 @@ p a:hover {
   color: #ee4c2c;
 }
 
-ul.trojanzoo-breadcrumbs {
+ul.sphinx-template-breadcrumbs {
   padding-left: 0;
   list-style-type: none;
 }
-ul.trojanzoo-breadcrumbs li {
+ul.sphinx-template-breadcrumbs li {
   display: inline-block;
   font-size: 0.875rem;
 }
-ul.trojanzoo-breadcrumbs a {
+ul.sphinx-template-breadcrumbs a {
   color: #ee4c2c;
   text-decoration: none;
 }
@@ -10341,9 +10341,9 @@ ul.trojanzoo-breadcrumbs a {
   top: 0;
 }
 
-.tutorials-header .header-logo {
-  background-image: url("../images/logo-dark.svg");
-}
+/* .tutorials-header .header-logo {
+  background-image: url("../images/trojanzoo-logo-dark.svg");
+} */
 .tutorials-header .main-menu ul li a {
   color: #262626;
 }
@@ -10433,52 +10433,52 @@ a:visited.has-code span {
   color: #4974D1;
 }
 
-article.trojanzoo-article ul,
-article.trojanzoo-article ol {
+article.sphinx-template-article ul,
+article.sphinx-template-article ol {
   padding-left: 1.875rem;
   margin: 0;
 }
-article.trojanzoo-article ul li,
-article.trojanzoo-article ol li {
+article.sphinx-template-article ul li,
+article.sphinx-template-article ol li {
   margin: 0;
   line-height: 1.75rem;
 }
-article.trojanzoo-article ul p,
-article.trojanzoo-article ol p {
+article.sphinx-template-article ul p,
+article.sphinx-template-article ol p {
   line-height: 1.75rem;
   margin-bottom: 0;
 }
-article.trojanzoo-article ul ul,
-article.trojanzoo-article ul ol,
-article.trojanzoo-article ol ul,
-article.trojanzoo-article ol ol {
+article.sphinx-template-article ul ul,
+article.sphinx-template-article ul ol,
+article.sphinx-template-article ol ul,
+article.sphinx-template-article ol ol {
   margin: 0;
 }
-article.trojanzoo-article h1,
-article.trojanzoo-article h2,
-article.trojanzoo-article h3,
-article.trojanzoo-article h4,
-article.trojanzoo-article h5,
-article.trojanzoo-article h6 {
+article.sphinx-template-article h1,
+article.sphinx-template-article h2,
+article.sphinx-template-article h3,
+article.sphinx-template-article h4,
+article.sphinx-template-article h5,
+article.sphinx-template-article h6 {
   font-weight: normal;
 }
-article.trojanzoo-article h1 a,
-article.trojanzoo-article h2 a,
-article.trojanzoo-article h3 a,
-article.trojanzoo-article h4 a,
-article.trojanzoo-article h5 a,
-article.trojanzoo-article h6 a {
+article.sphinx-template-article h1 a,
+article.sphinx-template-article h2 a,
+article.sphinx-template-article h3 a,
+article.sphinx-template-article h4 a,
+article.sphinx-template-article h5 a,
+article.sphinx-template-article h6 a {
   color: #262626;
 }
-article.trojanzoo-article p.caption {
+article.sphinx-template-article p.caption {
   margin-top: 1.25rem;
 }
 
-article.trojanzoo-article .section:first-of-type h1:first-of-type {
+article.sphinx-template-article .section:first-of-type h1:first-of-type {
   margin-top: 0;
 }
 
-article.trojanzoo-article .sphx-glr-thumbcontainer {
+article.sphinx-template-article .sphx-glr-thumbcontainer {
   margin: 0;
   border: 1px solid #d6d7d8;
   border-radius: 0;
@@ -10487,44 +10487,44 @@ article.trojanzoo-article .sphx-glr-thumbcontainer {
   margin-bottom: 5%;
 }
 @media screen and (max-width: 1100px) {
-  article.trojanzoo-article .sphx-glr-thumbcontainer:nth-child(odd) {
+  article.sphinx-template-article .sphx-glr-thumbcontainer:nth-child(odd) {
     margin-left: 0;
     margin-right: 2.5%;
   }
-  article.trojanzoo-article .sphx-glr-thumbcontainer:nth-child(even) {
+  article.sphinx-template-article .sphx-glr-thumbcontainer:nth-child(even) {
     margin-right: 0;
     margin-left: 2.5%;
   }
-  article.trojanzoo-article .sphx-glr-thumbcontainer .figure {
+  article.sphinx-template-article .sphx-glr-thumbcontainer .figure {
     width: 40%;
   }
 }
 @media screen and (min-width: 1101px) {
-  article.trojanzoo-article .sphx-glr-thumbcontainer {
+  article.sphinx-template-article .sphx-glr-thumbcontainer {
     margin-right: 3%;
     margin-bottom: 3%;
     width: 30%;
   }
 }
-article.trojanzoo-article .sphx-glr-thumbcontainer .caption-text a {
+article.sphinx-template-article .sphx-glr-thumbcontainer .caption-text a {
   font-size: 1rem;
   color: #262626;
   letter-spacing: 0;
   line-height: 1.5rem;
   text-decoration: none;
 }
-article.trojanzoo-article .sphx-glr-thumbcontainer:hover {
+article.sphinx-template-article .sphx-glr-thumbcontainer:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-bottom-color: #ffffff;
 }
-article.trojanzoo-article .sphx-glr-thumbcontainer:hover .figure:before {
+article.sphinx-template-article .sphx-glr-thumbcontainer:hover .figure:before {
   bottom: 100%;
 }
-article.trojanzoo-article .sphx-glr-thumbcontainer .figure {
+article.sphinx-template-article .sphx-glr-thumbcontainer .figure {
   width: 80%;
 }
-article.trojanzoo-article .sphx-glr-thumbcontainer .figure:before {
+article.sphinx-template-article .sphx-glr-thumbcontainer .figure:before {
   content: "";
   display: block;
   position: absolute;
@@ -10535,11 +10535,11 @@ article.trojanzoo-article .sphx-glr-thumbcontainer .figure:before {
   background: #8A94B3;
   opacity: 0.10;
 }
-article.trojanzoo-article .sphx-glr-thumbcontainer .figure a.reference.internal {
+article.sphinx-template-article .sphx-glr-thumbcontainer .figure a.reference.internal {
   text-align: left;
 }
 @media screen and (min-width: 768px) {
-  article.trojanzoo-article .sphx-glr-thumbcontainer:after {
+  article.sphinx-template-article .sphx-glr-thumbcontainer:after {
     content: "";
     display: block;
     width: 0;
@@ -10551,17 +10551,17 @@ article.trojanzoo-article .sphx-glr-thumbcontainer .figure a.reference.internal 
     -webkit-transition: width .250s ease-in-out;
     transition: width .250s ease-in-out;
   }
-  article.trojanzoo-article .sphx-glr-thumbcontainer:hover:after {
+  article.sphinx-template-article .sphx-glr-thumbcontainer:hover:after {
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  article.trojanzoo-article .sphx-glr-thumbcontainer:after {
+  article.sphinx-template-article .sphx-glr-thumbcontainer:after {
     background-color: #ee4c2c;
   }
 }
 
-article.trojanzoo-article .section :not(dt) > code {
+article.sphinx-template-article .section :not(dt) > code {
   color: #262626;
   border-top: solid 2px #ffffff;
   background-color: #ffffff;
@@ -10570,11 +10570,11 @@ article.trojanzoo-article .section :not(dt) > code {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-article.trojanzoo-article .section :not(dt) > code .pre {
+article.sphinx-template-article .section :not(dt) > code .pre {
   outline: 0px;
   padding: 0px;
 }
-article.trojanzoo-article .function dt, article.trojanzoo-article .attribute dt, article.trojanzoo-article .class .attribute dt, article.trojanzoo-article .class dt {
+article.sphinx-template-article .function dt, article.sphinx-template-article .attribute dt, article.sphinx-template-article .class .attribute dt, article.sphinx-template-article .class dt {
   position: relative;
   background: #f3f4f7;
   padding: 0.5rem;
@@ -10582,31 +10582,31 @@ article.trojanzoo-article .function dt, article.trojanzoo-article .attribute dt,
   word-wrap: break-word;
   padding-right: 100px;
 }
-article.trojanzoo-article .function dt em.property, article.trojanzoo-article .attribute dt em.property, article.trojanzoo-article .class dt em.property {
+article.sphinx-template-article .function dt em.property, article.sphinx-template-article .attribute dt em.property, article.sphinx-template-article .class dt em.property {
   font-family: inherit;
 }
-article.trojanzoo-article .function dt em, article.trojanzoo-article .attribute dt em, article.trojanzoo-article .class .attribute dt em, article.trojanzoo-article .class dt em, article.trojanzoo-article .function dt .sig-paren, article.trojanzoo-article .attribute dt .sig-paren, article.trojanzoo-article .class dt .sig-paren {
+article.sphinx-template-article .function dt em, article.sphinx-template-article .attribute dt em, article.sphinx-template-article .class .attribute dt em, article.sphinx-template-article .class dt em, article.sphinx-template-article .function dt .sig-paren, article.sphinx-template-article .attribute dt .sig-paren, article.sphinx-template-article .class dt .sig-paren {
   font-family: IBMPlexMono,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   font-size: 87.5%;
 }
-article.trojanzoo-article .function dt a, article.trojanzoo-article .attribute dt a, article.trojanzoo-article .class .attribute dt a, article.trojanzoo-article .class dt a {
+article.sphinx-template-article .function dt a, article.sphinx-template-article .attribute dt a, article.sphinx-template-article .class .attribute dt a, article.sphinx-template-article .class dt a {
   right: 30px;
   padding-right: 0;
   top: 50%;
   -webkit-transform: perspective(1px) translateY(-50%);
           transform: perspective(1px) translateY(-50%);
 }
-article.trojanzoo-article .function dt:hover .viewcode-link, article.trojanzoo-article .attribute dt:hover .viewcode-link, article.trojanzoo-article .class dt:hover .viewcode-link {
+article.sphinx-template-article .function dt:hover .viewcode-link, article.sphinx-template-article .attribute dt:hover .viewcode-link, article.sphinx-template-article .class dt:hover .viewcode-link {
   color: #ee4c2c;
 }
-article.trojanzoo-article .function .anchorjs-link, article.trojanzoo-article .attribute .anchorjs-link, article.trojanzoo-article .class .anchorjs-link {
+article.sphinx-template-article .function .anchorjs-link, article.sphinx-template-article .attribute .anchorjs-link, article.sphinx-template-article .class .anchorjs-link {
   display: inline;
   position: absolute;
   right: 8px;
   font-size: 1.5625rem !important;
   padding-left: 0;
 }
-article.trojanzoo-article .function dt > code, article.trojanzoo-article .attribute dt > code, article.trojanzoo-article .class .attribute dt > code, article.trojanzoo-article .class dt > code {
+article.sphinx-template-article .function dt > code, article.sphinx-template-article .attribute dt > code, article.sphinx-template-article .class .attribute dt > code, article.sphinx-template-article .class dt > code {
   color: #262626;
   border-top: solid 2px #f3f4f7;
   background-color: #f3f4f7;
@@ -10614,7 +10614,7 @@ article.trojanzoo-article .function dt > code, article.trojanzoo-article .attrib
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-article.trojanzoo-article .function .viewcode-link, article.trojanzoo-article .attribute .viewcode-link, article.trojanzoo-article .class .viewcode-link {
+article.sphinx-template-article .function .viewcode-link, article.sphinx-template-article .attribute .viewcode-link, article.sphinx-template-article .class .viewcode-link {
   padding-left: 0.6rem;
   position: absolute;
   font-size: 0.875rem;
@@ -10623,66 +10623,66 @@ article.trojanzoo-article .function .viewcode-link, article.trojanzoo-article .a
   line-height: 1.5rem;
   text-transform: uppercase;
 }
-article.trojanzoo-article .function dd, article.trojanzoo-article .attribute dd, article.trojanzoo-article .class .attribute dd, article.trojanzoo-article .class dd {
+article.sphinx-template-article .function dd, article.sphinx-template-article .attribute dd, article.sphinx-template-article .class .attribute dd, article.sphinx-template-article .class dd {
   padding-left: 3.75rem;
 }
-article.trojanzoo-article .function dd p, article.trojanzoo-article .attribute dd p, article.trojanzoo-article .class .attribute dd p, article.trojanzoo-article .class dd p {
+article.sphinx-template-article .function dd p, article.sphinx-template-article .attribute dd p, article.sphinx-template-article .class .attribute dd p, article.sphinx-template-article .class dd p {
   color: #262626;
 }
-article.trojanzoo-article .function table tbody tr th.field-name, article.trojanzoo-article .attribute table tbody tr th.field-name, article.trojanzoo-article .class table tbody tr th.field-name {
+article.sphinx-template-article .function table tbody tr th.field-name, article.sphinx-template-article .attribute table tbody tr th.field-name, article.sphinx-template-article .class table tbody tr th.field-name {
   white-space: nowrap;
   color: #262626;
   width: 20%;
 }
 @media screen and (min-width: 768px) {
-  article.trojanzoo-article .function table tbody tr th.field-name, article.trojanzoo-article .attribute table tbody tr th.field-name, article.trojanzoo-article .class table tbody tr th.field-name {
+  article.sphinx-template-article .function table tbody tr th.field-name, article.sphinx-template-article .attribute table tbody tr th.field-name, article.sphinx-template-article .class table tbody tr th.field-name {
     width: 15%;
   }
 }
-article.trojanzoo-article .function table tbody tr td.field-body, article.trojanzoo-article .attribute table tbody tr td.field-body, article.trojanzoo-article .class table tbody tr td.field-body {
+article.sphinx-template-article .function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
   padding: 0.625rem;
   width: 80%;
   color: #262626;
 }
 @media screen and (min-width: 768px) {
-  article.trojanzoo-article .function table tbody tr td.field-body, article.trojanzoo-article .attribute table tbody tr td.field-body, article.trojanzoo-article .class table tbody tr td.field-body {
+  article.sphinx-template-article .function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
     width: 85%;
   }
 }
 @media screen and (min-width: 1600px) {
-  article.trojanzoo-article .function table tbody tr td.field-body, article.trojanzoo-article .attribute table tbody tr td.field-body, article.trojanzoo-article .class table tbody tr td.field-body {
+  article.sphinx-template-article .function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
     padding-left: 1.25rem;
   }
 }
-article.trojanzoo-article .function table tbody tr td.field-body p, article.trojanzoo-article .attribute table tbody tr td.field-body p, article.trojanzoo-article .class table tbody tr td.field-body p {
+article.sphinx-template-article .function table tbody tr td.field-body p, article.sphinx-template-article .attribute table tbody tr td.field-body p, article.sphinx-template-article .class table tbody tr td.field-body p {
   padding-left: 0px;
 }
-article.trojanzoo-article .function table tbody tr td.field-body p:last-of-type, article.trojanzoo-article .attribute table tbody tr td.field-body p:last-of-type, article.trojanzoo-article .class table tbody tr td.field-body p:last-of-type {
+article.sphinx-template-article .function table tbody tr td.field-body p:last-of-type, article.sphinx-template-article .attribute table tbody tr td.field-body p:last-of-type, article.sphinx-template-article .class table tbody tr td.field-body p:last-of-type {
   margin-bottom: 0;
 }
-article.trojanzoo-article .function table tbody tr td.field-body ol, article.trojanzoo-article .attribute table tbody tr td.field-body ol, article.trojanzoo-article .class table tbody tr td.field-body ol, article.trojanzoo-article .function table tbody tr td.field-body ul, article.trojanzoo-article .attribute table tbody tr td.field-body ul, article.trojanzoo-article .class table tbody tr td.field-body ul {
+article.sphinx-template-article .function table tbody tr td.field-body ol, article.sphinx-template-article .attribute table tbody tr td.field-body ol, article.sphinx-template-article .class table tbody tr td.field-body ol, article.sphinx-template-article .function table tbody tr td.field-body ul, article.sphinx-template-article .attribute table tbody tr td.field-body ul, article.sphinx-template-article .class table tbody tr td.field-body ul {
   padding-left: 1rem;
   padding-bottom: 0;
 }
-article.trojanzoo-article .function table.docutils.field-list, article.trojanzoo-article .attribute table.docutils.field-list, article.trojanzoo-article .class table.docutils.field-list {
+article.sphinx-template-article .function table.docutils.field-list, article.sphinx-template-article .attribute table.docutils.field-list, article.sphinx-template-article .class table.docutils.field-list {
   margin-bottom: 0.75rem;
 }
-article.trojanzoo-article .attribute .has-code {
+article.sphinx-template-article .attribute .has-code {
   float: none;
 }
-article.trojanzoo-article .class dt {
+article.sphinx-template-article .class dt {
   border-left: none;
   border-top: 3px solid #ee4c2c;
   padding-left: 4em;
 }
-article.trojanzoo-article .class dt em.property {
+article.sphinx-template-article .class dt em.property {
   position: absolute;
   left: 0.5rem;
 }
-article.trojanzoo-article .class dd .docutils dt {
+article.sphinx-template-article .class dd .docutils dt {
   padding-left: 0.5rem;
 }
-article.trojanzoo-article .class em.property {
+article.sphinx-template-article .class em.property {
   text-transform: uppercase;
   font-style: normal;
   color: #ee4c2c;
@@ -10690,55 +10690,55 @@ article.trojanzoo-article .class em.property {
   letter-spacing: 0;
   padding-right: 0.75rem;
 }
-article.trojanzoo-article .class dl dt em.property {
+article.sphinx-template-article .class dl dt em.property {
   position: static;
   left: 0;
   padding-right: 0;
 }
-article.trojanzoo-article .class .method dt,
-article.trojanzoo-article .class .staticmethod dt {
+article.sphinx-template-article .class .method dt,
+article.sphinx-template-article .class .staticmethod dt {
   border-left: 3px solid #ee4c2c;
   border-top: none;
 }
-article.trojanzoo-article .class .method dt,
-article.trojanzoo-article .class .staticmethod dt {
+article.sphinx-template-article .class .method dt,
+article.sphinx-template-article .class .staticmethod dt {
   padding-left: 0.5rem;
 }
-article.trojanzoo-article .class .attribute dt {
+article.sphinx-template-article .class .attribute dt {
   border-top: none;
 }
-article.trojanzoo-article .class .attribute dt em.property {
+article.sphinx-template-article .class .attribute dt em.property {
   position: relative;
   left: 0;
 }
-article.trojanzoo-article table {
+article.sphinx-template-article table {
   table-layout: fixed;
 }
 
-article.trojanzoo-article .note,
-article.trojanzoo-article .warning,
-article.trojanzoo-article .tip,
-article.trojanzoo-article .seealso,
-article.trojanzoo-article .hint,
-article.trojanzoo-article .important,
-article.trojanzoo-article .caution,
-article.trojanzoo-article .danger,
-article.trojanzoo-article .attention,
-article.trojanzoo-article .error {
+article.sphinx-template-article .note,
+article.sphinx-template-article .warning,
+article.sphinx-template-article .tip,
+article.sphinx-template-article .seealso,
+article.sphinx-template-article .hint,
+article.sphinx-template-article .important,
+article.sphinx-template-article .caution,
+article.sphinx-template-article .danger,
+article.sphinx-template-article .attention,
+article.sphinx-template-article .error {
   background: #f3f4f7;
   margin-top: 1.875rem;
   margin-bottom: 1.125rem;
 }
-article.trojanzoo-article .note .admonition-title,
-article.trojanzoo-article .warning .admonition-title,
-article.trojanzoo-article .tip .admonition-title,
-article.trojanzoo-article .seealso .admonition-title,
-article.trojanzoo-article .hint .admonition-title,
-article.trojanzoo-article .important .admonition-title,
-article.trojanzoo-article .caution .admonition-title,
-article.trojanzoo-article .danger .admonition-title,
-article.trojanzoo-article .attention .admonition-title,
-article.trojanzoo-article .error .admonition-title {
+article.sphinx-template-article .note .admonition-title,
+article.sphinx-template-article .warning .admonition-title,
+article.sphinx-template-article .tip .admonition-title,
+article.sphinx-template-article .seealso .admonition-title,
+article.sphinx-template-article .hint .admonition-title,
+article.sphinx-template-article .important .admonition-title,
+article.sphinx-template-article .caution .admonition-title,
+article.sphinx-template-article .danger .admonition-title,
+article.sphinx-template-article .attention .admonition-title,
+article.sphinx-template-article .error .admonition-title {
   color: #ffffff;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -10747,57 +10747,57 @@ article.trojanzoo-article .error .admonition-title {
   position: relative;
   font-size: 0.875rem;
 }
-article.trojanzoo-article .note .admonition-title:before,
-article.trojanzoo-article .warning .admonition-title:before,
-article.trojanzoo-article .tip .admonition-title:before,
-article.trojanzoo-article .seealso .admonition-title:before,
-article.trojanzoo-article .hint .admonition-title:before,
-article.trojanzoo-article .important .admonition-title:before,
-article.trojanzoo-article .caution .admonition-title:before,
-article.trojanzoo-article .danger .admonition-title:before,
-article.trojanzoo-article .attention .admonition-title:before,
-article.trojanzoo-article .error .admonition-title:before {
+article.sphinx-template-article .note .admonition-title:before,
+article.sphinx-template-article .warning .admonition-title:before,
+article.sphinx-template-article .tip .admonition-title:before,
+article.sphinx-template-article .seealso .admonition-title:before,
+article.sphinx-template-article .hint .admonition-title:before,
+article.sphinx-template-article .important .admonition-title:before,
+article.sphinx-template-article .caution .admonition-title:before,
+article.sphinx-template-article .danger .admonition-title:before,
+article.sphinx-template-article .attention .admonition-title:before,
+article.sphinx-template-article .error .admonition-title:before {
   content: "\2022";
   position: absolute;
   left: 9px;
   color: #ffffff;
   top: 2px;
 }
-article.trojanzoo-article .note p:nth-child(n + 2),
-article.trojanzoo-article .warning p:nth-child(n + 2),
-article.trojanzoo-article .tip p:nth-child(n + 2),
-article.trojanzoo-article .seealso p:nth-child(n + 2),
-article.trojanzoo-article .hint p:nth-child(n + 2),
-article.trojanzoo-article .important p:nth-child(n + 2),
-article.trojanzoo-article .caution p:nth-child(n + 2),
-article.trojanzoo-article .danger p:nth-child(n + 2),
-article.trojanzoo-article .attention p:nth-child(n + 2),
-article.trojanzoo-article .error p:nth-child(n + 2) {
+article.sphinx-template-article .note p:nth-child(n + 2),
+article.sphinx-template-article .warning p:nth-child(n + 2),
+article.sphinx-template-article .tip p:nth-child(n + 2),
+article.sphinx-template-article .seealso p:nth-child(n + 2),
+article.sphinx-template-article .hint p:nth-child(n + 2),
+article.sphinx-template-article .important p:nth-child(n + 2),
+article.sphinx-template-article .caution p:nth-child(n + 2),
+article.sphinx-template-article .danger p:nth-child(n + 2),
+article.sphinx-template-article .attention p:nth-child(n + 2),
+article.sphinx-template-article .error p:nth-child(n + 2) {
   padding: 0 1.375rem;
 }
-article.trojanzoo-article .note table,
-article.trojanzoo-article .warning table,
-article.trojanzoo-article .tip table,
-article.trojanzoo-article .seealso table,
-article.trojanzoo-article .hint table,
-article.trojanzoo-article .important table,
-article.trojanzoo-article .caution table,
-article.trojanzoo-article .danger table,
-article.trojanzoo-article .attention table,
-article.trojanzoo-article .error table {
+article.sphinx-template-article .note table,
+article.sphinx-template-article .warning table,
+article.sphinx-template-article .tip table,
+article.sphinx-template-article .seealso table,
+article.sphinx-template-article .hint table,
+article.sphinx-template-article .important table,
+article.sphinx-template-article .caution table,
+article.sphinx-template-article .danger table,
+article.sphinx-template-article .attention table,
+article.sphinx-template-article .error table {
   margin: 0 2rem;
   width: auto;
 }
-article.trojanzoo-article .note :not(dt) > code,
-article.trojanzoo-article .warning :not(dt) > code,
-article.trojanzoo-article .tip :not(dt) > code,
-article.trojanzoo-article .seealso :not(dt) > code,
-article.trojanzoo-article .hint :not(dt) > code,
-article.trojanzoo-article .important :not(dt) > code,
-article.trojanzoo-article .caution :not(dt) > code,
-article.trojanzoo-article .danger :not(dt) > code,
-article.trojanzoo-article .attention :not(dt) > code,
-article.trojanzoo-article .error :not(dt) > code {
+article.sphinx-template-article .note :not(dt) > code,
+article.sphinx-template-article .warning :not(dt) > code,
+article.sphinx-template-article .tip :not(dt) > code,
+article.sphinx-template-article .seealso :not(dt) > code,
+article.sphinx-template-article .hint :not(dt) > code,
+article.sphinx-template-article .important :not(dt) > code,
+article.sphinx-template-article .caution :not(dt) > code,
+article.sphinx-template-article .danger :not(dt) > code,
+article.sphinx-template-article .attention :not(dt) > code,
+article.sphinx-template-article .error :not(dt) > code {
   border-top: solid 2px #ffffff;
   background-color: #ffffff;
   border-bottom: solid 2px #ffffff;
@@ -10806,139 +10806,139 @@ article.trojanzoo-article .error :not(dt) > code {
   box-decoration-break: clone;
   outline: 1px solid #e9e9e9;
 }
-article.trojanzoo-article .note :not(dt) > code .pre,
-article.trojanzoo-article .warning :not(dt) > code .pre,
-article.trojanzoo-article .tip :not(dt) > code .pre,
-article.trojanzoo-article .seealso :not(dt) > code .pre,
-article.trojanzoo-article .hint :not(dt) > code .pre,
-article.trojanzoo-article .important :not(dt) > code .pre,
-article.trojanzoo-article .caution :not(dt) > code .pre,
-article.trojanzoo-article .danger :not(dt) > code .pre,
-article.trojanzoo-article .attention :not(dt) > code .pre,
-article.trojanzoo-article .error :not(dt) > code .pre {
+article.sphinx-template-article .note :not(dt) > code .pre,
+article.sphinx-template-article .warning :not(dt) > code .pre,
+article.sphinx-template-article .tip :not(dt) > code .pre,
+article.sphinx-template-article .seealso :not(dt) > code .pre,
+article.sphinx-template-article .hint :not(dt) > code .pre,
+article.sphinx-template-article .important :not(dt) > code .pre,
+article.sphinx-template-article .caution :not(dt) > code .pre,
+article.sphinx-template-article .danger :not(dt) > code .pre,
+article.sphinx-template-article .attention :not(dt) > code .pre,
+article.sphinx-template-article .error :not(dt) > code .pre {
   outline: 0px;
   padding: 0px;
 }
-article.trojanzoo-article .note pre,
-article.trojanzoo-article .warning pre,
-article.trojanzoo-article .tip pre,
-article.trojanzoo-article .seealso pre,
-article.trojanzoo-article .hint pre,
-article.trojanzoo-article .important pre,
-article.trojanzoo-article .caution pre,
-article.trojanzoo-article .danger pre,
-article.trojanzoo-article .attention pre,
-article.trojanzoo-article .error pre {
+article.sphinx-template-article .note pre,
+article.sphinx-template-article .warning pre,
+article.sphinx-template-article .tip pre,
+article.sphinx-template-article .seealso pre,
+article.sphinx-template-article .hint pre,
+article.sphinx-template-article .important pre,
+article.sphinx-template-article .caution pre,
+article.sphinx-template-article .danger pre,
+article.sphinx-template-article .attention pre,
+article.sphinx-template-article .error pre {
   margin-bottom: 0;
 }
-article.trojanzoo-article .note .highlight,
-article.trojanzoo-article .warning .highlight,
-article.trojanzoo-article .tip .highlight,
-article.trojanzoo-article .seealso .highlight,
-article.trojanzoo-article .hint .highlight,
-article.trojanzoo-article .important .highlight,
-article.trojanzoo-article .caution .highlight,
-article.trojanzoo-article .danger .highlight,
-article.trojanzoo-article .attention .highlight,
-article.trojanzoo-article .error .highlight {
+article.sphinx-template-article .note .highlight,
+article.sphinx-template-article .warning .highlight,
+article.sphinx-template-article .tip .highlight,
+article.sphinx-template-article .seealso .highlight,
+article.sphinx-template-article .hint .highlight,
+article.sphinx-template-article .important .highlight,
+article.sphinx-template-article .caution .highlight,
+article.sphinx-template-article .danger .highlight,
+article.sphinx-template-article .attention .highlight,
+article.sphinx-template-article .error .highlight {
   margin: 0 2rem 1.125rem 2rem;
 }
-article.trojanzoo-article .note ul,
-article.trojanzoo-article .note ol,
-article.trojanzoo-article .warning ul,
-article.trojanzoo-article .warning ol,
-article.trojanzoo-article .tip ul,
-article.trojanzoo-article .tip ol,
-article.trojanzoo-article .seealso ul,
-article.trojanzoo-article .seealso ol,
-article.trojanzoo-article .hint ul,
-article.trojanzoo-article .hint ol,
-article.trojanzoo-article .important ul,
-article.trojanzoo-article .important ol,
-article.trojanzoo-article .caution ul,
-article.trojanzoo-article .caution ol,
-article.trojanzoo-article .danger ul,
-article.trojanzoo-article .danger ol,
-article.trojanzoo-article .attention ul,
-article.trojanzoo-article .attention ol,
-article.trojanzoo-article .error ul,
-article.trojanzoo-article .error ol {
+article.sphinx-template-article .note ul,
+article.sphinx-template-article .note ol,
+article.sphinx-template-article .warning ul,
+article.sphinx-template-article .warning ol,
+article.sphinx-template-article .tip ul,
+article.sphinx-template-article .tip ol,
+article.sphinx-template-article .seealso ul,
+article.sphinx-template-article .seealso ol,
+article.sphinx-template-article .hint ul,
+article.sphinx-template-article .hint ol,
+article.sphinx-template-article .important ul,
+article.sphinx-template-article .important ol,
+article.sphinx-template-article .caution ul,
+article.sphinx-template-article .caution ol,
+article.sphinx-template-article .danger ul,
+article.sphinx-template-article .danger ol,
+article.sphinx-template-article .attention ul,
+article.sphinx-template-article .attention ol,
+article.sphinx-template-article .error ul,
+article.sphinx-template-article .error ol {
   padding-left: 3.25rem;
 }
-article.trojanzoo-article .note ul li,
-article.trojanzoo-article .note ol li,
-article.trojanzoo-article .warning ul li,
-article.trojanzoo-article .warning ol li,
-article.trojanzoo-article .tip ul li,
-article.trojanzoo-article .tip ol li,
-article.trojanzoo-article .seealso ul li,
-article.trojanzoo-article .seealso ol li,
-article.trojanzoo-article .hint ul li,
-article.trojanzoo-article .hint ol li,
-article.trojanzoo-article .important ul li,
-article.trojanzoo-article .important ol li,
-article.trojanzoo-article .caution ul li,
-article.trojanzoo-article .caution ol li,
-article.trojanzoo-article .danger ul li,
-article.trojanzoo-article .danger ol li,
-article.trojanzoo-article .attention ul li,
-article.trojanzoo-article .attention ol li,
-article.trojanzoo-article .error ul li,
-article.trojanzoo-article .error ol li {
+article.sphinx-template-article .note ul li,
+article.sphinx-template-article .note ol li,
+article.sphinx-template-article .warning ul li,
+article.sphinx-template-article .warning ol li,
+article.sphinx-template-article .tip ul li,
+article.sphinx-template-article .tip ol li,
+article.sphinx-template-article .seealso ul li,
+article.sphinx-template-article .seealso ol li,
+article.sphinx-template-article .hint ul li,
+article.sphinx-template-article .hint ol li,
+article.sphinx-template-article .important ul li,
+article.sphinx-template-article .important ol li,
+article.sphinx-template-article .caution ul li,
+article.sphinx-template-article .caution ol li,
+article.sphinx-template-article .danger ul li,
+article.sphinx-template-article .danger ol li,
+article.sphinx-template-article .attention ul li,
+article.sphinx-template-article .attention ol li,
+article.sphinx-template-article .error ul li,
+article.sphinx-template-article .error ol li {
   color: #262626;
 }
-article.trojanzoo-article .note p,
-article.trojanzoo-article .warning p,
-article.trojanzoo-article .tip p,
-article.trojanzoo-article .seealso p,
-article.trojanzoo-article .hint p,
-article.trojanzoo-article .important p,
-article.trojanzoo-article .caution p,
-article.trojanzoo-article .danger p,
-article.trojanzoo-article .attention p,
-article.trojanzoo-article .error p {
+article.sphinx-template-article .note p,
+article.sphinx-template-article .warning p,
+article.sphinx-template-article .tip p,
+article.sphinx-template-article .seealso p,
+article.sphinx-template-article .hint p,
+article.sphinx-template-article .important p,
+article.sphinx-template-article .caution p,
+article.sphinx-template-article .danger p,
+article.sphinx-template-article .attention p,
+article.sphinx-template-article .error p {
   margin-top: 1.125rem;
 }
-article.trojanzoo-article .note .admonition-title {
+article.sphinx-template-article .note .admonition-title {
   background: #54c7ec;
 }
-article.trojanzoo-article .warning .admonition-title {
+article.sphinx-template-article .warning .admonition-title {
   background: #e94f3b;
 }
-article.trojanzoo-article .tip .admonition-title {
+article.sphinx-template-article .tip .admonition-title {
   background: #6bcebb;
 }
-article.trojanzoo-article .seealso .admonition-title {
+article.sphinx-template-article .seealso .admonition-title {
   background: #6bcebb;
 }
-article.trojanzoo-article .hint .admonition-title {
+article.sphinx-template-article .hint .admonition-title {
   background: #a2cdde;
 }
-article.trojanzoo-article .important .admonition-title {
+article.sphinx-template-article .important .admonition-title {
   background: #5890ff;
 }
-article.trojanzoo-article .caution .admonition-title {
+article.sphinx-template-article .caution .admonition-title {
   background: #f7923a;
 }
-article.trojanzoo-article .danger .admonition-title {
+article.sphinx-template-article .danger .admonition-title {
   background: #db2c49;
 }
-article.trojanzoo-article .attention .admonition-title {
+article.sphinx-template-article .attention .admonition-title {
   background: #f5a623;
 }
-article.trojanzoo-article .error .admonition-title {
+article.sphinx-template-article .error .admonition-title {
   background: #cc2f90;
 }
-article.trojanzoo-article .sphx-glr-download-link-note.admonition.note,
-article.trojanzoo-article .reference.download.internal, article.trojanzoo-article .sphx-glr-signature {
+article.sphinx-template-article .sphx-glr-download-link-note.admonition.note,
+article.sphinx-template-article .reference.download.internal, article.sphinx-template-article .sphx-glr-signature {
   display: none;
 }
-article.trojanzoo-article .admonition > p:last-of-type {
+article.sphinx-template-article .admonition > p:last-of-type {
   margin-bottom: 0;
   padding-bottom: 1.125rem !important;
 }
 
-.trojanzoo-article div.sphx-glr-download a {
+.sphinx-template-article div.sphx-glr-download a {
   background-color: #f3f4f7;
   background-image: url("../images/arrow-down-orange.svg");
   background-repeat: no-repeat;
@@ -10953,7 +10953,7 @@ article.trojanzoo-article .admonition > p:last-of-type {
   margin: 1.25rem auto;
 }
 @media screen and (min-width: 768px) {
-  .trojanzoo-article div.sphx-glr-download a:after {
+  .sphinx-template-article div.sphx-glr-download a:after {
     content: "";
     display: block;
     width: 0;
@@ -10965,86 +10965,86 @@ article.trojanzoo-article .admonition > p:last-of-type {
     -webkit-transition: width .250s ease-in-out;
     transition: width .250s ease-in-out;
   }
-  .trojanzoo-article div.sphx-glr-download a:hover:after {
+  .sphinx-template-article div.sphx-glr-download a:hover:after {
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  .trojanzoo-article div.sphx-glr-download a:after {
+  .sphinx-template-article div.sphx-glr-download a:after {
     background-color: #ee4c2c;
   }
 }
 @media screen and (min-width: 768px) {
-  .trojanzoo-article div.sphx-glr-download a {
+  .sphinx-template-article div.sphx-glr-download a {
     background-position: left 20px center;
   }
 }
-.trojanzoo-article div.sphx-glr-download a:hover {
+.sphinx-template-article div.sphx-glr-download a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   text-decoration: none;
   background-image: url("../images/arrow-down-orange.svg");
   background-color: #f3f4f7;
 }
-.trojanzoo-article div.sphx-glr-download a span.pre {
+.sphinx-template-article div.sphx-glr-download a span.pre {
   background-color: transparent;
   font-size: 1.125rem;
   padding: 0;
   color: #262626;
 }
-.trojanzoo-article div.sphx-glr-download a code, .trojanzoo-article div.sphx-glr-download a kbd, .trojanzoo-article div.sphx-glr-download a pre, .trojanzoo-article div.sphx-glr-download a samp, .trojanzoo-article div.sphx-glr-download a span.pre {
+.sphinx-template-article div.sphx-glr-download a code, .sphinx-template-article div.sphx-glr-download a kbd, .sphinx-template-article div.sphx-glr-download a pre, .sphinx-template-article div.sphx-glr-download a samp, .sphinx-template-article div.sphx-glr-download a span.pre {
   font-family: FreightSans, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.trojanzoo-article p.sphx-glr-script-out {
+.sphinx-template-article p.sphx-glr-script-out {
   margin-bottom: 1.125rem;
 }
 
-.trojanzoo-article div.sphx-glr-script-out {
+.sphinx-template-article div.sphx-glr-script-out {
   margin-bottom: 2.5rem;
 }
-.trojanzoo-article div.sphx-glr-script-out .highlight {
+.sphinx-template-article div.sphx-glr-script-out .highlight {
   margin-left: 0;
   margin-top: 0;
 }
-.trojanzoo-article div.sphx-glr-script-out .highlight pre {
+.sphinx-template-article div.sphx-glr-script-out .highlight pre {
   background-color: #fdede9;
   padding: 1.5625rem;
   color: #837b79;
 }
-.trojanzoo-article div.sphx-glr-script-out + p {
+.sphinx-template-article div.sphx-glr-script-out + p {
   margin-top: unset;
 }
 
-article.trojanzoo-article .wy-table-responsive table {
+article.sphinx-template-article .wy-table-responsive table {
   border: none;
   border-color: #ffffff !important;
   table-layout: fixed;
 }
-article.trojanzoo-article .wy-table-responsive table thead tr {
+article.sphinx-template-article .wy-table-responsive table thead tr {
   border-bottom: 2px solid #6c6c6d;
 }
-article.trojanzoo-article .wy-table-responsive table thead th {
+article.sphinx-template-article .wy-table-responsive table thead th {
   line-height: 1.75rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
 }
-article.trojanzoo-article .wy-table-responsive table tbody .row-odd {
+article.sphinx-template-article .wy-table-responsive table tbody .row-odd {
   background-color: #f3f4f7;
 }
-article.trojanzoo-article .wy-table-responsive table tbody td {
+article.sphinx-template-article .wy-table-responsive table tbody td {
   color: #6c6c6d;
   white-space: normal;
   padding: 0.9375rem;
   font-size: 1rem;
   line-height: 1.375rem;
 }
-article.trojanzoo-article .wy-table-responsive table tbody td .pre {
+article.sphinx-template-article .wy-table-responsive table tbody td .pre {
   background: #ffffff;
   color: #ee4c2c;
   font-size: 87.5%;
 }
-article.trojanzoo-article .wy-table-responsive table tbody td code {
+article.sphinx-template-article .wy-table-responsive table tbody td code {
   font-size: 87.5%;
 }
 
@@ -11075,51 +11075,51 @@ img.previous-page {
           box-shadow: none;
 }
 
-article.trojanzoo-article blockquote {
+article.sphinx-template-article blockquote {
   margin-left: 3.75rem;
   color: #6c6c6d;
 }
 
-article.trojanzoo-article .caption {
+article.sphinx-template-article .caption {
   color: #6c6c6d;
   letter-spacing: 0.25px;
   line-height: 2.125rem;
 }
 
-article.trojanzoo-article .math {
+article.sphinx-template-article .math {
   color: #262626;
   width: auto;
   text-align: center;
 }
-article.trojanzoo-article .math img {
+article.sphinx-template-article .math img {
   width: auto;
 }
 
-.trojanzoo-breadcrumbs-wrapper {
+.sphinx-template-breadcrumbs-wrapper {
   width: 100%;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-breadcrumbs-wrapper {
+  .sphinx-template-breadcrumbs-wrapper {
     float: left;
     margin-left: 3%;
     width: 75%;
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-breadcrumbs-wrapper {
+  .sphinx-template-breadcrumbs-wrapper {
     width: 850px;
     margin-left: 1.875rem;
   }
 }
-.trojanzoo-breadcrumbs-wrapper .trojanzoo-breadcrumbs-aside {
+.sphinx-template-breadcrumbs-wrapper .sphinx-template-breadcrumbs-aside {
   float: right;
 }
-.trojanzoo-breadcrumbs-wrapper .trojanzoo-breadcrumbs-aside .fa.fa-github {
+.sphinx-template-breadcrumbs-wrapper .sphinx-template-breadcrumbs-aside .fa.fa-github {
   margin-top: 5px;
   display: block;
 }
 
-.trojanzoo-article .container {
+.sphinx-template-article .container {
   padding-left: 0;
   padding-right: 0;
   max-width: none;
@@ -11182,64 +11182,64 @@ a:hover {
   padding-bottom: 1rem;
 }
 
-.trojanzoo-call-to-action-links {
+.sphinx-template-call-to-action-links {
   padding-top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 @media screen and (min-width: 768px) {
-  .trojanzoo-call-to-action-links {
+  .sphinx-template-call-to-action-links {
     padding-top: 2.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1239px) {
-  .trojanzoo-call-to-action-links {
+  .sphinx-template-call-to-action-links {
     padding-top: 0;
   }
 }
 @media (min-width: 1100px) and (max-width: 1239px) {
-  .trojanzoo-call-to-action-links {
+  .sphinx-template-call-to-action-links {
     padding-top: 2.5rem;
   }
 }
-.trojanzoo-call-to-action-links #tutorial-type {
+.sphinx-template-call-to-action-links #tutorial-type {
   display: none;
 }
-.trojanzoo-call-to-action-links .call-to-action-img, .trojanzoo-call-to-action-links .call-to-action-notebook-img {
+.sphinx-template-call-to-action-links .call-to-action-img, .sphinx-template-call-to-action-links .call-to-action-notebook-img {
   height: 1.375rem;
   width: 1.375rem;
   margin-right: 10px;
 }
-.trojanzoo-call-to-action-links .call-to-action-notebook-img {
+.sphinx-template-call-to-action-links .call-to-action-notebook-img {
   height: 1rem;
 }
-.trojanzoo-call-to-action-links a {
+.sphinx-template-call-to-action-links a {
   padding-right: 1.25rem;
   color: #000000;
   cursor: pointer;
 }
-.trojanzoo-call-to-action-links a:hover {
+.sphinx-template-call-to-action-links a:hover {
   color: #e44c2c;
 }
-.trojanzoo-call-to-action-links a .call-to-action-desktop-view {
+.sphinx-template-call-to-action-links a .call-to-action-desktop-view {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .trojanzoo-call-to-action-links a .call-to-action-desktop-view {
+  .sphinx-template-call-to-action-links a .call-to-action-desktop-view {
     display: block;
   }
 }
-.trojanzoo-call-to-action-links a .call-to-action-mobile-view {
+.sphinx-template-call-to-action-links a .call-to-action-mobile-view {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  .trojanzoo-call-to-action-links a .call-to-action-mobile-view {
+  .sphinx-template-call-to-action-links a .call-to-action-mobile-view {
     display: none;
   }
 }
-.trojanzoo-call-to-action-links a #google-colab-link, .trojanzoo-call-to-action-links a #download-notebook-link,
-.trojanzoo-call-to-action-links a #github-view-link {
+.sphinx-template-call-to-action-links a #google-colab-link, .sphinx-template-call-to-action-links a #download-notebook-link,
+.sphinx-template-call-to-action-links a #github-view-link {
   padding-bottom: 0.625rem;
   border-bottom: 1px solid #f3f4f7;
   padding-right: 2.5rem;
@@ -11250,8 +11250,8 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
 }
-.trojanzoo-call-to-action-links a #google-colab-link:hover, .trojanzoo-call-to-action-links a #download-notebook-link:hover,
-.trojanzoo-call-to-action-links a #github-view-link:hover {
+.sphinx-template-call-to-action-links a #google-colab-link:hover, .sphinx-template-call-to-action-links a #download-notebook-link:hover,
+.sphinx-template-call-to-action-links a #github-view-link:hover {
   border-bottom-color: #e44c2c;
   color: #e44c2c;
 }
@@ -11475,23 +11475,23 @@ a:hover {
   background-color: #dee2e6;
 }
 
-article.trojanzoo-article .tutorials-callout-container {
+article.sphinx-template-article .tutorials-callout-container {
   padding-bottom: 50px;
 }
-article.trojanzoo-article .tutorials-callout-container .col-md-6 {
+article.sphinx-template-article .tutorials-callout-container .col-md-6 {
   padding-bottom: 10px;
 }
-article.trojanzoo-article .tutorials-callout-container .text-container {
+article.sphinx-template-article .tutorials-callout-container .text-container {
   padding: 10px 0px 30px 0px;
   padding-bottom: 10px;
 }
-article.trojanzoo-article .tutorials-callout-container .text-container .body-paragraph {
+article.sphinx-template-article .tutorials-callout-container .text-container .body-paragraph {
   color: #666666;
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.875rem;
 }
-article.trojanzoo-article .tutorials-callout-container .btn.callout-button {
+article.sphinx-template-article .tutorials-callout-container .btn.callout-button {
   font-size: 1.125rem;
   border-radius: 0;
   border: none;
@@ -11502,7 +11502,7 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button {
   letter-spacing: 0.25px;
 }
 @media screen and (min-width: 768px) {
-  article.trojanzoo-article .tutorials-callout-container .btn.callout-button:after {
+  article.sphinx-template-article .tutorials-callout-container .btn.callout-button:after {
     content: "";
     display: block;
     width: 0;
@@ -11514,47 +11514,47 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button {
     -webkit-transition: width .250s ease-in-out;
     transition: width .250s ease-in-out;
   }
-  article.trojanzoo-article .tutorials-callout-container .btn.callout-button:hover:after {
+  article.sphinx-template-article .tutorials-callout-container .btn.callout-button:hover:after {
     width: 100%;
   }
 }
-article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
+article.sphinx-template-article .tutorials-callout-container .btn.callout-button a {
   color: inherit;
 }
 
-.trojanzoo-container {
+.sphinx-template-container {
   margin: 0 auto;
   padding: 0 1.875rem;
   width: auto;
   position: relative;
 }
 @media screen and (min-width: 1100px) {
-  .trojanzoo-container {
+  .sphinx-template-container {
     padding: 0;
   }
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-container {
+  .sphinx-template-container {
     margin-left: 25%;
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-container {
+  .sphinx-template-container {
     margin-left: 350px;
   }
 }
-.trojanzoo-container:before, .trojanzoo-container:after {
+.sphinx-template-container:before, .sphinx-template-container:after {
   content: "";
   display: table;
 }
-.trojanzoo-container:after {
+.sphinx-template-container:after {
   clear: both;
 }
-.trojanzoo-container {
+.sphinx-template-container {
   *zoom: 1;
 }
 
-.trojanzoo-content-wrap {
+.sphinx-template-content-wrap {
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11562,18 +11562,18 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   position: relative;
   padding-top: 0;
 }
-.trojanzoo-content-wrap:before, .trojanzoo-content-wrap:after {
+.sphinx-template-content-wrap:before, .sphinx-template-content-wrap:after {
   content: "";
   display: table;
 }
-.trojanzoo-content-wrap:after {
+.sphinx-template-content-wrap:after {
   clear: both;
 }
-.trojanzoo-content-wrap {
+.sphinx-template-content-wrap {
   *zoom: 1;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-content-wrap {
+  .sphinx-template-content-wrap {
     padding-top: 45px;
     float: left;
     width: 100%;
@@ -11581,25 +11581,25 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-content-wrap {
+  .sphinx-template-content-wrap {
     width: 100%;
   }
 }
 
-.trojanzoo-content {
+.sphinx-template-content {
   background: #ffffff;
   width: 100%;
   max-width: 700px;
   position: relative;
 }
 
-.trojanzoo-content-left {
+.sphinx-template-content-left {
   min-height: 100vh;
   margin-top: 2.5rem;
   width: 100%;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-content-left {
+  .sphinx-template-content-left {
     margin-top: 0;
     margin-left: 3%;
     width: 75%;
@@ -11607,29 +11607,29 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-content-left {
+  .sphinx-template-content-left {
     width: 850px;
     margin-left: 30px;
   }
 }
-.trojanzoo-content-left .main-content {
+.sphinx-template-content-left .main-content {
   padding-top: 0.9375rem;
 }
-.trojanzoo-content-left .main-content ul.simple {
+.sphinx-template-content-left .main-content ul.simple {
   padding-bottom: 1.25rem;
 }
-.trojanzoo-content-left .main-content .note:nth-child(1), .trojanzoo-content-left .main-content .warning:nth-child(1) {
+.sphinx-template-content-left .main-content .note:nth-child(1), .sphinx-template-content-left .main-content .warning:nth-child(1) {
   margin-top: 0;
 }
 
-.trojanzoo-content-right {
+.sphinx-template-content-right {
   display: none;
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-content-right {
+  .sphinx-template-content-right {
     display: block;
     margin-left: 0;
     width: 19%;
@@ -11638,13 +11638,13 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-content-right {
+  .sphinx-template-content-right {
     width: 280px;
   }
 }
 
 @media screen and (min-width: 1101px) {
-  .trojanzoo-side-scroll {
+  .sphinx-template-side-scroll {
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -11652,11 +11652,11 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 
-.trojanzoo-menu-vertical {
+.sphinx-template-menu-vertical {
   padding: 1.25rem 1.875rem 2.5rem 1.875rem;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-menu-vertical {
+  .sphinx-template-menu-vertical {
     display: block;
     padding-top: 0;
     padding-right: 13.5%;
@@ -11664,20 +11664,20 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-menu-vertical {
+  .sphinx-template-menu-vertical {
     padding-left: 0;
     padding-right: 1.5625rem;
   }
 }
 
-.trojanzoo-left-menu {
+.sphinx-template-left-menu {
   display: none;
   background-color: #f3f4f7;
   color: #262626;
   overflow: scroll;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-left-menu {
+  .sphinx-template-left-menu {
     display: block;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -11687,7 +11687,7 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
     z-index: 200;
     float: left;
   }
-  .trojanzoo-left-menu.make-fixed {
+  .sphinx-template-left-menu.make-fixed {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -11696,7 +11696,7 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-left-menu {
+  .sphinx-template-left-menu {
     padding: 0 0 0 1.875rem;
     width: 350px;
   }
@@ -11716,7 +11716,7 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   padding-top: 1rem;
 }
 
-.trojanzoo-left-menu p.caption {
+.sphinx-template-left-menu p.caption {
   color: #262626;
   display: block;
   font-size: 1rem;
@@ -11726,32 +11726,32 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   white-space: normal;
 }
 
-.trojanzoo-left-menu-search {
+.sphinx-template-left-menu-search {
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-left-menu-search {
+  .sphinx-template-left-menu-search {
     margin: 1.25rem 0.625rem 1.875rem 0;
   }
 }
 
-.trojanzoo-left-menu-search ::-webkit-input-placeholder {
+.sphinx-template-left-menu-search ::-webkit-input-placeholder {
   color: #262626;
 }
-.trojanzoo-left-menu-search ::-moz-placeholder {
+.sphinx-template-left-menu-search ::-moz-placeholder {
   color: #262626;
 }
-.trojanzoo-left-menu-search :-ms-input-placeholder {
+.sphinx-template-left-menu-search :-ms-input-placeholder {
   color: #262626;
 }
-.trojanzoo-left-menu-search ::-ms-input-placeholder {
+.sphinx-template-left-menu-search ::-ms-input-placeholder {
   color: #262626;
 }
-.trojanzoo-left-menu-search ::placeholder {
+.sphinx-template-left-menu-search ::placeholder {
   color: #262626;
 }
 
-.trojanzoo-left-menu-search input[type=text] {
+.sphinx-template-left-menu-search input[type=text] {
   border-radius: 0;
   padding: 0.5rem 0.75rem;
   border-color: #ffffff;
@@ -11767,22 +11767,22 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   padding-left: 40px;
   background-color: #ffffff;
 }
-.trojanzoo-left-menu-search input[type=text]:focus {
+.sphinx-template-left-menu-search input[type=text]:focus {
   outline: 0;
 }
 
 @media screen and (min-width: 1101px) {
-  .trojanzoo-left-menu .trojanzoo-side-scroll {
+  .sphinx-template-left-menu .sphinx-template-side-scroll {
     width: 120%;
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-left-menu .trojanzoo-side-scroll {
+  .sphinx-template-left-menu .sphinx-template-side-scroll {
     width: 340px;
   }
 }
 
-.trojanzoo-right-menu {
+.sphinx-template-right-menu {
   min-height: 100px;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -11792,102 +11792,102 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   position: relative;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-right-menu {
+  .sphinx-template-right-menu {
     width: 100%;
   }
-  .trojanzoo-right-menu.scrolling-fixed {
+  .sphinx-template-right-menu.scrolling-fixed {
     position: fixed;
     top: 45px;
     left: 83.5%;
     width: 14%;
   }
-  .trojanzoo-right-menu.scrolling-absolute {
+  .sphinx-template-right-menu.scrolling-absolute {
     position: absolute;
     left: 0;
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-right-menu {
+  .sphinx-template-right-menu {
     left: 0;
     width: 380px;
   }
-  .trojanzoo-right-menu.scrolling-fixed {
+  .sphinx-template-right-menu.scrolling-fixed {
     position: fixed;
     top: 45px;
     left: 1230px;
   }
-  .trojanzoo-right-menu.scrolling-absolute {
+  .sphinx-template-right-menu.scrolling-absolute {
     position: absolute;
     left: 0;
   }
 }
 
-.trojanzoo-left-menu ul,
-.trojanzoo-right-menu ul {
+.sphinx-template-left-menu ul,
+.sphinx-template-right-menu ul {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 2.5rem;
 }
-.trojanzoo-left-menu > ul,
-.trojanzoo-right-menu > ul {
+.sphinx-template-left-menu > ul,
+.sphinx-template-right-menu > ul {
   margin-bottom: 2.5rem;
 }
-.trojanzoo-left-menu a:link,
-.trojanzoo-left-menu a:visited,
-.trojanzoo-left-menu a:hover,
-.trojanzoo-right-menu a:link,
-.trojanzoo-right-menu a:visited,
-.trojanzoo-right-menu a:hover {
+.sphinx-template-left-menu a:link,
+.sphinx-template-left-menu a:visited,
+.sphinx-template-left-menu a:hover,
+.sphinx-template-right-menu a:link,
+.sphinx-template-right-menu a:visited,
+.sphinx-template-right-menu a:hover {
   color: #6c6c6d;
   font-size: 0.875rem;
   line-height: 1rem;
   padding: 0;
   text-decoration: none;
 }
-.trojanzoo-left-menu a:link.reference.internal,
-.trojanzoo-left-menu a:visited.reference.internal,
-.trojanzoo-left-menu a:hover.reference.internal,
-.trojanzoo-right-menu a:link.reference.internal,
-.trojanzoo-right-menu a:visited.reference.internal,
-.trojanzoo-right-menu a:hover.reference.internal {
+.sphinx-template-left-menu a:link.reference.internal,
+.sphinx-template-left-menu a:visited.reference.internal,
+.sphinx-template-left-menu a:hover.reference.internal,
+.sphinx-template-right-menu a:link.reference.internal,
+.sphinx-template-right-menu a:visited.reference.internal,
+.sphinx-template-right-menu a:hover.reference.internal {
   margin-bottom: 0.3125rem;
   position: relative;
 }
-.trojanzoo-left-menu li code,
-.trojanzoo-right-menu li code {
+.sphinx-template-left-menu li code,
+.sphinx-template-right-menu li code {
   border: none;
   background: inherit;
   color: inherit;
   padding-left: 0;
   padding-right: 0;
 }
-.trojanzoo-left-menu li span.toctree-expand,
-.trojanzoo-right-menu li span.toctree-expand {
+.sphinx-template-left-menu li span.toctree-expand,
+.sphinx-template-right-menu li span.toctree-expand {
   display: block;
   float: left;
   margin-left: -1.2em;
   font-size: 0.8em;
   line-height: 1.6em;
 }
-.trojanzoo-left-menu li.on a, .trojanzoo-left-menu li.current > a,
-.trojanzoo-right-menu li.on a,
-.trojanzoo-right-menu li.current > a {
+.sphinx-template-left-menu li.on a, .sphinx-template-left-menu li.current > a,
+.sphinx-template-right-menu li.on a,
+.sphinx-template-right-menu li.current > a {
   position: relative;
   border: none;
 }
-.trojanzoo-left-menu li.on a span.toctree-expand, .trojanzoo-left-menu li.current > a span.toctree-expand,
-.trojanzoo-right-menu li.on a span.toctree-expand,
-.trojanzoo-right-menu li.current > a span.toctree-expand {
+.sphinx-template-left-menu li.on a span.toctree-expand, .sphinx-template-left-menu li.current > a span.toctree-expand,
+.sphinx-template-right-menu li.on a span.toctree-expand,
+.sphinx-template-right-menu li.current > a span.toctree-expand {
   display: block;
   font-size: 0.8em;
   line-height: 1.6em;
 }
-.trojanzoo-left-menu li.toctree-l1.current > a,
-.trojanzoo-right-menu li.toctree-l1.current > a {
+.sphinx-template-left-menu li.toctree-l1.current > a,
+.sphinx-template-right-menu li.toctree-l1.current > a {
   color: #ee4c2c;
 }
-.trojanzoo-left-menu li.toctree-l1.current > a:before,
-.trojanzoo-right-menu li.toctree-l1.current > a:before {
+.sphinx-template-left-menu li.toctree-l1.current > a:before,
+.sphinx-template-right-menu li.toctree-l1.current > a:before {
   content: "\2022";
   display: inline-block;
   position: absolute;
@@ -11897,97 +11897,97 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   color: #ee4c2c;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-left-menu li.toctree-l1.current > a:before,
-  .trojanzoo-right-menu li.toctree-l1.current > a:before {
+  .sphinx-template-left-menu li.toctree-l1.current > a:before,
+  .sphinx-template-right-menu li.toctree-l1.current > a:before {
     left: -20px;
   }
 }
-.trojanzoo-left-menu li.toctree-l1.current li.toctree-l2 > ul, .trojanzoo-left-menu li.toctree-l2.current li.toctree-l3 > ul,
-.trojanzoo-right-menu li.toctree-l1.current li.toctree-l2 > ul,
-.trojanzoo-right-menu li.toctree-l2.current li.toctree-l3 > ul {
+.sphinx-template-left-menu li.toctree-l1.current li.toctree-l2 > ul, .sphinx-template-left-menu li.toctree-l2.current li.toctree-l3 > ul,
+.sphinx-template-right-menu li.toctree-l1.current li.toctree-l2 > ul,
+.sphinx-template-right-menu li.toctree-l2.current li.toctree-l3 > ul {
   display: none;
 }
-.trojanzoo-left-menu li.toctree-l1.current li.toctree-l2.current > ul, .trojanzoo-left-menu li.toctree-l2.current li.toctree-l3.current > ul,
-.trojanzoo-right-menu li.toctree-l1.current li.toctree-l2.current > ul,
-.trojanzoo-right-menu li.toctree-l2.current li.toctree-l3.current > ul {
+.sphinx-template-left-menu li.toctree-l1.current li.toctree-l2.current > ul, .sphinx-template-left-menu li.toctree-l2.current li.toctree-l3.current > ul,
+.sphinx-template-right-menu li.toctree-l1.current li.toctree-l2.current > ul,
+.sphinx-template-right-menu li.toctree-l2.current li.toctree-l3.current > ul {
   display: block;
 }
-.trojanzoo-left-menu li.toctree-l2.current li.toctree-l3 > a,
-.trojanzoo-right-menu li.toctree-l2.current li.toctree-l3 > a {
+.sphinx-template-left-menu li.toctree-l2.current li.toctree-l3 > a,
+.sphinx-template-right-menu li.toctree-l2.current li.toctree-l3 > a {
   display: block;
 }
-.trojanzoo-left-menu li.toctree-l3,
-.trojanzoo-right-menu li.toctree-l3 {
+.sphinx-template-left-menu li.toctree-l3,
+.sphinx-template-right-menu li.toctree-l3 {
   font-size: 0.9em;
 }
-.trojanzoo-left-menu li.toctree-l3.current li.toctree-l4 > a,
-.trojanzoo-right-menu li.toctree-l3.current li.toctree-l4 > a {
+.sphinx-template-left-menu li.toctree-l3.current li.toctree-l4 > a,
+.sphinx-template-right-menu li.toctree-l3.current li.toctree-l4 > a {
   display: block;
 }
-.trojanzoo-left-menu li.toctree-l4,
-.trojanzoo-right-menu li.toctree-l4 {
+.sphinx-template-left-menu li.toctree-l4,
+.sphinx-template-right-menu li.toctree-l4 {
   font-size: 0.9em;
 }
-.trojanzoo-left-menu li.current ul,
-.trojanzoo-right-menu li.current ul {
+.sphinx-template-left-menu li.current ul,
+.sphinx-template-right-menu li.current ul {
   display: block;
 }
-.trojanzoo-left-menu li ul,
-.trojanzoo-right-menu li ul {
+.sphinx-template-left-menu li ul,
+.sphinx-template-right-menu li ul {
   margin-bottom: 0;
   display: none;
 }
-.trojanzoo-left-menu li ul li a,
-.trojanzoo-right-menu li ul li a {
+.sphinx-template-left-menu li ul li a,
+.sphinx-template-right-menu li ul li a {
   margin-bottom: 0;
 }
-.trojanzoo-left-menu a,
-.trojanzoo-right-menu a {
+.sphinx-template-left-menu a,
+.sphinx-template-right-menu a {
   display: inline-block;
   position: relative;
 }
-.trojanzoo-left-menu a:hover,
-.trojanzoo-right-menu a:hover {
+.sphinx-template-left-menu a:hover,
+.sphinx-template-right-menu a:hover {
   cursor: pointer;
 }
-.trojanzoo-left-menu a:active,
-.trojanzoo-right-menu a:active {
+.sphinx-template-left-menu a:active,
+.sphinx-template-right-menu a:active {
   cursor: pointer;
 }
 
-.trojanzoo-left-menu ul {
+.sphinx-template-left-menu ul {
   padding-left: 0;
 }
 
-.trojanzoo-right-menu a:link,
-.trojanzoo-right-menu a:visited,
-.trojanzoo-right-menu a:hover {
+.sphinx-template-right-menu a:link,
+.sphinx-template-right-menu a:visited,
+.sphinx-template-right-menu a:hover {
   color: #6c6c6d;
 }
-.trojanzoo-right-menu a:link span.pre,
-.trojanzoo-right-menu a:visited span.pre,
-.trojanzoo-right-menu a:hover span.pre {
+.sphinx-template-right-menu a:link span.pre,
+.sphinx-template-right-menu a:visited span.pre,
+.sphinx-template-right-menu a:hover span.pre {
   color: #6c6c6d;
 }
-.trojanzoo-right-menu a.reference.internal.expanded:before {
+.sphinx-template-right-menu a.reference.internal.expanded:before {
   content: "-";
   font-family: monospace;
   position: absolute;
   left: -12px;
 }
-.trojanzoo-right-menu a.reference.internal.not-expanded:before {
+.sphinx-template-right-menu a.reference.internal.not-expanded:before {
   content: "+";
   font-family: monospace;
   position: absolute;
   left: -12px;
 }
-.trojanzoo-right-menu li.active > a {
+.sphinx-template-right-menu li.active > a {
   color: #ee4c2c;
 }
-.trojanzoo-right-menu li.active > a span.pre, .trojanzoo-right-menu li.active > a:before {
+.sphinx-template-right-menu li.active > a span.pre, .sphinx-template-right-menu li.active > a:before {
   color: #ee4c2c;
 }
-.trojanzoo-right-menu li.active > a:after {
+.sphinx-template-right-menu li.active > a:after {
   content: "\2022";
   color: #e44c2c;
   display: inline-block;
@@ -11996,61 +11996,61 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   position: absolute;
   top: 1px;
 }
-.trojanzoo-right-menu .trojanzoo-side-scroll > ul > li > ul > li {
+.sphinx-template-right-menu .sphinx-template-side-scroll > ul > li > ul > li {
   margin-bottom: 0;
 }
-.trojanzoo-right-menu ul ul {
+.sphinx-template-right-menu ul ul {
   padding-left: 0;
 }
-.trojanzoo-right-menu ul ul li {
+.sphinx-template-right-menu ul ul li {
   padding-left: 0px;
 }
-.trojanzoo-right-menu ul ul li a.reference.internal {
+.sphinx-template-right-menu ul ul li a.reference.internal {
   padding-left: 0;
 }
-.trojanzoo-right-menu ul ul li ul {
+.sphinx-template-right-menu ul ul li ul {
   display: none;
   padding-left: 10px;
 }
-.trojanzoo-right-menu ul ul li li a.reference.internal {
+.sphinx-template-right-menu ul ul li li a.reference.internal {
   padding-left: 0;
 }
-.trojanzoo-right-menu li ul {
+.sphinx-template-right-menu li ul {
   display: block;
 }
 
-.trojanzoo-right-menu .trojanzoo-side-scroll {
+.sphinx-template-right-menu .sphinx-template-side-scroll {
   padding-top: 20px;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-right-menu .trojanzoo-side-scroll {
+  .sphinx-template-right-menu .sphinx-template-side-scroll {
     width: 120%;
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-right-menu .trojanzoo-side-scroll {
+  .sphinx-template-right-menu .sphinx-template-side-scroll {
     width: 400px;
   }
 }
-.trojanzoo-right-menu .trojanzoo-side-scroll > ul {
+.sphinx-template-right-menu .sphinx-template-side-scroll > ul {
   padding-left: 10%;
   padding-right: 10%;
   margin-bottom: 0;
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-right-menu .trojanzoo-side-scroll > ul {
+  .sphinx-template-right-menu .sphinx-template-side-scroll > ul {
     padding-left: 25px;
   }
 }
-.trojanzoo-right-menu .trojanzoo-side-scroll > ul > li > a.reference.internal {
+.sphinx-template-right-menu .sphinx-template-side-scroll > ul > li > a.reference.internal {
   color: #262626;
   font-weight: 500;
 }
-.trojanzoo-right-menu .trojanzoo-side-scroll ul li {
+.sphinx-template-right-menu .sphinx-template-side-scroll ul li {
   position: relative;
 }
 
-#trojanzoo-right-menu .side-scroll-highlight {
+#sphinx-template-right-menu .side-scroll-highlight {
   color: #ee4c2c;
 }
 
@@ -12105,7 +12105,7 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 
-.trojanzoo-page-level-bar {
+.sphinx-template-page-level-bar {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -12116,7 +12116,7 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   z-index: 201;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-page-level-bar {
+  .sphinx-template-page-level-bar {
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12127,7 +12127,7 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
     position: absolute;
     z-index: 1;
   }
-  .trojanzoo-page-level-bar.left-menu-is-fixed {
+  .sphinx-template-page-level-bar.left-menu-is-fixed {
     position: fixed;
     top: 0;
     left: 25%;
@@ -12137,34 +12137,34 @@ article.trojanzoo-article .tutorials-callout-container .btn.callout-button a {
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-page-level-bar {
+  .sphinx-template-page-level-bar {
     left: 0;
     right: 0;
     width: auto;
     z-index: 1;
   }
-  .trojanzoo-page-level-bar.left-menu-is-fixed {
+  .sphinx-template-page-level-bar.left-menu-is-fixed {
     left: 350px;
     right: 0;
     width: auto;
   }
 }
-.trojanzoo-page-level-bar ul, .trojanzoo-page-level-bar li {
+.sphinx-template-page-level-bar ul, .sphinx-template-page-level-bar li {
   margin: 0;
 }
 
-.trojanzoo-shortcuts-wrapper {
+.sphinx-template-shortcuts-wrapper {
   display: none;
 }
 @media screen and (min-width: 1101px) {
-  .trojanzoo-shortcuts-wrapper {
+  .sphinx-template-shortcuts-wrapper {
     font-size: 0.875rem;
     float: left;
     margin-left: 2%;
   }
 }
 @media screen and (min-width: 1600px) {
-  .trojanzoo-shortcuts-wrapper {
+  .sphinx-template-shortcuts-wrapper {
     margin-left: 1.875rem;
   }
 }

@@ -8,6 +8,7 @@
 {%- endif %}
 {%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
 {% import 'theme_variables.jinja' as theme_variables %}
+{% import 'image_variables.jinja' as image_variables %}
 
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="{{ lang_attr }}" > <![endif]-->
@@ -86,96 +87,30 @@
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
-      <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="TrojanZoo"></a>
+      <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="{{ project }}" {%- if image_variables.external_urls['logo-dark'] %} style="background-image: url(_static/{{ image_variables.external_urls['logo-dark'] }})" {% endif %}></a>
 
       <div class="main-menu">
         <ul>
-          <!-- <li>
-            <a href="{{ theme_variables.external_urls['get_started'] }}">Get Started</a>
-          </li>
-
-          <li>
-            <a href="{{ theme_variables.external_urls['ecosystem'] }}">Ecosystem</a>
-          </li>
-
-          <li>
-            <a href="{{ theme_variables.external_urls['mobile'] }}">Mobile</a>
-          </li>
-
-          <li>
-            <a href="{{ theme_variables.external_urls['blog'] }}">Blog</a>
-          </li>
-
-          <li {%- if theme_trojanzoo_project == 'tutorials' %} class="active"{% endif %}>
-            <a href="{{ theme_variables.external_urls['tutorials'] }}">Tutorials</a>
-          </li> -->
-
-          <li {%- if theme_trojanzoo_project == 'docs' %} class="active docs-active"{% endif %}>
+          {%- if theme_variables.external_urls['items']|length > 0 %}
+          <li class="active docs-active">
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="resource-option with-down-orange-arrow">
                 Docs
               </a>
               <div class="resources-dropdown-menu">
-                <a class="doc-dropdown-option nav-dropdown-item" href="{{ theme_variables.external_urls['docs'] }}">
-                  <span class="dropdown-title">TrojanZoo</span>
+                {%- for k,v in theme_variables.external_urls['items'] %}
+                <a class="doc-dropdown-option nav-dropdown-item" href="{{ v }}">
+                  <span class="dropdown-title">{{ k }}</span>
                   <p></p>
                 </a>
-                <a class="doc-dropdown-option nav-dropdown-item" href="{{ theme_variables.external_urls['audio'] }}">
-                  <span class="dropdown-title">TrojanVision</span>
-                  <p></p>
-                </a>
-                <!-- <a class="doc-dropdown-option nav-dropdown-item" href="{{ theme_variables.external_urls['text'] }}">
-                  <span class="dropdown-title">torchtext</span>
-                  <p></p>
-                </a>
-                <a class="doc-dropdown-option nav-dropdown-item" href="{{ theme_variables.external_urls['vision'] }}">
-                  <span class="dropdown-title">torchvision</span>
-                  <p></p>
-                </a>
-                <a class="doc-dropdown-option nav-dropdown-item" href="{{ theme_variables.external_urls['elastic'] }}">
-                  <span class="dropdown-title">TorchElastic</span>
-                  <p></p>
-                </a>
-                <a class="doc-dropdown-option nav-dropdown-item" href="{{ theme_variables.external_urls['serve'] }}">
-                  <span class="dropdown-title">TorchServe</span>
-                  <p></p>
-                </a>
-                <a class="doc-dropdown-option nav-dropdown-item" href="{{ theme_variables.external_urls['xla'] }}">
-                  <span class="dropdown-title">TrojanZoo on XLA Devices</span>
-                  <p></p>
-                </a> -->
+                {%- endfor %}
             </div>
           </li>
-<!-- 
+          {% else %}
           <li>
-            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
-              <a class="resource-option with-down-arrow">
-                Resources
-              </a>
-              <div class="resources-dropdown-menu">
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['features'] }}">
-                  <span class="dropdown-title">About</span>
-                  <p>Learn about TrojanZoo’s features and capabilities</p>
-                </a>
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['community'] }}">
-                  <span class="dropdown-title">Community</span>
-                  <p>Join the TrojanZoo developer community to contribute, learn, and get your questions answered.</p>
-                </a>
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['resources'] }}">
-                  <span class="dropdown-title">Developer Resources</span>
-                  <p>Find resources and get questions answered</p>
-                </a>
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['forums'] }}" target="_blank">
-                  <span class="dropdown-title">Forums</span>
-                  <p>A place to discuss TrojanZoo code, issues, install, research</p>
-                </a>
-                <a class="nav-dropdown-item" href="{{ theme_variables.external_urls['hub'] }}">
-                  <span class="dropdown-title">Models (Beta)</span>
-                  <p>Discover, publish, and reuse pre-trained models</p>
-                </a>
-              </div>
-            </div>
-          </li> -->
+            <a href="{{ theme_variables.external_urls['docs'] }}">Docs</a>
+          </li>
+          {% endif %}
 
           <li>
             <a href="{{ theme_variables.external_urls['github'] }}">GitHub</a>
@@ -188,7 +123,7 @@
   </div>
 </div>
 
-<body class="trojanzoo-body">
+<body class="sphinx-template-body">
 
   {% block extrabody %} {% endblock %}
 
@@ -199,10 +134,10 @@
       <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
     </div>
 
-    <nav data-toggle="wy-nav-shift" class="trojanzoo-left-menu" id="trojanzoo-left-menu">
-      <div class="trojanzoo-side-scroll">
-        <div class="trojanzoo-menu trojanzoo-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          <div class="trojanzoo-left-menu-search">
+    <nav data-toggle="wy-nav-shift" class="sphinx-template-left-menu" id="sphinx-template-left-menu">
+      <div class="sphinx-template-side-scroll">
+        <div class="sphinx-template-menu sphinx-template-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          <div class="sphinx-template-left-menu-search">
             {% block sidebartitle %}
 
             {% if theme_display_version %}
@@ -244,43 +179,19 @@
       </div>
     </nav>
 
-    <div class="trojanzoo-container">
-      <div class="trojanzoo-page-level-bar" id="trojanzoo-page-level-bar">
-        <div class="trojanzoo-breadcrumbs-wrapper">
+    <div class="sphinx-template-container">
+      <div class="sphinx-template-page-level-bar" id="sphinx-template-page-level-bar">
+        <div class="sphinx-template-breadcrumbs-wrapper">
           {% include "breadcrumbs.html" %}
         </div>
 
-        <div class="trojanzoo-shortcuts-wrapper" id="trojanzoo-shortcuts-wrapper">
+        <div class="sphinx-template-shortcuts-wrapper" id="sphinx-template-shortcuts-wrapper">
           Shortcuts
         </div>
       </div>
 
-      <section data-toggle="wy-nav-shift" id="trojanzoo-content-wrap" class="trojanzoo-content-wrap">
-        <div class="trojanzoo-content-left">
-<!-- 
-        {% if theme_trojanzoo_project == 'tutorials' %}
-
-          <div class="trojanzoo-call-to-action-links">
-            <div id="tutorial-type">{{ pagename }}</div>
-
-            <div id="google-colab-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/trojanzoo-colab.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">Run in Google Colab</div>
-              <div class="call-to-action-mobile-view">Colab</div>
-            </div>
-            <div id="download-notebook-link">
-              <img class="call-to-action-notebook-img" src="{{ pathto('_static/images/trojanzoo-download.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">Download Notebook</div>
-              <div class="call-to-action-mobile-view">Notebook</div>
-            </div>
-            <div id="github-view-link">
-              <img class="call-to-action-img" src="{{ pathto('_static/images/trojanzoo-github.svg', 1) }}"/>
-              <div class="call-to-action-desktop-view">View on GitHub</div>
-              <div class="call-to-action-mobile-view">GitHub</div>
-            </div>
-          </div>
-
-        {% endif %} -->
+      <section data-toggle="wy-nav-shift" id="sphinx-template-content-wrap" class="sphinx-template-content-wrap">
+        <div class="sphinx-template-content-left">
 
         {%- block content %}
           {% if theme_style_external_links|tobool %}
@@ -290,7 +201,7 @@
           {% endif %}
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
             {%- block document %}
-             <article itemprop="articleBody" id="trojanzoo-article" class="trojanzoo-article">
+             <article itemprop="articleBody" id="sphinx-template-article" class="sphinx-template-article">
               {% block body %}{% endblock %}
              </article>
              {% if self.comments()|trim %}
@@ -305,9 +216,9 @@
         {%- endblock %}
         </div>
 
-        <div class="trojanzoo-content-right" id="trojanzoo-content-right">
-          <div class="trojanzoo-right-menu" id="trojanzoo-right-menu">
-            <div class="trojanzoo-side-scroll" id="trojanzoo-side-scroll-right">
+        <div class="sphinx-template-content-right" id="sphinx-template-content-right">
+          <div class="sphinx-template-right-menu" id="sphinx-template-right-menu">
+            <div class="sphinx-template-side-scroll" id="sphinx-template-side-scroll-right">
               {{ toc }}
             </div>
           </div>
@@ -363,101 +274,21 @@
       <div class="row">
         <div class="col-md-4 text-center">
           <h2>Docs</h2>
-          <p>Access comprehensive developer documentation for TrojanZoo</p>
+          <p>Access comprehensive developer documentation for {{ project }}</p>
           <a class="with-right-arrow" href="{{ theme_variables.external_urls['docs'] }}">View Docs</a>
         </div>
-
-        <!-- <div class="col-md-4 text-center">
-          <h2>Tutorials</h2>
-          <p>Get in-depth tutorials for beginners and advanced developers</p>
-          <a class="with-right-arrow" href="{{ theme_variables.external_urls['tutorials'] }}">View Tutorials</a>
-        </div>
-
-        <div class="col-md-4 text-center">
-          <h2>Resources</h2>
-          <p>Find development resources and get your questions answered</p>
-          <a class="with-right-arrow" href="{{ theme_variables.external_urls['resources'] }}">View Resources</a>
-        </div> -->
       </div>
     </div>
   </div>
 
-  <!-- <footer class="site-footer">
+  
+  <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-logo-wrapper">
-        <a href="{{ theme_variables.external_urls['home'] }}" class="footer-logo"></a>
-      </div>
-
-      <div class="footer-links-wrapper">
-        <div class="footer-links-col">
-          <ul>
-            <li class="list-title"><a href="{{ theme_variables.external_urls['home'] }}">TrojanZoo</a></li>
-            <li><a href="{{ theme_variables.external_urls['get_started'] }}">Get Started</a></li>
-            <li><a href="{{ theme_variables.external_urls['features'] }}">Features</a></li>
-            <li><a href="{{ theme_variables.external_urls['ecosystem'] }}">Ecosystem</a></li>
-            <li><a href="{{ theme_variables.external_urls['blog'] }}">Blog</a></li>
-            <li><a href="{{ theme_variables.external_urls['contributing'] }}">Contributing</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-col">
-          <ul>
-            <li class="list-title"><a href="{{ theme_variables.external_urls['resources'] }}">Resources</a></li>
-            <li><a href="{{ theme_variables.external_urls['tutorials'] }}">Tutorials</a></li>
-            <li><a href="{{ theme_variables.external_urls['docs'] }}">Docs</a></li>
-            <li><a href="{{ theme_variables.external_urls['discuss'] }}" target="_blank">Discuss</a></li>
-            <li><a href="{{ theme_variables.external_urls['github_issues'] }}" target="_blank">Github Issues</a></li>
-            <li><a href="{{ theme_variables.external_urls['brand_guidelines'] }}" target="_blank">Brand Guidelines</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-links-col follow-us-col">
-          <ul>
-            <li class="list-title">Stay Connected</li>
-            <li>
-              <div id="mc_embed_signup">
-                <form
-                  action="https://twitter.us14.list-manage.com/subscribe/post?u=75419c71fe0a935e53dfa4a3f&id=91d0dccd39"
-                  method="post"
-                  id="mc-embedded-subscribe-form"
-                  name="mc-embedded-subscribe-form"
-                  class="email-subscribe-form validate"
-                  target="_blank"
-                  novalidate>
-                  <div id="mc_embed_signup_scroll" class="email-subscribe-form-fields-wrapper">
-                    <div class="mc-field-group">
-                      <label for="mce-EMAIL" style="display:none;">Email Address</label>
-                      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
-                    </div>
-
-                    <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>
-
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_75419c71fe0a935e53dfa4a3f_91d0dccd39" tabindex="-1" value=""></div>
-
-                    <div class="clear">
-                      <input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button email-subscribe-button">
-                    </div>
-                  </div>
-                </form>
-              </div>
-
-            </li>
-          </ul>
-
-          <div class="footer-social-icons">
-            <a href="{{ theme_variables.external_urls['facebook'] }}" target="_blank" class="facebook"></a>
-            <a href="{{ theme_variables.external_urls['twitter'] }}" target="_blank" class="twitter"></a>
-            <a href="{{ theme_variables.external_urls['youtube'] }}" target="_blank" class="youtube"></a>
-          </div>
-        </div>
+        <a href="{{ theme_variables.external_urls['home'] }}" class="footer-logo" {%- if image_variables.external_urls['logo-icon'] %} style="background-image: url(_static/{{ image_variables.external_urls['logo-icon'] }})" {% endif %}></a>
       </div>
     </div>
-  </footer> -->
-
-  <!-- {% include "cookie_banner.html" %} -->
+  </footer>
 
   <!-- End Footer -->
 
@@ -467,7 +298,7 @@
     <div class="container-fluid">
       <div class="container">
         <div class="mobile-main-menu-header-container">
-          <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="TrojanZoo"></a>
+          <a class="header-logo" href="{{ theme_variables.external_urls['home'] }}" aria-label="{{ project }}" {%- if image_variables.external_urls['logo'] %} style="background-image: url(_static/{{ image_variables.external_urls['logo'] }})" {% endif %}></a>
           <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
         </div>
       </div>
@@ -476,92 +307,22 @@
     <div class="mobile-main-menu-links-container">
       <div class="main-menu">
         <ul>
-          <!-- <li>
-            <a href="{{ theme_variables.external_urls['get_started'] }}">Get Started</a>
-          </li>
 
-          <li>
-            <a href="{{ theme_variables.external_urls['ecosystem'] }}">Ecosystem</a>
-          </li>
-
-          <li>
-            <a href="{{ theme_variables.external_urls['mobile'] }}">Mobile</a>
-          </li>
-
-          <li>
-            <a href="{{ theme_variables.external_urls['hub'] }}">TrojanZoo Hub</a>
-          </li>
-
-          <li>
-            <a href="{{ theme_variables.external_urls['blog'] }}">Blog</a>
-          </li>
-
-          <li {%- if theme_trojanzoo_project == 'tutorials' %} class="active"{%- endif %}>
-            <a href="{{ theme_variables.external_urls['tutorials'] }}">Tutorials</a>
-          </li> -->
-
-          <li class="resources-mobile-menu-title" {%- if theme_trojanzoo_project == 'docs' %} class="active"{%- endif %}>
+          <li class="resources-mobile-menu-title" class="active">
             Docs
           </li>
-
+          {%- if theme_variables.external_urls['items']|length > 0 %}
           <ul class="resources-mobile-menu-items">
+            {%- for k,v in theme_variables.external_urls['items'] %}
             <li>
-              <a href="{{ theme_variables.external_urls['docs'] }}">TrojanZoo</a>
+              <a href="{{ v }}">{{ k }}</a>
             </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['vision'] }}">TrojanVision</a>
-            </li>
-
-            <!-- <li>
-              <a href="{{ theme_variables.external_urls['text'] }}">torchtext</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['vision'] }}">torchvision</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['elastic'] }}">TorchElastic</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['serve'] }}">TorchServe</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['xla'] }}">TrojanZoo on XLA Devices</a>
-            </li>
-          </ul> -->
-
-          <!-- <li class="resources-mobile-menu-title">
-            Resources
-          </li>
-
-          <ul class="resources-mobile-menu-items">
-            <li>
-              <a href="{{ theme_variables.external_urls['resources'] }}">Developer Resources</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['features'] }}">About</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['hub'] }}">Models (Beta)</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['community'] }}">Community</a>
-            </li>
-
-            <li>
-              <a href="{{ theme_variables.external_urls['forums'] }}">Forums</a>
-            </li>
-          </ul> -->
+            {%- endfor %}
+          </ul>
+          {% endif %}
 
           <li>
-            <a href="{{ theme_variables.external_urls['github'] }}">Github</a>
+            <a href="{{ theme_variables.external_urls['github'] }}">GitHub</a>
           </li>
         </ul>
       </div>
@@ -585,7 +346,7 @@
       filterTags.bind();
 
       // Add class to links that have code blocks, since we cannot create links in code blocks
-      $("article.trojanzoo-article a span.pre").each(function(e) {
+      $("article.sphinx-template-article a span.pre").each(function(e) {
         $(this).closest("a").addClass("has-code");
       });
     })

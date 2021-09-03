@@ -25,7 +25,7 @@ window.scrollToAnchor = {
         // This interferes with clicks below it, causing a double fire
         // $(window).on('hashchange', $.proxy(this, 'scrollToCurrent'));
         $('body').on('click', 'a', $.proxy(this, 'delegateAnchors'));
-        $('body').on('click', '#trojanzoo-right-menu li span', $.proxy(this, 'delegateSpans'));
+        $('body').on('click', '#sphinx-template-right-menu li span', $.proxy(this, 'delegateSpans'));
       },
 
       /**

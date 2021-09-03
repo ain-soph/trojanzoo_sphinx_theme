@@ -81,7 +81,7 @@ luctus efficitur arcu. Cras ut dictum mi. Nulla congue interdum lorem, semper se
 Document Subsection
 -------------------
 
-.. figure:: static/yi_jing_01_chien.jpg
+.. figure:: ../_static/yi_jing_01_chien.jpg
     :align: right
     :figwidth: 200px
 

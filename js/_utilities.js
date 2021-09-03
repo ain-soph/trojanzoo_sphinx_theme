@@ -86,11 +86,11 @@ window.utilities = {
   },
 
   headersHeight: function() {
-    if (document.getElementById("trojanzoo-left-menu").classList.contains("make-fixed")) {
-      return document.getElementById("trojanzoo-page-level-bar").offsetHeight;
+    if (document.getElementById("sphinx-template-left-menu").classList.contains("make-fixed")) {
+      return document.getElementById("sphinx-template-page-level-bar").offsetHeight;
     } else {
       return document.getElementById("header-holder").offsetHeight +
-             document.getElementById("trojanzoo-page-level-bar").offsetHeight;
+             document.getElementById("sphinx-template-page-level-bar").offsetHeight;
     }
   },
 

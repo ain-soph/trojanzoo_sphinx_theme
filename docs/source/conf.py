@@ -1,7 +1,8 @@
 import sys
 import os
 
-sys.path.append(os.path.abspath('..'))
+sys.path.append(os.path.abspath('../../'))
+sys.path.append(os.path.abspath('./'))
 sys.path.append(os.path.abspath('./demo/'))
 
 from trojanzoo_sphinx_theme import __version__
@@ -14,7 +15,7 @@ from trojanzoo_sphinx_theme import __version__
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
-#needs_sphinx = '1.0'
+needs_sphinx = '4.0'
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
@@ -22,7 +23,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
-    'sphinxcontrib.httpdomain',
 ]
 
 # Do not warn about external images (status badges in README.rst)
@@ -38,11 +38,11 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+root_doc = 'index'
 
 # General information about the project.
-project = u'TrojanZoo Sphinx Theme'
-copyright = u'TrojanZoo'
+project = u'Demo Sphinx Theme'
+copyright = u'ain-soph'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -100,11 +100,12 @@ html_theme = 'trojanzoo_sphinx_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
+    'canonical_url': 'https://ain-soph.github.io/trojanzoo_sphinx_theme/',
     'logo_only': True
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["../"]
+html_theme_path = ["../../"]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -115,17 +116,17 @@ html_theme_path = ["../"]
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "demo/static/trojanzoo-logo-dark.svg"
+# html_logo = "_static/images/trojanzoo-logo-dark.svg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = "_static/favicon.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -189,7 +190,7 @@ latex_elements = {
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'TrojanZoothemedemo.tex', u'TrojanZoo theme demo Documentation',
-   u'TrojanZoo, TrojanZoo', 'manual'),
+   u'ain-soph, Alps Lab', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -219,7 +220,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'trojanzoothemedemo', u'TrojanZoo theme demo Documentation',
-     [u'TrojanZoo'], 1)
+     [u'ain-soph'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -233,7 +234,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'TrojanZoothemedemo', u'TrojanZoo theme demo Documentation',
-   u'TrojanZoo', 'TrojanZoothemedemo',
+   u'ain-soph', 'TrojanZoothemedemo',
    'One line description of project.', 'Miscellaneous'),
 ]
 

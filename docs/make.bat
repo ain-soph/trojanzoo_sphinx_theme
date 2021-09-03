@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SPHINXOPTS=
 set SPHINXBUILD=sphinx-build
-set SOURCEDIR=.
+set SOURCEDIR=source
 set BUILDDIR=C:/build
 set SPHINXPROJ=TrojanZooSphinxTheme
 

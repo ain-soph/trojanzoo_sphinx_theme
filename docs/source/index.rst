@@ -1,5 +1,7 @@
-.. include:: ../README.rst
+.. .. include:: ../README.rst
 
+Demo documentation
+===================================
 .. toctree::
    :caption: Theme Documentation
    :maxdepth: 2
