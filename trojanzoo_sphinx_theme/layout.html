@@ -94,7 +94,7 @@
           {%- if theme_variables.external_urls['items']|length > 0 %}
           <li class="active docs-active">
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
-              <a class="resource-option with-down-orange-arrow">
+              <a class="resource-option with-down-orange-arrow" href="{{ theme_variables.external_urls['docs'] }}">
                 Docs
               </a>
               <div class="resources-dropdown-menu">
@@ -308,7 +308,7 @@
       <div class="main-menu">
         <ul>
 
-          <li class="resources-mobile-menu-title" class="active">
+          <li class="resources-mobile-menu-title" class="active" href="{{ theme_variables.external_urls['docs'] }}">
             Docs
           </li>
           {%- if theme_variables.external_urls['items']|length > 0 %}
