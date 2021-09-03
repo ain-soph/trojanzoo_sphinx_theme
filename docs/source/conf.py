@@ -1,7 +1,7 @@
 import sys
 import os
 
-sys.path.append(os.path.abspath('../../'))
+# sys.path.append(os.path.abspath('../../'))
 sys.path.append(os.path.abspath('./'))
 
 from trojanzoo_sphinx_theme import __version__
