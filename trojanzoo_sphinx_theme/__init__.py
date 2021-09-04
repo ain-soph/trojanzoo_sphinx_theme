@@ -5,7 +5,7 @@ From https://github.com/ain-soph/trojanzoo_sphinx_theme.
 """
 from os import path
 
-__version__ = '0.0.25'
+__version__ = '0.0.26'
 __version_full__ = __version__
 
 
