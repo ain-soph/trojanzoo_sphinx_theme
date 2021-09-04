@@ -277,7 +277,11 @@
       });
   </script>
 
-  {%- block footer %} {% endblock %}
+  {%- block footer %}
+  <script script type="text/javascript">
+    var collapsedSections = {{ theme_variables['collapsedSections'] }};
+  </script>
+  {% endblock %}
 
   <!-- Begin Footer -->
 
