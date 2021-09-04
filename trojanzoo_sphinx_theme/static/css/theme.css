@@ -11882,10 +11882,46 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   font-size: 0.8em;
   line-height: 1.6em;
 }
+
+/* l1 other text */
+.sphinx-template-left-menu li.toctree-l1 > a,
+.sphinx-template-right-menu li.toctree-l1 > a {
+  color: #262626;
+  font-size: 1rem;
+}
+
+/* l1 current text */
 .sphinx-template-left-menu li.toctree-l1.current > a,
 .sphinx-template-right-menu li.toctree-l1.current > a {
   color: #ee4c2c;
 }
+
+/* l2 current text */
+.sphinx-template-left-menu li.toctree-l2.current > a,
+.sphinx-template-right-menu li.toctree-l2.current > a {
+  left: 15px;
+  color: #792ee5;
+}
+@media screen and (min-width: 1101px) {
+  .sphinx-template-left-menu li.toctree-l2.current > a,
+  .sphinx-template-right-menu li.toctree-l2.current > a {
+    left: 20px;
+  }
+}
+
+/* l2 other text */
+.sphinx-template-left-menu li.toctree-l2 > a,
+.sphinx-template-right-menu li.toctree-l2 > a {
+  left: 15px;
+}
+@media screen and (min-width: 1101px) {
+  .sphinx-template-left-menu li.toctree-l2 > a,
+  .sphinx-template-right-menu li.toctree-l2 > a {
+    left: 20px;
+  }
+}
+
+/* l1 current point */
 .sphinx-template-left-menu li.toctree-l1.current > a:before,
 .sphinx-template-right-menu li.toctree-l1.current > a:before {
   content: "\2022";
@@ -11894,7 +11930,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   left: -15px;
   top: -10%;
   font-size: 1.375rem;
-  color: #ee4c2c;
+  color: #ee4c2c; /* point color */
 }
 @media screen and (min-width: 1101px) {
   .sphinx-template-left-menu li.toctree-l1.current > a:before,
@@ -11902,6 +11938,26 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
     left: -20px;
   }
 }
+
+/* l2 current point */
+.sphinx-template-left-menu li.toctree-l2.current > a:before,
+.sphinx-template-right-menu li.toctree-l2.current > a:before {
+  content: "\2022";
+  display: inline-block;
+  position: absolute;
+  left: -15px;
+  top: -10%;
+  font-size: 1.375rem;
+  color: #792ee5;
+}
+@media screen and (min-width: 1101px) {
+  .sphinx-template-left-menu li.toctree-l2.current > a:before,
+  .sphinx-template-right-menu li.toctree-l2.current > a:before {
+    left: -20px;
+  }
+}
+
+
 .sphinx-template-left-menu li.toctree-l1.current li.toctree-l2 > ul, .sphinx-template-left-menu li.toctree-l2.current li.toctree-l3 > ul,
 .sphinx-template-right-menu li.toctree-l1.current li.toctree-l2 > ul,
 .sphinx-template-right-menu li.toctree-l2.current li.toctree-l3 > ul {

@@ -146,7 +146,6 @@ function ThemeNav () {
             if (link.length > 0) {
                 $('.sphinx-template-menu-vertical .current').removeClass('current');
                 link.addClass('current');
-                link.closest('li.toctree-l1').addClass('current');
                 link.closest('li.toctree-l1').parent().addClass('current');
                 link.closest('li.toctree-l1').addClass('current');
                 link.closest('li.toctree-l2').addClass('current');
@@ -191,7 +190,7 @@ function ThemeNav () {
         parent_li.siblings('li.current').removeClass('current');
         parent_li.siblings().find('li.current').removeClass('current');
         parent_li.find('> ul li.current').removeClass('current');
-        parent_li.toggleClass('current');
+        parent_li.toggleClass('current', true);
     }
 
     return nav;
