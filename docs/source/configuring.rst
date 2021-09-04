@@ -26,7 +26,7 @@ file of this repository, and can be defined in your project's ``conf.py`` via
         'style_external_links': False,
         'vcs_pageview_mode': '',
         # Toc options
-        'collapse_navigation': True,
+        'collapse_navigation': False,
         'sticky_navigation': True,
         'navigation_depth': 4,
         'includehidden': True,
