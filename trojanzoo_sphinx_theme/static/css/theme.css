@@ -11883,7 +11883,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   line-height: 1.6em;
 }
 
-/* l1 other text */
+/* l1 text */
 .sphinx-template-left-menu li.toctree-l1 > a,
 .sphinx-template-right-menu li.toctree-l1 > a {
   color: #262626;
@@ -11896,20 +11896,8 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   color: #ee4c2c;
 }
 
-/* l2 current text */
-.sphinx-template-left-menu li.toctree-l2.current > a,
-.sphinx-template-right-menu li.toctree-l2.current > a {
-  left: 15px;
-  color: #792ee5;
-}
-@media screen and (min-width: 1101px) {
-  .sphinx-template-left-menu li.toctree-l2.current > a,
-  .sphinx-template-right-menu li.toctree-l2.current > a {
-    left: 20px;
-  }
-}
 
-/* l2 other text */
+/* l2 text */
 .sphinx-template-left-menu li.toctree-l2 > a,
 .sphinx-template-right-menu li.toctree-l2 > a {
   left: 15px;
@@ -11919,6 +11907,11 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   .sphinx-template-right-menu li.toctree-l2 > a {
     left: 20px;
   }
+}
+/* l2 current text */
+.sphinx-template-left-menu li.toctree-l2.current > a,
+.sphinx-template-right-menu li.toctree-l2.current > a {
+  color: #792ee5;
 }
 
 /* l1 current point */
@@ -11972,18 +11965,82 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
 .sphinx-template-right-menu li.toctree-l2.current li.toctree-l3 > a {
   display: block;
 }
-.sphinx-template-left-menu li.toctree-l3,
-.sphinx-template-right-menu li.toctree-l3 {
+
+/* l3 text */
+.sphinx-template-left-menu li.toctree-l3 > a,
+.sphinx-template-right-menu li.toctree-l3 > a {
+  left: 30px;
   font-size: 0.9em;
 }
+@media screen and (min-width: 1101px) {
+  .sphinx-template-left-menu li.toctree-l3 > a,
+  .sphinx-template-right-menu li.toctree-l3 > a {
+    left: 40px;
+  }
+}
+/* l3 current text */
+.sphinx-template-left-menu li.toctree-l3.current > a,
+.sphinx-template-right-menu li.toctree-l3.current > a {
+  color: #0f9d58;
+}
+/* l3 current point */
+.sphinx-template-left-menu li.toctree-l3.current > a:before,
+.sphinx-template-right-menu li.toctree-l3.current > a:before {
+  content: "\2022";
+  display: inline-block;
+  position: absolute;
+  left: -15px;
+  top: -10%;
+  font-size: 1.2rem;
+  color: #0f9d58;
+}
+@media screen and (min-width: 1101px) {
+  .sphinx-template-left-menu li.toctree-l3.current > a:before,
+  .sphinx-template-right-menu li.toctree-l3.current > a:before {
+    left: -20px;
+  }
+}
+
 .sphinx-template-left-menu li.toctree-l3.current li.toctree-l4 > a,
 .sphinx-template-right-menu li.toctree-l3.current li.toctree-l4 > a {
   display: block;
 }
-.sphinx-template-left-menu li.toctree-l4,
-.sphinx-template-right-menu li.toctree-l4 {
+
+/* l4 text */
+.sphinx-template-left-menu li.toctree-l4 > a,
+.sphinx-template-right-menu li.toctree-l4 > a {
+  left: 45px;
   font-size: 0.9em;
 }
+@media screen and (min-width: 1101px) {
+  .sphinx-template-left-menu li.toctree-l4 > a,
+  .sphinx-template-right-menu li.toctree-l4 > a {
+    left: 60px;
+  }
+}
+/* l4 current text */
+.sphinx-template-left-menu li.toctree-l4.current > a,
+.sphinx-template-right-menu li.toctree-l4.current > a {
+  color: #f4b400;
+}
+/* l4 current point */
+.sphinx-template-left-menu li.toctree-l4.current > a:before,
+.sphinx-template-right-menu li.toctree-l4.current > a:before {
+  content: "\2022";
+  display: inline-block;
+  position: absolute;
+  left: -15px;
+  top: -10%;
+  font-size: 1.2rem;
+  color: #f4b400;
+}
+@media screen and (min-width: 1101px) {
+  .sphinx-template-left-menu li.toctree-l4.current > a:before,
+  .sphinx-template-right-menu li.toctree-l4.current > a:before {
+    left: -20px;
+  }
+}
+
 .sphinx-template-left-menu li.current ul,
 .sphinx-template-right-menu li.current ul {
   display: block;
