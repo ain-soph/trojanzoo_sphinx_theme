@@ -4,7 +4,7 @@
 [![release](https://img.shields.io/github/v/release/ain-soph/trojanzoo_sphinx_theme)](https://github.com/ain-soph/trojanzoo/releases)
 [![pypi](https://img.shields.io/pypi/v/trojanzoo_sphinx_theme)](https://pypi.org/project/trojanzoo_sphinx_theme/)
 
-Sphinx theme for [TrojanZoo Docs](https://ain-soph.github.io/trojanzoo) based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest). Forked from [Pytorch Sphinx Theme](https://github.com/pytorch/pytorch_sphinx_theme) with commit `f86d059609c7508a896ebb9d03ddc72c7795e5b4`.
+Sphinx theme for [TrojanZoo Docs](https://ain-soph.github.io/trojanzoo) based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest). Forked from [Pytorch Sphinx Theme](https://github.com/pytorch/pytorch_sphinx_theme) with commit `b4d0005` at 09/24/2021.
 
 ## Local Development
 
