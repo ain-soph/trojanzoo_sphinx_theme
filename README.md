@@ -6,6 +6,12 @@
 
 Sphinx theme for [TrojanZoo Docs](https://ain-soph.github.io/trojanzoo) based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest). Forked from [Pytorch Sphinx Theme](https://github.com/pytorch/pytorch_sphinx_theme) with commit `b4d0005` at 09/24/2021.
 
+## Difference from pytorch-sphinx-theme
+This work removes all pytorch-related things and support many customizations. It also removes all other unnecessary items to make it a pure doc template.  
+See demos at:  
+https://ain-soph.github.io/trojanzoo_sphinx_theme/  
+https://ain-soph.github.io/trojanzoo/
+
 ## Local Development
 
 Run python setup:
@@ -79,14 +85,7 @@ Once the docs have been successfully generated you should be able to run the fol
 make html
 ```
 
-#### Tutorials
-
-```
-# root directory
-make html
-```
-
-Once these are successful, navigate to the `conf.py` file in each project. In the Docs these are at `./docs/source`. The Tutorials one can be found in the root directory.
+Once these are successful, navigate to the `conf.py` file in each project. In the Docs these are at `./docs/source`.
 
 In `conf.py` change the html theme to `trojanzoo_sphinx_theme` and point the html theme path to this repo's local folder, which will end up looking something like:
 
