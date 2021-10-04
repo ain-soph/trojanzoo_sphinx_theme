@@ -11751,6 +11751,22 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   color: #262626;
 }
 
+.sphinx-template-left-menu-search :focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.sphinx-template-left-menu-search :focus::-moz-placeholder {
+  color: transparent;
+}
+.sphinx-template-left-menu-search :focus:-ms-input-placeholder {
+  color: transparent;
+}
+.sphinx-template-left-menu-search :focus::-ms-input-placeholder {
+  color: transparent;
+}
+.sphinx-template-left-menu-search :focus::placeholder {
+  color: transparent;
+}
+
 .sphinx-template-left-menu-search input[type=text] {
   border-radius: 0;
   padding: 0.5rem 0.75rem;
