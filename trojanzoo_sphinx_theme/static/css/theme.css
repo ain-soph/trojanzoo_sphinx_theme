@@ -10404,7 +10404,7 @@ h1 {
   margin: 1.375rem 0;
 }
 
-span.pre {
+code.xref.py.py-attr.docutils.literal.notranslate {
   color: #6c6c6d;
   background-color: #f3f4f7;
   padding: 2px 0px;
@@ -10574,7 +10574,7 @@ article.sphinx-template-article .section :not(dt) > code .pre {
   outline: 0px;
   padding: 0px;
 }
-article.sphinx-template-article .function dt, article.sphinx-template-article .attribute dt, article.sphinx-template-article .class .attribute dt, article.sphinx-template-article .class dt {
+article.sphinx-template-article .py.function dt, article.sphinx-template-article .attribute dt, article.sphinx-template-article .class .attribute dt, article.sphinx-template-article .class dt {
   position: relative;
   background: #f3f4f7;
   padding: 0.5rem;
@@ -10582,31 +10582,31 @@ article.sphinx-template-article .function dt, article.sphinx-template-article .a
   word-wrap: break-word;
   padding-right: 100px;
 }
-article.sphinx-template-article .function dt em.property, article.sphinx-template-article .attribute dt em.property, article.sphinx-template-article .class dt em.property {
+article.sphinx-template-article .py.function dt em.property, article.sphinx-template-article .attribute dt em.property, article.sphinx-template-article .class dt em.property {
   font-family: inherit;
 }
-article.sphinx-template-article .function dt em, article.sphinx-template-article .attribute dt em, article.sphinx-template-article .class .attribute dt em, article.sphinx-template-article .class dt em, article.sphinx-template-article .function dt .sig-paren, article.sphinx-template-article .attribute dt .sig-paren, article.sphinx-template-article .class dt .sig-paren {
+article.sphinx-template-article .py.function dt em, article.sphinx-template-article .attribute dt em, article.sphinx-template-article .class .attribute dt em, article.sphinx-template-article .class dt em, article.sphinx-template-article .py.function dt .sig-paren, article.sphinx-template-article .attribute dt .sig-paren, article.sphinx-template-article .class dt .sig-paren {
   font-family: IBMPlexMono,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
   font-size: 87.5%;
 }
-article.sphinx-template-article .function dt a, article.sphinx-template-article .attribute dt a, article.sphinx-template-article .class .attribute dt a, article.sphinx-template-article .class dt a {
+article.sphinx-template-article .py.function dt a, article.sphinx-template-article .attribute dt a, article.sphinx-template-article .class .attribute dt a, article.sphinx-template-article .class dt a {
   right: 30px;
   padding-right: 0;
   top: 50%;
   -webkit-transform: perspective(1px) translateY(-50%);
           transform: perspective(1px) translateY(-50%);
 }
-article.sphinx-template-article .function dt:hover .viewcode-link, article.sphinx-template-article .attribute dt:hover .viewcode-link, article.sphinx-template-article .class dt:hover .viewcode-link {
+article.sphinx-template-article .py.function dt:hover .viewcode-link, article.sphinx-template-article .attribute dt:hover .viewcode-link, article.sphinx-template-article .class dt:hover .viewcode-link {
   color: #ee4c2c;
 }
-article.sphinx-template-article .function .anchorjs-link, article.sphinx-template-article .attribute .anchorjs-link, article.sphinx-template-article .class .anchorjs-link {
+article.sphinx-template-article .py.function .anchorjs-link, article.sphinx-template-article .attribute .anchorjs-link, article.sphinx-template-article .class .anchorjs-link {
   display: inline;
   position: absolute;
   right: 8px;
   font-size: 1.5625rem !important;
   padding-left: 0;
 }
-article.sphinx-template-article .function dt > code, article.sphinx-template-article .attribute dt > code, article.sphinx-template-article .class .attribute dt > code, article.sphinx-template-article .class dt > code {
+article.sphinx-template-article .py.function dt > code, article.sphinx-template-article .attribute dt > code, article.sphinx-template-article .class .attribute dt > code, article.sphinx-template-article .class dt > code {
   color: #262626;
   border-top: solid 2px #f3f4f7;
   background-color: #f3f4f7;
@@ -10614,7 +10614,7 @@ article.sphinx-template-article .function dt > code, article.sphinx-template-art
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-article.sphinx-template-article .function .viewcode-link, article.sphinx-template-article .attribute .viewcode-link, article.sphinx-template-article .class .viewcode-link {
+article.sphinx-template-article .py.function .viewcode-link, article.sphinx-template-article .attribute .viewcode-link, article.sphinx-template-article .class .viewcode-link {
   padding-left: 0.6rem;
   position: absolute;
   font-size: 0.875rem;
@@ -10623,48 +10623,48 @@ article.sphinx-template-article .function .viewcode-link, article.sphinx-templat
   line-height: 1.5rem;
   text-transform: uppercase;
 }
-article.sphinx-template-article .function dd, article.sphinx-template-article .attribute dd, article.sphinx-template-article .class .attribute dd, article.sphinx-template-article .class dd {
+article.sphinx-template-article .py.function dd, article.sphinx-template-article .attribute dd, article.sphinx-template-article .class .attribute dd, article.sphinx-template-article .class dd {
   padding-left: 3.75rem;
 }
-article.sphinx-template-article .function dd p, article.sphinx-template-article .attribute dd p, article.sphinx-template-article .class .attribute dd p, article.sphinx-template-article .class dd p {
+article.sphinx-template-article .py.function dd p, article.sphinx-template-article .attribute dd p, article.sphinx-template-article .class .attribute dd p, article.sphinx-template-article .class dd p {
   color: #262626;
 }
-article.sphinx-template-article .function table tbody tr th.field-name, article.sphinx-template-article .attribute table tbody tr th.field-name, article.sphinx-template-article .class table tbody tr th.field-name {
+article.sphinx-template-article .py.function table tbody tr th.field-name, article.sphinx-template-article .attribute table tbody tr th.field-name, article.sphinx-template-article .class table tbody tr th.field-name {
   white-space: nowrap;
   color: #262626;
   width: 20%;
 }
 @media screen and (min-width: 768px) {
-  article.sphinx-template-article .function table tbody tr th.field-name, article.sphinx-template-article .attribute table tbody tr th.field-name, article.sphinx-template-article .class table tbody tr th.field-name {
+  article.sphinx-template-article .py.function table tbody tr th.field-name, article.sphinx-template-article .attribute table tbody tr th.field-name, article.sphinx-template-article .class table tbody tr th.field-name {
     width: 15%;
   }
 }
-article.sphinx-template-article .function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
+article.sphinx-template-article .py.function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
   padding: 0.625rem;
   width: 80%;
   color: #262626;
 }
 @media screen and (min-width: 768px) {
-  article.sphinx-template-article .function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
+  article.sphinx-template-article .py.function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
     width: 85%;
   }
 }
 @media screen and (min-width: 1600px) {
-  article.sphinx-template-article .function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
+  article.sphinx-template-article .py.function table tbody tr td.field-body, article.sphinx-template-article .attribute table tbody tr td.field-body, article.sphinx-template-article .class table tbody tr td.field-body {
     padding-left: 1.25rem;
   }
 }
-article.sphinx-template-article .function table tbody tr td.field-body p, article.sphinx-template-article .attribute table tbody tr td.field-body p, article.sphinx-template-article .class table tbody tr td.field-body p {
+article.sphinx-template-article .py.function table tbody tr td.field-body p, article.sphinx-template-article .attribute table tbody tr td.field-body p, article.sphinx-template-article .class table tbody tr td.field-body p {
   padding-left: 0px;
 }
-article.sphinx-template-article .function table tbody tr td.field-body p:last-of-type, article.sphinx-template-article .attribute table tbody tr td.field-body p:last-of-type, article.sphinx-template-article .class table tbody tr td.field-body p:last-of-type {
+article.sphinx-template-article .py.function table tbody tr td.field-body p:last-of-type, article.sphinx-template-article .attribute table tbody tr td.field-body p:last-of-type, article.sphinx-template-article .class table tbody tr td.field-body p:last-of-type {
   margin-bottom: 0;
 }
-article.sphinx-template-article .function table tbody tr td.field-body ol, article.sphinx-template-article .attribute table tbody tr td.field-body ol, article.sphinx-template-article .class table tbody tr td.field-body ol, article.sphinx-template-article .function table tbody tr td.field-body ul, article.sphinx-template-article .attribute table tbody tr td.field-body ul, article.sphinx-template-article .class table tbody tr td.field-body ul {
+article.sphinx-template-article .py.function table tbody tr td.field-body ol, article.sphinx-template-article .attribute table tbody tr td.field-body ol, article.sphinx-template-article .class table tbody tr td.field-body ol, article.sphinx-template-article .py.function table tbody tr td.field-body ul, article.sphinx-template-article .attribute table tbody tr td.field-body ul, article.sphinx-template-article .class table tbody tr td.field-body ul {
   padding-left: 1rem;
   padding-bottom: 0;
 }
-article.sphinx-template-article .function table.docutils.field-list, article.sphinx-template-article .attribute table.docutils.field-list, article.sphinx-template-article .class table.docutils.field-list {
+article.sphinx-template-article .py.function table.docutils.field-list, article.sphinx-template-article .attribute table.docutils.field-list, article.sphinx-template-article .class table.docutils.field-list {
   margin-bottom: 0.75rem;
 }
 article.sphinx-template-article .attribute .has-code {
