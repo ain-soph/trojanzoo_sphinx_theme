@@ -6,7 +6,7 @@
 
 Sphinx theme for [TrojanZoo Docs](https://ain-soph.github.io/trojanzoo) based on the [Read the Docs Sphinx Theme](https://sphinx-rtd-theme.readthedocs.io/en/latest). Forked from [Pytorch Sphinx Theme](https://github.com/pytorch/pytorch_sphinx_theme) with commit `b4d0005` at 09/24/2021.
 
-## Difference from pytorch-sphinx-theme
+## Difference from pytorch_sphinx_theme
 This work removes all pytorch-related things and support many customizations. It also removes all other unnecessary items to make it a pure doc template.  
 See demos at:  
 https://ain-soph.github.io/trojanzoo_sphinx_theme/  
