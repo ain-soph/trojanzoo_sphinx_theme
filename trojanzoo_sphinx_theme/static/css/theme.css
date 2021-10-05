@@ -10582,6 +10582,9 @@ article.sphinx-template-article .py.function dt, article.sphinx-template-article
   word-wrap: break-word;
   padding-right: 100px;
 }
+article.sphinx-template-article .py.function dd dt {
+  border-left: 3px solid #792ee5;
+}
 article.sphinx-template-article .py.function dt em.property, article.sphinx-template-article .attribute dt em.property, article.sphinx-template-article .class dt em.property {
   font-family: inherit;
 }
