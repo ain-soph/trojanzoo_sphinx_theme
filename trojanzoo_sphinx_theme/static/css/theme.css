@@ -9938,6 +9938,20 @@ pre {
 .mobile-main-menu-links-container ul.resources-mobile-menu-items li {
   padding-left: 15px;
 }
+.mobile-main-menu-links-container ul.resources-mobile-menu-items li {
+  padding-left: 15px;
+}
+.mobile-main-menu-links-container ul.resources-mobile-menu-items li.active {
+  padding-left: 0px;
+}
+.mobile-main-menu-links-container ul.resources-mobile-menu-items li.active:before {
+  content: "•";
+  color: #e44c2c;
+  font-size: 1.375rem;
+  text-align: left;
+  display: inline-block;
+  width: 12px;
+}
 
 .site-footer {
   padding: 2.5rem 0;
@@ -12492,6 +12506,19 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   text-align: center;
   background-color: transparent;
   border-bottom: 1px solid #e2e2e2;
+}
+.header-holder .main-menu ul li a.nav-dropdown-item.active:before {
+  content: "\F0A3";
+  font-family: FontAwesome;
+  color: #792ee5;
+  padding: 0.5rem 0rem;
+  font-size: 1.5rem;
+  left: 5px;
+  position: absolute;
+  text-align: left;
+}
+.header-holder .main-menu ul li a.nav-dropdown-item.active:hover:before {
+  color: #0f9d58;
 }
 .header-holder .main-menu ul li a.nav-dropdown-item:last-of-type {
   border-bottom-color: transparent;

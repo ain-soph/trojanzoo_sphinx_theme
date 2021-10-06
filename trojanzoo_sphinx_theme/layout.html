@@ -113,19 +113,23 @@ url({{ pathto('_static/' + name, 1) }})
 
           <li class="active docs-active">
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
-              <a class="resource-option with-down-orange-arrow" href="{{ pathto(root_doc) }}">
+              <a class="resource-option with-down-orange-arrow">
                 Docs
               </a>
               {%- if theme_variables['items']|length > 0 %}
               <div class="resources-dropdown-menu">
                 {%- for k, v in theme_variables['items'].items() %}
-                <a class="doc-dropdown-option nav-dropdown-item" href="{{ get_theme_var(v) }}">
+                  {%- if k == title|striptags|e|replace(" documentation", "") %}
+                  <a class="doc-dropdown-option nav-dropdown-item active" href="{{ get_theme_var(v) }}">
+                  {%- else %}
+                  <a class="doc-dropdown-option nav-dropdown-item" href="{{ get_theme_var(v) }}">
+                  {%- endif %}
                   <span class="dropdown-title">{{ k }}</span>
                   <p></p>
                 </a>
                 {%- endfor %}
               </div>
-              {% endif %}
+              {%- endif %}
             </div>
           </li>
 
@@ -332,19 +336,26 @@ url({{ pathto('_static/' + name, 1) }})
       <div class="main-menu">
         <ul>
 
-          <li class="active resources-mobile-menu-title" href="{{ pathto(root_doc) }}">
+          <li>
+            <a href="{{ get_theme_var(theme_variables['home']) }}">Home</a>
+          </li>
+
+          <li class="active resources-mobile-menu-title">
             Docs
           </li>
           {%- if theme_variables['items']|length > 0 %}
           <ul class="resources-mobile-menu-items">
             {%- for k, v in theme_variables['items'].items() %}
-            <li>
+              {%- if k == title|striptags|e|replace(" documentation", "") %}
+              <li class="active">
+              {%- else %}
+              <li>
+              {%- endif %}
               <a href="{{ get_theme_var(v) }}">{{ k }}</a>
             </li>
             {%- endfor %}
           </ul>
           {% endif %}
-
           <li>
             <a href="{{ theme_variables['github'] }}">GitHub</a>
           </li>
