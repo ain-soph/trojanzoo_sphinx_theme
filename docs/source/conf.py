@@ -40,7 +40,7 @@ source_suffix = '.rst'
 root_doc = 'index'
 
 # General information about the project.
-project = u'Demo Sphinx Theme'
+project = u'trojanzoo_sphinx_theme'
 copyright = u'ain-soph'
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
