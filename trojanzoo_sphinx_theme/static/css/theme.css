@@ -9525,6 +9525,13 @@ a.text-dark:hover, a.text-dark:focus {
   unicode-range: u+0020-007f;
   src: local("IBMPlexMono-Light"), url("../fonts/IBMPlexMono/IBMPlexMono-Light.woff2") format("woff2"), url("../fonts/IBMPlexMono/IBMPlexMono-Light.woff") format("woff");
 }
+@font-face {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg")
+}
 html {
   position: relative;
   min-height: 100%;
@@ -10419,8 +10426,25 @@ pre {
 }
 
 .headerlink {
-  display: none !important;
+  color: #0A507A !important;
+  font-family: FontAwesome;
+  font-size: 12px;
+  float: right;
+  visibility: hidden;
 }
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink,
+dt:hover > a.headerlink,
+caption:hover > a.headerlink,
+p.caption:hover > a.headerlink,
+div.code-block-caption:hover > a.headerlink {
+    visibility: visible;
+}
+
 
 a:link.has-code,
 a:hover.has-code,
