@@ -112,11 +112,11 @@ url({{ pathto('_static/' + name, 1) }})
           </li>
 
           <li class="active docs-active">
+            {%- if theme_variables['items']|length > 0 %}
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="resource-option with-down-orange-arrow">
                 Docs
               </a>
-              {%- if theme_variables['items']|length > 0 %}
               <div class="resources-dropdown-menu">
                 {%- for k, v in theme_variables['items'].items() %}
                   {%- if k == title|striptags|e|replace(" documentation", "") %}
@@ -129,8 +129,10 @@ url({{ pathto('_static/' + name, 1) }})
                 </a>
                 {%- endfor %}
               </div>
-              {%- endif %}
             </div>
+            {%- else %}
+            <a href="{{ url_root }}">Docs</a>
+            {%- endif %}
           </li>
 
           <li>
@@ -341,7 +343,7 @@ url({{ pathto('_static/' + name, 1) }})
           </li>
 
           <li class="active resources-mobile-menu-title">
-            Docs
+            <a href="{{ url_root }}">Docs</a>
           </li>
           {%- if theme_variables['items']|length > 0 %}
           <ul class="resources-mobile-menu-items">
