@@ -2,30 +2,31 @@
 {%- set url_root = pathto('', 1) %}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {%- if not embedded and docstitle %}
-  {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+{%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
 {%- else %}
-  {%- set titlesuffix = "" %}
+{%- set titlesuffix = "" %}
 {%- endif %}
 {%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
 {% from 'theme_variables.jinja' import external_urls as theme_variables %}
 {% from 'image_variables.jinja' import external_urls as image_variables %}
 
 {% macro get_image_var(name) -%}
-  url({{ pathto('_static/' + name, 1) }})
-{%- endmacro %}
-
-{% macro modify_theme_var(name) -%}
-  {{name}}{%- if not name.endswith('.html') and not name.startswith('http') and not name.startswith('www.') %}{%- if not name.endswith('/') and name|length>0 %}/{%- endif %}index{%- endif %}
+url({{ pathto('_static/' + name, 1) }})
 {%- endmacro %}
 
 {% macro get_theme_var(name) -%}
-{{ pathto(modify_theme_var(name)) }}
+{%- set flag = not name.endswith('.html') and not name.startswith('http') and not name.startswith('www.') %}
+{%- set addr = name + '' if not flag else ('/' if not name.endswith('/') and name|length>0 else '')+'index.html' %}
+{%- if flag %}{{ pathto(addr, 1) }}{%- else %}{{ addr }}{%- endif %}
 {%- endmacro %}
 
 
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="{{ lang_attr }}" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ lang_attr }}" > <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ lang_attr }}">
+<!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   {{ metatags }}
@@ -36,57 +37,58 @@
 
   {# FAVICON #}
   {% if favicon %}
-    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
+  <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
   {% endif %}
   {# CANONICAL URL #}
   {% if theme_canonical_url %}
-    <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
+  <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html" />
   {% endif %}
 
   {# CSS #}
 
   {# OPENSEARCH #}
   {% if not embedded %}
-    {% if use_opensearch %}
-      <link rel="search" type="application/opensearchdescription+xml"
-            title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
-            href="{{ pathto('_static/opensearch.xml', 1) }}"/>
-    {% endif %}
+  {% if use_opensearch %}
+  <link rel="search" type="application/opensearchdescription+xml"
+    title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
+    href="{{ pathto('_static/opensearch.xml', 1) }}" />
+  {% endif %}
 
   {% endif %}
 
   <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
   <!-- <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" /> -->
   {%- for css in css_files %}
-    {%- if css|attr("rel") %}
-  <link rel="{{ css.rel }}" href="{{ pathto(css.filename, 1) }}" type="text/css"{% if css.title is not none %} title="{{ css.title }}"{% endif %} />
-    {%- else %}
+  {%- if css|attr("rel") %}
+  <link rel="{{ css.rel }}" href="{{ pathto(css.filename, 1) }}" type="text/css" {% if css.title is not none %}
+    title="{{ css.title }}" {% endif %} />
+  {%- else %}
   <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
-    {%- endif %}
+  {%- endif %}
   {%- endfor %}
   {%- for cssfile in extra_css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+  <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {%- endfor %}
 
   {%- block linktags %}
-    {%- if hasdoc('about') %}
-    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
-    {%- endif %}
-    {%- if hasdoc('genindex') %}
-    <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
-    {%- endif %}
-    {%- if hasdoc('search') %}
-    <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
-    {%- endif %}
-    {%- if hasdoc('copyright') %}
-    <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
-    {%- endif %}
-    {%- if next %}
-    <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
-    {%- endif %}
-    {%- if prev %}
-    <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
-    {%- endif %}
+  {%- if hasdoc('about') %}
+  <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
+  {%- endif %}
+  {%- if hasdoc('genindex') %}
+  <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}" />
+  {%- endif %}
+  {%- if hasdoc('search') %}
+  <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}" />
+  {%- endif %}
+  {%- if hasdoc('copyright') %}
+  <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}" />
+  {%- endif %}
+  {%- if next %}
+  <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}" />
+  {%- endif %}
+  {%- if prev %}
+  <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}" />
+  {%- endif %}
   {%- endblock %}
   {%- block extrahead %} {% endblock %}
 
@@ -94,36 +96,38 @@
   <script src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
 
   {% include "fonts.html" %}
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
 
 <div class="container-fluid header-holder tutorials-header" id="header-holder">
   <div class="container">
     <div class="header-container">
-      <a class="header-logo" href="{{ get_theme_var(theme_variables['home']) }}" aria-label="{{ project }}" style="background-image: {{ get_image_var(image_variables['logo-dark']) }}"></a>
-
+      <a class="header-logo" href="{{ get_theme_var(theme_variables['home']) }}" aria-label="{{ project }}"
+        style="background-image: {{ get_image_var(image_variables['logo-dark']) }}"></a>
       <div class="main-menu">
         <ul>
-          {%- if theme_variables['items']|length > 0 %}
+          <li>
+            <a href="{{ get_theme_var(theme_variables['home']) }}">Home</a>
+          </li>
+
           <li class="active docs-active">
             <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
               <a class="resource-option with-down-orange-arrow" href="{{ pathto(root_doc) }}">
                 Docs
               </a>
+              {%- if theme_variables['items']|length > 0 %}
               <div class="resources-dropdown-menu">
-                {%- for k,v in theme_variables['items'].items() %}
+                {%- for k, v in theme_variables['items'].items() %}
                 <a class="doc-dropdown-option nav-dropdown-item" href="{{ get_theme_var(v) }}">
                   <span class="dropdown-title">{{ k }}</span>
                   <p></p>
                 </a>
                 {%- endfor %}
+              </div>
+              {% endif %}
             </div>
           </li>
-          {% else %}
-          <li>
-            <a href="{{ pathto(root_doc) }}">Docs</a>
-          </li>
-          {% endif %}
 
           <li>
             <a href="{{ theme_variables['github'] }}">GitHub</a>
@@ -140,92 +144,93 @@
 
   {% block extrabody %} {% endblock %}
 
-    {# SIDE NAV, TOGGLES ON MOBILE #}
+  {# SIDE NAV, TOGGLES ON MOBILE #}
 
-    <div class="table-of-contents-link-wrapper">
-      <span>Table of Contents</span>
-      <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
-    </div>
+  <div class="table-of-contents-link-wrapper">
+    <span>Table of Contents</span>
+    <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+  </div>
 
-    <nav data-toggle="wy-nav-shift" class="sphinx-template-left-menu" id="sphinx-template-left-menu">
-      <div class="sphinx-template-side-scroll">
-        <div class="sphinx-template-menu sphinx-template-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          <div class="sphinx-template-left-menu-search">
-            {% block sidebartitle %}
+  <nav data-toggle="wy-nav-shift" class="sphinx-template-left-menu" id="sphinx-template-left-menu">
+    <div class="sphinx-template-side-scroll">
+      <div class="sphinx-template-menu sphinx-template-menu-vertical" data-spy="affix" role="navigation"
+        aria-label="main navigation">
+        <div class="sphinx-template-left-menu-search">
+          {% block sidebartitle %}
 
-            {% if theme_display_version %}
-              {%- set nav_version = version %}
-              {% if READTHEDOCS and current_version %}
-                {%- set nav_version = current_version %}
-              {% endif %}
-              {% if nav_version %}
-                <div class="version">
-                  {{ nav_version }}
-                </div>
-              {% endif %}
-            {% endif %}
-
-            {% include "searchbox.html" %}
-
-            {% endblock %}
+          {% if theme_display_version %}
+          {%- set nav_version = version %}
+          {% if READTHEDOCS and current_version %}
+          {%- set nav_version = current_version %}
+          {% endif %}
+          {% if nav_version %}
+          <div class="version">
+            {{ nav_version }}
           </div>
+          {% endif %}
+          {% endif %}
 
-          {% block menu %}
-            {#
-              The singlehtml builder doesn't handle this toctree call when the
-              toctree is empty. Skip building this for now.
-            #}
-            {% if 'singlehtml' not in builder %}
-              {% set global_toc = toctree(collapse=theme_collapse_navigation|tobool,
-                                          includehidden=theme_includehidden|tobool,
-                                          titles_only=theme_titles_only|tobool) %}
-            {% endif %}
-            {% if global_toc %}
-              {{ global_toc }}
-            {% else %}
-              <!-- Local TOC -->
-              <div class="local-toc">{{ toc }}</div>
-            {% endif %}
+          {% include "searchbox.html" %}
+
           {% endblock %}
         </div>
+
+        {% block menu %}
+        {#
+        The singlehtml builder doesn't handle this toctree call when the
+        toctree is empty. Skip building this for now.
+        #}
+        {% if 'singlehtml' not in builder %}
+        {% set global_toc = toctree(collapse=theme_collapse_navigation|tobool,
+        includehidden=theme_includehidden|tobool,
+        titles_only=theme_titles_only|tobool) %}
+        {% endif %}
+        {% if global_toc %}
+        {{ global_toc }}
+        {% else %}
+        <!-- Local TOC -->
+        <div class="local-toc">{{ toc }}</div>
+        {% endif %}
+        {% endblock %}
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div class="sphinx-template-container">
-      <div class="sphinx-template-page-level-bar" id="sphinx-template-page-level-bar">
-        <div class="sphinx-template-breadcrumbs-wrapper">
-          {% include "breadcrumbs.html" %}
-        </div>
-
-        <div class="sphinx-template-shortcuts-wrapper" id="sphinx-template-shortcuts-wrapper">
-          Shortcuts
-        </div>
+  <div class="sphinx-template-container">
+    <div class="sphinx-template-page-level-bar" id="sphinx-template-page-level-bar">
+      <div class="sphinx-template-breadcrumbs-wrapper">
+        {% include "breadcrumbs.html" %}
       </div>
 
-      <section data-toggle="wy-nav-shift" id="sphinx-template-content-wrap" class="sphinx-template-content-wrap">
-        <div class="sphinx-template-content-left">
+      <div class="sphinx-template-shortcuts-wrapper" id="sphinx-template-shortcuts-wrapper">
+        Shortcuts
+      </div>
+    </div>
+
+    <section data-toggle="wy-nav-shift" id="sphinx-template-content-wrap" class="sphinx-template-content-wrap">
+      <div class="sphinx-template-content-left">
 
         {%- block content %}
-          {% if theme_style_external_links|tobool %}
-          <div class="rst-content style-external-links">
+        {% if theme_style_external_links|tobool %}
+        <div class="rst-content style-external-links">
           {% else %}
           <div class="rst-content">
-          {% endif %}
+            {% endif %}
             <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
-            {%- block document %}
-             <article itemprop="articleBody" id="sphinx-template-article" class="sphinx-template-article">
-              {% block body %}{% endblock %}
-             </article>
-             {% if self.comments()|trim %}
-             <div class="articleComments">
-              {% block comments %}{% endblock %}
-             </div>
-             {% endif%}
+              {%- block document %}
+              <article itemprop="articleBody" id="sphinx-template-article" class="sphinx-template-article">
+                {% block body %}{% endblock %}
+              </article>
+              {% if self.comments()|trim %}
+              <div class="articleComments">
+                {% block comments %}{% endblock %}
+              </div>
+              {% endif%}
             </div>
             {%- endblock %}
             {% include "footer.html" %}
           </div>
-        {%- endblock %}
+          {%- endblock %}
         </div>
 
         <div class="sphinx-template-content-right" id="sphinx-template-content-right">
@@ -235,34 +240,35 @@
             </div>
           </div>
         </div>
-      </section>
-    </div>
+    </section>
+  </div>
 
   {% include "versions.html" %}
 
   {% if not embedded %}
 
-     {% if sphinx_version >= "1.8.0" %}
-       <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}" src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
-       {%- for scriptfile in script_files %}
-         {{ js_tag(scriptfile) }}
-       {%- endfor %}
-     {% else %}
-       <script type="text/javascript">
-           var DOCUMENTATION_OPTIONS = {
-               URL_ROOT:'{{ url_root }}',
-               VERSION:'{{ release|e }}',
-               LANGUAGE:'{{ language }}',
-               COLLAPSE_INDEX:false,
-               FILE_SUFFIX:'{{ '' if no_search_suffix else file_suffix }}',
-               HAS_SOURCE:  {{ has_source|lower }},
-               SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
+  {% if sphinx_version >= "1.8.0" %}
+  <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}"
+    src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+  {%- for scriptfile in script_files %}
+  {{ js_tag(scriptfile) }}
+  {%- endfor %}
+  {% else %}
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT: '{{ url_root }}',
+      VERSION: '{{ release|e }}',
+      LANGUAGE: '{{ language }}',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+      HAS_SOURCE: {{ has_source| lower }},
+    SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
            };
-       </script>
-       {%- for scriptfile in script_files %}
-         <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-       {%- endfor %}
-     {% endif %}
+  </script>
+  {%- for scriptfile in script_files %}
+  <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+  {%- endfor %}
+  {% endif %}
 
   {% endif %}
 
@@ -272,8 +278,8 @@
   <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
 
   <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable({{ 'true' if theme_sticky_navigation|tobool else 'false' }});
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable({{ 'true' if theme_sticky_navigation | tobool else 'false' }});
       });
   </script>
 
@@ -297,11 +303,12 @@
     </div>
   </div>
 
-  
+
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-logo-wrapper">
-        <a href="{{ get_theme_var(theme_variables['home']) }}" class="footer-logo" style="background-image: {{ get_image_var(image_variables['logo-icon']) }}"></a>
+        <a href="{{ get_theme_var(theme_variables['home']) }}" class="footer-logo"
+          style="background-image: {{ get_image_var(image_variables['logo-icon']) }}"></a>
       </div>
     </div>
   </footer>
@@ -314,7 +321,8 @@
     <div class="container-fluid">
       <div class="container">
         <div class="mobile-main-menu-header-container">
-          <a class="header-logo" href="{{ get_theme_var(theme_variables['home']) }}" aria-label="{{ project }}" style="background-image: {{ get_image_var(image_variables['logo']) }}"></a>
+          <a class="header-logo" href="{{ get_theme_var(theme_variables['home']) }}" aria-label="{{ project }}"
+            style="background-image: {{ get_image_var(image_variables['logo']) }}"></a>
           <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
         </div>
       </div>
@@ -324,12 +332,12 @@
       <div class="main-menu">
         <ul>
 
-          <li class="resources-mobile-menu-title" class="active" href="{{ pathto(root_doc) }}">
+          <li class="active resources-mobile-menu-title" href="{{ pathto(root_doc) }}">
             Docs
           </li>
           {%- if theme_variables['items']|length > 0 %}
           <ul class="resources-mobile-menu-items">
-            {%- for k,v in theme_variables['items'].items() %}
+            {%- for k, v in theme_variables['items'].items() %}
             <li>
               <a href="{{ get_theme_var(v) }}">{{ k }}</a>
             </li>
@@ -351,7 +359,7 @@
 
 
   <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
       mobileMenu.bind();
       mobileTOC.bind();
       trojanzooAnchors.bind();
@@ -362,10 +370,11 @@
       filterTags.bind();
 
       // Add class to links that have code blocks, since we cannot create links in code blocks
-      $("article.sphinx-template-article a span.pre").each(function(e) {
+      $("article.sphinx-template-article a span.pre").each(function (e) {
         $(this).closest("a").addClass("has-code");
       });
     })
   </script>
 </body>
+
 </html>
