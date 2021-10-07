@@ -40,6 +40,14 @@ module.exports = function (grunt) {
                         src: ['fonts/IBMPlexMono/*'],
                         dest: 'trojanzoo_sphinx_theme/static/fonts/IBMPlexMono',
                         filter: 'isFile'
+                    },
+
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['fonts/FontAwesome/*'],
+                        dest: 'trojanzoo_sphinx_theme/static/fonts/FontAwesome',
+                        filter: 'isFile'
                     }
                 ]
             },
