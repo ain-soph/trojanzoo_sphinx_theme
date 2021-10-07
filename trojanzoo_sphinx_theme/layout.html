@@ -119,7 +119,7 @@ url({{ pathto('_static/' + name, 1) }})
               </a>
               <div class="resources-dropdown-menu">
                 {%- for k, v in theme_variables['items'].items() %}
-                  {%- if k == title|striptags|e|replace(" documentation", "") %}
+                  {%- if k == (docstitle|striptags|e).split(' ')[0] %}
                   <a class="doc-dropdown-option nav-dropdown-item active" href="{{ get_theme_var(v) }}">
                   {%- else %}
                   <a class="doc-dropdown-option nav-dropdown-item" href="{{ get_theme_var(v) }}">
@@ -348,7 +348,7 @@ url({{ pathto('_static/' + name, 1) }})
           {%- if theme_variables['items']|length > 0 %}
           <ul class="resources-mobile-menu-items">
             {%- for k, v in theme_variables['items'].items() %}
-              {%- if k == title|striptags|e|replace(" documentation", "") %}
+              {%- if k == (docstitle|striptags|e).split(' ')[0] %}
               <li class="active">
               {%- else %}
               <li>

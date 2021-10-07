@@ -1,6 +1,6 @@
 .. .. include:: ../README.rst
 
-trojanzoo_sphinx_theme documentation
+Demo documentation
 ===================================
 .. toctree::
    :caption: Theme Documentation
