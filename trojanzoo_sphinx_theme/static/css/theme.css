@@ -11907,6 +11907,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
 .sphinx-template-right-menu a:visited.reference.internal,
 .sphinx-template-right-menu a:hover.reference.internal {
   margin-bottom: 0.3125rem;
+  margin-left: 1.5rem;
   position: relative;
 }
 .sphinx-template-left-menu li code,
