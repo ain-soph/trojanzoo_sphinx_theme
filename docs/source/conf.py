@@ -106,7 +106,7 @@ html_theme_options = {
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ["../../"]    # trojanzoo_sphinx_theme.get_html_theme_path()
 
-html_permalinks_icon = '\uf0c1'  # '\uf08e'  font-family = FontAwesome
+html_permalinks_icon = '\uf08e'  # '\uf0c1'  font-family = FontAwesome
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
