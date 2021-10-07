@@ -10442,9 +10442,9 @@ pre {
 .headerlink {
   color: #0A507A !important;
   font-family: FontAwesome;
-  font-size: 12px;
   float: right;
   visibility: hidden;
+  position: absolute;
 }
 h1:hover > a.headerlink,
 h2:hover > a.headerlink,
@@ -10456,7 +10456,7 @@ dt:hover > a.headerlink,
 caption:hover > a.headerlink,
 p.caption:hover > a.headerlink,
 div.code-block-caption:hover > a.headerlink {
-    visibility: visible;
+  visibility: visible;
 }
 
 
