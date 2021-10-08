@@ -16,9 +16,9 @@ url({{ pathto('_static/' + name, 1) }})
 
 {% macro get_theme_var(name) -%}
 {%- if ":" in name %}
-{{ addr }}
+{{ name }}
 {%- else %}
-{{ pathto(addr, 1) }}
+{{ pathto(name, 1) }}
 {%- endif %}
 {%- endmacro %}
 
