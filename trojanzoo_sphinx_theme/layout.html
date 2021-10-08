@@ -22,6 +22,14 @@ url({{ pathto('_static/' + name, 1) }})
 {%- endif %}
 {%- endmacro %}
 
+{% macro get_github_addr(name) -%}
+{%- if name.removesuffix('/').count('/')>1 %}
+{{ name }}
+{%- else %}
+{{ "https://www.github.com/" + name }}
+{%- endif %}
+{%- endmacro %}
+
 
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="{{ lang_attr }}" > <![endif]-->
