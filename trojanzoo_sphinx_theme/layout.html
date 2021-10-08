@@ -11,7 +11,11 @@
 {% from 'image_variables.jinja' import external_urls as image_variables %}
 
 {% macro get_image_var(name) -%}
+{%- if ":" in name %}
+url({{ name }})
+{%- else %}
 url({{ pathto('_static/' + name, 1) }})
+{%- endif %}
 {%- endmacro %}
 
 {% macro get_theme_var(name) -%}
