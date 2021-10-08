@@ -15,9 +15,11 @@ url({{ pathto('_static/' + name, 1) }})
 {%- endmacro %}
 
 {% macro get_theme_var(name) -%}
-{%- set flag = not name.endswith('.html') and not name.startswith('http') and not name.startswith('www.') %}
-{%- set addr = name + '' if not flag else ('/' if not name.endswith('/') and name|length>0 else '')+'index.html' %}
-{%- if flag %}{{ pathto(addr, 1) }}{%- else %}{{ addr }}{%- endif %}
+{%- if ":" in name %}
+{{ addr }}
+{%- else %}
+{{ pathto(addr, 1) }}
+{%- endif %}
 {%- endmacro %}
 
 
