@@ -15,7 +15,7 @@ package = trojanzoo_sphinx_theme
 
 # -- General configuration ------------------------------------------------
 
-project = 'AlpsPlot'
+project = 'trojanzoo_sphinx_theme'
 author = 'ain-soph'
 copyright = f'2021, {author}'
 
