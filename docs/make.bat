@@ -4,14 +4,12 @@ pushd %~dp0
 
 REM Command file for Sphinx documentation
 
+set SPHINXOPTS=-j auto -T
 if "%SPHINXBUILD%" == "" (
-	set SPHINXBUILD=python -msphinx
+        set SPHINXBUILD=sphinx-build
 )
-set SPHINXOPTS=
-set SPHINXBUILD=sphinx-build
 set SOURCEDIR=source
 set BUILDDIR=C:/build
-set SPHINXPROJ=TrojanZooSphinxTheme
 
 if "%1" == "" goto help
 

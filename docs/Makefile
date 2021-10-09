@@ -2,9 +2,8 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
+SPHINXOPTS    = -j auto -T
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = TrojanZooSphinxTheme
 SOURCEDIR     = source
 BUILDDIR      = build
 
@@ -18,3 +17,7 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+clean:
+	@echo "Removing everything under 'build' and 'source/generated'.."
+	@rm -rf $(BUILDDIR)/html/ $(BUILDDIR)/doctrees $(SOURCEDIR)/generated
