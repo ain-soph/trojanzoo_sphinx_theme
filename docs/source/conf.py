@@ -27,8 +27,6 @@ gh_page_url = f'https://{github_user}.github.io/{github_repo}/'
 
 html_theme_options = {
     'canonical_url': gh_page_url,
-    'collapse_navigation': False,
-    'display_version': True,
 
     'doc_items': {
         'AlpsPlot': '/alpsplot',
