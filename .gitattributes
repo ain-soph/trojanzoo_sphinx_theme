@@ -9,6 +9,7 @@
 *.otf   binary
 *.png   binary
 *.eot   binary
+*.ttc   binary
 *.ttf   binary
 *.whl   binary
 *.woff  binary
