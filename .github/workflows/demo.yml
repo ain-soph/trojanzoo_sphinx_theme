@@ -8,20 +8,15 @@ on:
 jobs:
   demo:
     runs-on: ubuntu-latest
+    container:
+      image: python:3.9
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
-      - name: Install requirements
+      - name: Install Dependencies
         run: |
           pip install --upgrade pip
-          pip install -r requirements.txt
-      - name: Install trojanzoo-sphinx-theme
-        run: |  # python setup.py install
-          pip install .
+          pip install -e .
       - name: Compile Sphinx Docs
         run: |
           cd ./docs/
