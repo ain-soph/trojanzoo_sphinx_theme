@@ -1,8 +1,7 @@
-"""TrojanZoo Sphinx theme.
+#!/usr/bin/env python3
 
-From https://github.com/ain-soph/trojanzoo_sphinx_theme.
+from .version import __version__
 
-"""
 from os import path
 from sphinx.util import isurl
 from sphinx.util.fileutil import copy_asset
@@ -13,7 +12,6 @@ if TYPE_CHECKING:
     from sphinx.application import Sphinx
     from sphinx.config import Config
 
-__version__ = '0.0.26'
 
 logo_keys = ['logo', 'logo_dark', 'logo_icon']
 
