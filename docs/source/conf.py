@@ -27,6 +27,7 @@ gh_page_url = f'https://{github_user}.github.io/{github_repo}/'
 
 html_theme_options = {
     'canonical_url': gh_page_url,
+    'github_url': github_url,
 
     'doc_items': {
         'AlpsPlot': '/alpsplot',
@@ -34,7 +35,6 @@ html_theme_options = {
         'trojanzoo_sphinx_theme': '/trojanzoo_sphinx_theme',
         'base': 'https://github.com/ain-soph/base',
     },
-    'github_url': github_url,
 
     'logo': 'images/logo/trojanzoo-logo.svg',
     'logo_dark': 'images/logo/trojanzoo-logo-dark.svg',
