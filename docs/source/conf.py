@@ -46,8 +46,9 @@ html_theme_options = {
 # -- Extension configuration ----------------------------------------------
 
 extensions = [
-    'sphinx.ext.intersphinx',
     'sphinx.ext.autodoc',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.linkcode',  # viewcode
 ]
 
