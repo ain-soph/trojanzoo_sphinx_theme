@@ -28,8 +28,8 @@
   <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
   {% endif %}
   {# CANONICAL URL #}
-  {% if theme_canonical_url %}
-  <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html" />
+  {% if html_baseurl %}
+  <link rel="canonical" href="{{ html_baseurl }}{{ pagename }}.html" />
   {% endif %}
 
   {# CSS #}
