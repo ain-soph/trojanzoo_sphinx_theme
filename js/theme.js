@@ -144,13 +144,21 @@ function ThemeNav () {
             // If we found a matching link then reset current and re-apply
             // otherwise retain the existing match
             if (link.length > 0) {
-                $('.sphinx-template-menu-vertical .current').removeClass('current');
-                link.addClass('current');
-                link.closest('li.toctree-l1').parent().addClass('current');
-                link.closest('li.toctree-l1').addClass('current');
-                link.closest('li.toctree-l2').addClass('current');
-                link.closest('li.toctree-l3').addClass('current');
-                link.closest('li.toctree-l4').addClass('current');
+                $('.sphinx-template-menu-vertical .current')
+                    .removeClass('current')
+                    .attr('aria-expanded','false');
+                link.addClass('current')
+                    .attr('aria-expanded','true');
+                link.closest('li.toctree-l1')
+                    .parent()
+                    .addClass('current')
+                    .attr('aria-expanded','true');
+                for (let i = 1; i <= 10; i++) {
+                    link.closest('li.toctree-l' + i)
+                        .addClass('current')
+                        .attr('aria-expanded','true');
+                }
+                link[0].scrollIntoView();
             }
         }
         catch (err) {
@@ -187,10 +195,29 @@ function ThemeNav () {
 
     nav.toggleCurrent = function (elem) {
         var parent_li = elem.closest('li');
-        parent_li.siblings('li.current').removeClass('current');
-        parent_li.siblings().find('li.current').removeClass('current');
-        parent_li.find('> ul li.current').removeClass('current');
-        parent_li.toggleClass('current', true);
+        parent_li
+            .siblings('li.current')
+            .removeClass('current')
+            .attr('aria-expanded','false');
+        parent_li
+            .siblings()
+            .find('li.current')
+            .removeClass('current')
+            .attr('aria-expanded','false');
+        var children = parent_li.find('> ul li');
+        // Don't toggle terminal elements.
+        if (children.length) {
+            children
+                .removeClass('current')
+                .attr('aria-expanded','false');
+            parent_li
+                .toggleClass('current')
+                .attr('aria-expanded', function(i, old) {
+                    return old == 'true' ? 'false' : 'true';
+                });
+        }
+        // parent_li.find('> ul li.current').removeClass('current');
+        // parent_li.toggleClass('current', true);
     }
 
     return nav;
