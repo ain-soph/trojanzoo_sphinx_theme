@@ -1,4 +1,4 @@
-window.pytorchAnchors = {
+window.trojanzooAnchors = {
   bind: function() {
     // Replace Sphinx-generated anchors with anchorjs ones
     $(".headerlink").text("");

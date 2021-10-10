@@ -149,10 +149,6 @@ function ThemeNav () {
                     .attr('aria-expanded','false');
                 link.addClass('current')
                     .attr('aria-expanded','true');
-                link.closest('li.toctree-l1')
-                    .parent()
-                    .addClass('current')
-                    .attr('aria-expanded','true');
                 for (let i = 1; i <= 10; i++) {
                     link.closest('li.toctree-l' + i)
                         .addClass('current')

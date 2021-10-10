@@ -300,7 +300,7 @@ window.mobileTOC = {
 }
 
 },{}],7:[function(require,module,exports){
-window.pytorchAnchors = {
+window.trojanzooAnchors = {
   bind: function() {
     // Replace Sphinx-generated anchors with anchorjs ones
     $(".headerlink").text("");
@@ -1016,4 +1016,4 @@ $(window).scroll(function () {
   });
 });
 
-},{"jquery":"jquery"}]},{},[1,2,3,4,5,6,7,8,9,10,"sphinx-template-sphinx-theme"]);
+},{"jquery":"jquery"}]},{},[1,2,3,4,5,6,7,8,9,"sphinx-template-sphinx-theme"]);
