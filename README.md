@@ -49,12 +49,12 @@ The resulting site is a demo.
 When you are ready to submit a PR with your changes you can first test that your changes have been applied correctly against either the TrojanZoo Docs repo:
 
 1. Run the `grunt build` task on your branch and commit the build to Github.
-2. In your local docs or tutorials repo, remove any existing `trojanzoo_sphinx_theme` packages in the `src` folder (there should be a `pip-delete-this-directory.txt` file there)
+2. In your local docs repo, remove any existing `trojanzoo_sphinx_theme` packages in the `src` folder (there should be a `pip-delete-this-directory.txt` file there)
 3. In `requirements.txt` replace the existing git link with a link pointing to your commit or branch, e.g. `-e git+git://github.com/{ your repo }/trojanzoo_sphinx_theme.git@{ your commit hash }#egg=trojanzoo_sphinx_theme`
 4. Install the requirements `pip install -r requirements.txt`
-5. Remove the current build. In the docs this is `make clean`, tutorials is `make clean-cache`
-6. Build the static site. In the docs this is `make html`, tutorials is `make html-noplot`
-7. Open the site and look around. In the docs open `docs/build/html/index.html`, in the tutorials open `_build/html.index.html`
+5. Remove the current build with `make clean`
+6. Build the static site with `make html`
+7. Open the site at `docs/build/html/index.html` and look around
 
 If your changes have been applied successfully, remove the build commit from your branch and submit your PR.
 

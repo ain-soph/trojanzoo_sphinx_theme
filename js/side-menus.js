@@ -148,7 +148,7 @@ window.sideMenus = {
 
   handleLeftMenu: function () {
     var windowHeight = utilities.windowHeight();
-    var topOfFooterRelativeToWindow = document.getElementById("docs-tutorials-resources").getBoundingClientRect().top;
+    var topOfFooterRelativeToWindow = document.getElementById("docs-resources").getBoundingClientRect().top;
 
     if (topOfFooterRelativeToWindow >= windowHeight) {
       document.getElementById("sphinx-template-left-menu").style.height = "100%";
