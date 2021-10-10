@@ -10317,7 +10317,7 @@ p a:hover {
   color: #ee4c2c;
 }
 
-.wy-breadcrumbs li a {
+.sphinx-template-breadcrumbs li a {
   color: #ee4c2c;
 }
 
@@ -11060,35 +11060,35 @@ article.sphinx-template-article .admonition > p:last-of-type {
   margin-top: unset;
 }
 
-article.sphinx-template-article .wy-table-responsive table {
+article.sphinx-template-article .sphinx-template-table-responsive table {
   border: none;
   border-color: #ffffff !important;
   table-layout: fixed;
 }
-article.sphinx-template-article .wy-table-responsive table thead tr {
+article.sphinx-template-article .sphinx-template-table-responsive table thead tr {
   border-bottom: 2px solid #6c6c6d;
 }
-article.sphinx-template-article .wy-table-responsive table thead th {
+article.sphinx-template-article .sphinx-template-table-responsive table thead th {
   line-height: 1.75rem;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
 }
-article.sphinx-template-article .wy-table-responsive table tbody .row-odd {
+article.sphinx-template-article .sphinx-template-table-responsive table tbody .row-odd {
   background-color: #f3f4f7;
 }
-article.sphinx-template-article .wy-table-responsive table tbody td {
+article.sphinx-template-article .sphinx-template-table-responsive table tbody td {
   color: #6c6c6d;
   white-space: normal;
   padding: 0.9375rem;
   font-size: 1rem;
   line-height: 1.375rem;
 }
-article.sphinx-template-article .wy-table-responsive table tbody td .pre {
+article.sphinx-template-article .sphinx-template-table-responsive table tbody td .pre {
   background: #ffffff;
   color: #ee4c2c;
   font-size: 87.5%;
 }
-article.sphinx-template-article .wy-table-responsive table tbody td code {
+article.sphinx-template-article .sphinx-template-table-responsive table tbody td code {
   font-size: 87.5%;
 }
 

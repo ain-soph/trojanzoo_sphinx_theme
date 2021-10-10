@@ -775,7 +775,7 @@ function ThemeNav () {
         $(document)
             // Shift nav in mobile when clicking the menu.
             .on('click', "[data-toggle='sphinx-template-left-menu-nav-top']", function() {
-                $("[data-toggle='wy-nav-shift']").toggleClass("shift");
+                $("[data-toggle='sphinx-template-nav-shift']").toggleClass("shift");
                 $("[data-toggle='rst-versions']").toggleClass("shift");
             })
 
@@ -783,7 +783,7 @@ function ThemeNav () {
             .on('click', ".sphinx-template-menu-vertical .current ul li a", function() {
                 var target = $(this);
                 // Close menu when you click a link.
-                $("[data-toggle='wy-nav-shift']").removeClass("shift");
+                $("[data-toggle='sphinx-template-nav-shift']").removeClass("shift");
                 $("[data-toggle='rst-versions']").toggleClass("shift");
                 // Handle dynamic display of l3 and l4 nav lists
                 self.toggleCurrent(target);
@@ -795,14 +795,14 @@ function ThemeNav () {
 
         // Make tables responsive
         $("table.docutils:not(.field-list,.footnote,.citation)")
-            .wrap("<div class='wy-table-responsive'></div>");
+            .wrap("<div class='sphinx-template-table-responsive'></div>");
 
         // Add extra class to responsive tables that contain
         // footnotes or citations so that we can target them for styling
         $("table.docutils.footnote")
-            .wrap("<div class='wy-table-responsive footnote'></div>");
+            .wrap("<div class='sphinx-template-table-responsive footnote'></div>");
         $("table.docutils.citation")
-            .wrap("<div class='wy-table-responsive citation'></div>");
+            .wrap("<div class='sphinx-template-table-responsive citation'></div>");
 
         // Add expand links to all parents of nested ul
         $('.sphinx-template-menu-vertical ul').not('.simple').siblings('a').each(function () {
