@@ -88,11 +88,11 @@
     integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
 
+
 <div class="container-fluid header-holder docs-header" id="header-holder">
   <div class="container">
     <div class="header-container">
-      <a class="header-logo" href="{{ theme_home_url }}" aria-label="{{ project }}"
-        style="background-image: url({{ theme_logo_dark_url }})"></a>
+      <a class="header-logo" href="{{ theme_home_url }}" aria-label="{{ project }}"></a>
       <div class="main-menu">
         <ul>
           <li>
@@ -242,8 +242,6 @@
   {% if not embedded %}
 
   {% if sphinx_version >= "1.8.0" %}
-  <script type="text/javascript" id="documentation_options" data-url_root="{{ pathto('', 1) }}"
-    src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
   {%- for scriptfile in script_files %}
   {{ js_tag(scriptfile) }}
   {%- endfor %}
@@ -277,6 +275,14 @@
       });
   </script>
 
+  <script type="text/javascript">
+    jQuery(function () {
+      $('.header-logo').css('background-image', 'url({{ theme_logo_url }})');
+      $('.docs-header .header-logo').css('background-image', 'url({{ theme_logo_dark_url }})');
+      $('.footer-logo').css('background-image', 'url({{ theme_logo_icon_url }})');
+      });
+  </script>
+
   {%- block footer %}
   <script script type="text/javascript">
     var collapsedSections = {{ theme_collapsedSections }};
@@ -301,8 +307,7 @@
   <footer class="site-footer">
     <div class="container footer-container">
       <div class="footer-logo-wrapper">
-        <a href="{{ theme_home_url }}" class="footer-logo"
-          style="background-image: url({{ theme_logo_icon_url }})"></a>
+        <a href="{{ theme_home_url }}" class="footer-logo"></a>
       </div>
     </div>
   </footer>
@@ -315,8 +320,7 @@
     <div class="container-fluid">
       <div class="container">
         <div class="mobile-main-menu-header-container">
-          <a class="header-logo" href="{{ theme_home_url }}" aria-label="{{ project }}"
-            style="background-image: url({{ theme_logo_url }})"></a>
+          <a class="header-logo" href="{{ theme_home_url }}" aria-label="{{ project }}"></a>
           <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
         </div>
       </div>
