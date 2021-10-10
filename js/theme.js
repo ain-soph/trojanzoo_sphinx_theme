@@ -112,7 +112,8 @@ function ThemeNav () {
         // Add expand links to all parents of nested ul
         $('.sphinx-template-menu-vertical ul').not('.simple').siblings('a').each(function () {
             var link = $(this);
-                expand = $('<span class="toctree-expand"></span>');
+                expand =
+                    $('<span class="toctree-expand"></span>');
             expand.on('click', function (ev) {
                 self.toggleCurrent(link);
                 ev.stopPropagation();
@@ -148,6 +149,10 @@ function ThemeNav () {
                     .removeClass('current')
                     .attr('aria-expanded','false');
                 link.addClass('current')
+                    .attr('aria-expanded','true');
+                link.closest('li.toctree-l1')
+                    .parent()
+                    .addClass('current')
                     .attr('aria-expanded','true');
                 for (let i = 1; i <= 10; i++) {
                     link.closest('li.toctree-l' + i)
@@ -212,8 +217,6 @@ function ThemeNav () {
                     return old == 'true' ? 'false' : 'true';
                 });
         }
-        // parent_li.find('> ul li.current').removeClass('current');
-        // parent_li.toggleClass('current', true);
     }
 
     return nav;
@@ -317,13 +320,6 @@ $(document).on("click", ".page", function() {
       'slow'
     );
 });
-
-var link = $("a[href='intermediate/speech_command_recognition_with_torchaudio.html']");
-
-if (link.text() == "SyntaxError") {
-    console.log("There is an issue with the intermediate/speech_command_recognition_with_torchaudio.html menu item.");
-    link.text("Speech Command Recognition with torchaudio");
-}
 
 $(".stars-outer > i").hover(function() {
     $(this).prevAll().addBack().toggleClass("fas star-fill");

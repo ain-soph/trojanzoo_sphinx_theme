@@ -842,14 +842,12 @@ function ThemeNav () {
             children
                 .removeClass('current')
                 .attr('aria-expanded','false');
-            parent_li
-                .toggleClass('current')
-                .attr('aria-expanded', function(i, old) {
-                    return old == 'true' ? 'false' : 'true';
-                });
         }
-        // parent_li.find('> ul li.current').removeClass('current');
-        // parent_li.toggleClass('current', true);
+        parent_li
+            .toggleClass('current')
+            .attr('aria-expanded', function(i, old) {
+                return old == 'true' ? 'false' : 'true';
+            });
     }
 
     return nav;
