@@ -68,6 +68,9 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+
+  --lightning: #792ee5;
+  --pytorch: #e44c2c;
 }
 
 [tabindex="-1"]:focus {
@@ -9556,7 +9559,7 @@ a:link,
 a:visited,
 a:hover {
   text-decoration: none;
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 
 a.with-right-arrow, .btn.with-right-arrow {
@@ -9576,23 +9579,23 @@ a.with-right-arrow, .btn.with-right-arrow {
 }
 
 ::-webkit-input-placeholder {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 
 ::-moz-placeholder {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 
 :-ms-input-placeholder {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 
 :-moz-placeholder {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 
 .email-subscribe-form input.email {
-  color: #e44c2c;
+  color: var(--pytorch);
   border: none;
   border-bottom: 1px solid #939393;
   width: 100%;
@@ -9811,7 +9814,7 @@ pre {
 .header-holder .main-menu ul li.active:after {
   content: "•";
   bottom: -24px;
-  color: #e44c2c;
+  color: var(--pytorch);
   font-size: 1.375rem;
   left: 0;
   position: absolute;
@@ -9819,12 +9822,12 @@ pre {
   text-align: center;
 }
 .header-holder .main-menu ul li.active a {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 .header-holder .main-menu ul li.docs-active:after {
   content: "•";
   bottom: -24px;
-  color: #e44c2c;
+  color: var(--pytorch);
   font-size: 1.375rem;
   left: -24px;
   position: absolute;
@@ -9844,7 +9847,7 @@ pre {
 }
 @media screen and (min-width: 1100px) {
   .header-holder .main-menu ul li a:hover {
-    color: #e44c2c;
+    color: var(--pytorch);
   }
 }
 
@@ -9899,7 +9902,7 @@ pre {
   text-decoration: none;
 }
 .mobile-main-menu.open ul li.active a {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 
 .main-menu-close-button {
@@ -9995,7 +9998,7 @@ pre {
 }
 @media screen and (min-width: 768px) {
   .site-footer a:hover {
-    color: #e44c2c;
+    color: var(--pytorch);
   }
 }
 
@@ -10057,7 +10060,7 @@ pre {
 }
 .docs-tutorials-resources a {
   font-size: 1.125rem;
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 .docs-tutorials-resources a:hover {
   color: #ffffff;
@@ -10273,9 +10276,6 @@ article.sphinx-template-article blockquote {
   margin-bottom: 2.5rem;
   width: 65%;
 }
-article.sphinx-template-article img {
-  width: 100%;
-}
 
 html {
   height: 100%;
@@ -10303,7 +10303,7 @@ p {
 p a:link,
 p a:visited,
 p a:hover {
-  color: #e44c2c;
+  color: var(--pytorch);
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
@@ -10394,11 +10394,11 @@ ul.sphinx-template-breadcrumbs a {
   display: none;
 }
 .rst-content footer .rating-container .rating-prompt.yes-link, .rst-content footer .rating-container .rating-prompt.no-link {
-  color: #e44c2c;
+  color: var(--pytorch);
   cursor: pointer;
 }
 .rst-content footer .rating-container .rating-prompt.yes-link:hover, .rst-content footer .rating-container .rating-prompt.no-link:hover {
-  background-color: #e44c2c;
+  background-color: var(--pytorch);
   color: #ffffff;
 }
 .rst-content footer .rating-container .stars-outer {
@@ -10588,7 +10588,7 @@ article.sphinx-template-article .sphx-glr-thumbcontainer .figure a.reference.int
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #e44c2c;
+    background-color: var(--pytorch);
     -webkit-transition: width .250s ease-in-out;
     transition: width .250s ease-in-out;
   }
@@ -10624,7 +10624,7 @@ article.sphinx-template-article .py.function dt, article.sphinx-template-article
   padding-right: 100px;
 }
 article.sphinx-template-article .py.function dd dt {
-  border-left: 3px solid #792ee5;
+  border-left: 3px solid var(--lightning);
 }
 article.sphinx-template-article .py.function dt em.property, article.sphinx-template-article .attribute dt em.property, article.sphinx-template-article .class dt em.property {
   font-family: inherit;
@@ -11005,7 +11005,7 @@ article.sphinx-template-article .admonition > p:last-of-type {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #e44c2c;
+    background-color: var(--pytorch);
     -webkit-transition: width .250s ease-in-out;
     transition: width .250s ease-in-out;
   }
@@ -11260,7 +11260,7 @@ a:hover {
   cursor: pointer;
 }
 .sphinx-template-call-to-action-links a:hover {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 .sphinx-template-call-to-action-links a .call-to-action-desktop-view {
   display: none;
@@ -11292,8 +11292,8 @@ a:hover {
 }
 .sphinx-template-call-to-action-links a #google-colab-link:hover, .sphinx-template-call-to-action-links a #download-notebook-link:hover,
 .sphinx-template-call-to-action-links a #github-view-link:hover {
-  border-bottom-color: #e44c2c;
-  color: #e44c2c;
+  border-bottom-color: var(--pytorch);
+  color: var(--pytorch);
 }
 
 #tutorial-cards-container #tutorial-cards {
@@ -11436,7 +11436,7 @@ a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #e44c2c;
+    background-color: var(--pytorch);
     -webkit-transition: width .250s ease-in-out;
     transition: width .250s ease-in-out;
   }
@@ -11473,7 +11473,7 @@ a:hover {
   color: #979797;
 }
 #tutorial-cards-container .tutorial-filter-menu ul li a:hover {
-  color: #e44c2c;
+  color: var(--pytorch);
 }
 #tutorial-cards-container .tutorial-filter {
   cursor: pointer;
@@ -11491,12 +11491,12 @@ a:hover {
   margin-bottom: 5px;
 }
 #tutorial-cards-container .filter-btn:hover {
-  border: 1px solid #e44c2c;
-  color: #e44c2c;
+  border: 1px solid var(--pytorch);
+  color: var(--pytorch);
 }
 #tutorial-cards-container .filter-btn.selected {
-  background-color: #e44c2c;
-  border: 1px solid #e44c2c;
+  background-color: var(--pytorch);
+  border: 1px solid var(--pytorch);
   color: #ffffff;
 }
 #tutorial-cards-container .all-tag-selected {
@@ -11550,7 +11550,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #e44c2c;
+    background-color: var(--pytorch);
     -webkit-transition: width .250s ease-in-out;
     transition: width .250s ease-in-out;
   }
@@ -11968,7 +11968,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
 /* l2 current text */
 .sphinx-template-left-menu li.toctree-l2.current > a,
 .sphinx-template-right-menu li.toctree-l2.current > a {
-  color: #792ee5;
+  color: var(--lightning);
 }
 
 /* l1 current point */
@@ -11998,7 +11998,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   left: -15px;
   top: -10%;
   font-size: 1.375rem;
-  color: #792ee5;
+  color: var(--lightning);
 }
 @media screen and (min-width: 1101px) {
   .sphinx-template-left-menu li.toctree-l2.current > a:before,
@@ -12159,7 +12159,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
 }
 .sphinx-template-right-menu li.active > a:after {
   content: "\2022";
-  color: #e44c2c;
+  color: var(--pytorch);
   display: inline-block;
   font-size: 1.375rem;
   left: -17px;
@@ -12418,7 +12418,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   border-bottom-color: transparent;
 }
 .main-menu ul li .dropdown-menu .dropdown-item:hover {
-  background-color: #e44c2c;
+  background-color: var(--pytorch);
 }
 .main-menu ul li .dropdown-menu .dropdown-item p {
   font-size: 1rem;
@@ -12510,7 +12510,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
 .header-holder .main-menu ul li a.nav-dropdown-item.active:before {
   content: "\F0A3";
   font-family: FontAwesome;
-  color: #792ee5;
+  color: var(--lightning);
   padding: 0.5rem 0rem;
   font-size: 1.3rem;
   left: 3px;
@@ -12524,7 +12524,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
   border-bottom-color: transparent;
 }
 .header-holder .main-menu ul li a.nav-dropdown-item:hover {
-  background-color: #e44c2c;
+  background-color: var(--pytorch);
   color: white;
 }
 .header-holder .main-menu ul li a.nav-dropdown-item .dropdown-title {
@@ -12535,7 +12535,7 @@ article.sphinx-template-article .tutorials-callout-container .btn.callout-button
 }
 
 .header-holder .main-menu ul li a.nav-dropdown-item:hover .dropdown-title {
-  background-color: #e44c2c;
+  background-color: var(--pytorch);
   color: white;
 }
 
