@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
-# https://github.com/Lasagne/Lasagne/blob/master/docs/conf.py
-
 import inspect
 import sys
 from os import path
 
-from types import ModuleType
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from types import ModuleType
 
 
 def linkcode_helper(domain, info,
-                    package: ModuleType,
+                    package: 'ModuleType',
                     github_url: str,
                     github_version: str = 'master'):
     # Resolve function for the linkcode extension.

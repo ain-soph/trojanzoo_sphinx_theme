@@ -4,14 +4,13 @@
 
 import os
 import sys
+from trojanzoo_sphinx_theme.linkcode import linkcode_helper
 
 sys.path.insert(0, os.path.abspath('./'))
 sys.path.insert(0, os.path.abspath('../../'))
 
-from linkcode import linkcode_helper  # noqa
-import trojanzoo_sphinx_theme  # noqa
+import trojanzoo_sphinx_theme as package  # noqa
 
-package = trojanzoo_sphinx_theme
 
 # -- General configuration ------------------------------------------------
 
@@ -60,10 +59,11 @@ extensions = [
 
 
 def linkcode_resolve(domain, info):
-    return linkcode_helper(domain, info,
-                           package=package,
-                           github_url=github_url,
-                           github_version=github_version)
+    return linkcode_helper(
+        domain, info,
+        package=package,
+        github_url=github_url,
+        github_version=github_version)
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
