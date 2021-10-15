@@ -32,7 +32,7 @@ html_context = {
     'github_user': github_user,
     'github_repo': github_repo,
     'github_version': github_version,
-    "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
+    "conf_py_path": "/docs/source/",  # Path in the checkout to the docs root
 }
 html_theme_options = {
     'github_url': github_url,
