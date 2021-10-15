@@ -21,7 +21,7 @@ copyright = f'2021, {author}'
 
 github_user = author
 github_repo = package.__name__
-github_version = 'master'
+github_version = 'main'
 
 github_url = f'https://github.com/{github_user}/{github_repo}/'
 gh_page_url = f'https://{github_user}.github.io/{github_repo}/'
