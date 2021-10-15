@@ -12,7 +12,7 @@ from types import ModuleType
 def linkcode_helper(domain, info,
                     package: ModuleType,
                     github_url: str,
-                    tag: str = 'master'):
+                    github_version: str = 'master'):
     # Resolve function for the linkcode extension.
     if domain != 'py' or not info['module']:
         return None
@@ -38,4 +38,4 @@ def linkcode_helper(domain, info,
         fn += f'#L{lineno}-L{lineno + len(source) - 1}'
     except Exception:
         pass
-    return f'{github_url}/blob/{tag}/{fn}'
+    return f'{github_url}/blob/{github_version}/{fn}'

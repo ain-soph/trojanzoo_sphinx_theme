@@ -71,6 +71,7 @@ body {
 
   --lightning: #792ee5;
   --pytorch: #e44c2c;
+  --readthedoc: #2980b9;
   --google_blue: #4285f4;
   --google_red: #db4437;
   --google_yellow: #f4b400;
@@ -12267,6 +12268,37 @@ a:hover {
 .header-holder .main-menu ul li a.nav-dropdown-item:hover .dropdown-title {
   background-color: var(--pytorch);
   color: white;
+}
+
+.fa:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 1;
+  padding-right: 2px;
+}
+.fa-black:before {
+  color: 'black';
+}
+.fa-blue:before {
+  color: var(--readthedoc);
+}
+.fa-large:before {
+  font-size: large;
+}
+.fa.fa-home:before {
+  content: "\F015";
+}
+.fa.fa-github:before {
+  content: "\F09B";
+}
+.fa.fa-arrow-circle-left:before {
+  content: "\F0A8";
+}
+.fa.fa-arrow-circle-right:before {
+  content: "\F0A9";
 }
 
 /*# sourceMappingURL=theme.css.map */
