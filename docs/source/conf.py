@@ -55,6 +55,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.intersphinx',
     'sphinx.ext.linkcode',  # viewcode
+    'sphinx_copybutton',
 ]
 
 
