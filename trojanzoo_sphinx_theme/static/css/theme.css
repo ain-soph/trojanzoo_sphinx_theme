@@ -11834,8 +11834,8 @@ a:hover {
   }
 }
 
-.sphinx-template-left-menu li[aria-expanded="true"] ul,
-.sphinx-template-right-menu li[aria-expanded="true"] ul {
+.sphinx-template-left-menu li[aria-expanded="true"] > ul,
+.sphinx-template-right-menu li[aria-expanded="true"] > ul {
   display: block;
 }
 .sphinx-template-left-menu li ul,
