@@ -792,6 +792,8 @@ function ThemeNav () {
                 }
                 link[0].scrollIntoView();
             }
+            $('.sphinx-template-menu-vertical li.toctree-l1')
+                .attr('aria-expanded','true');
         }
         catch (err) {
             console.log("Error expanding nav for anchor", err);
