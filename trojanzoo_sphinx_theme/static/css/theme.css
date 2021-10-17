@@ -10516,7 +10516,7 @@ article.sphinx-template-article p.caption {
   margin-top: 1.25rem;
 }
 
-article.sphinx-template-article .section:first-of-type h1:first-of-type {
+article.sphinx-template-article section:first-of-type h1:first-of-type {
   margin-top: 0;
 }
 
@@ -10603,7 +10603,7 @@ article.sphinx-template-article .sphx-glr-thumbcontainer .figure a.reference.int
   }
 }
 
-article.sphinx-template-article .section :not(dt) > code {
+article.sphinx-template-article section :not(dt) > code {
   color: #262626;
   border-top: solid 2px #ffffff;
   background-color: #ffffff;
@@ -10612,7 +10612,7 @@ article.sphinx-template-article .section :not(dt) > code {
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-article.sphinx-template-article .section :not(dt) > code .pre {
+article.sphinx-template-article section :not(dt) > code .pre {
   outline: 0px;
   padding: 0px;
 }
