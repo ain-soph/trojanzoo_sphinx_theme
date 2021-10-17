@@ -339,7 +339,7 @@ $(".stars-outer > i").on("click", function() {
     });
 })
 
-$("#sphinx-template-side-scroll-right li a").on("click", function (e) {
+$("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", function (e) {
   var href = $(this).attr("href");
   $('html, body').stop().animate({
     scrollTop: $(href).offset().top - 100

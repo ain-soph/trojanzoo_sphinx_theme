@@ -81,7 +81,7 @@ window.sideMenus = {
       }
 
       // Bind click events on right menu links
-      $("#sphinx-template-right-menu a.reference.internal").on("click", function() {
+      $('#sphinx-template-right-menu').on('click', 'a.reference.internal', function() {
         if (this.classList.contains("expanded")) {
           this.nextElementSibling.style.display = "none";
           this.classList.remove("expanded");
