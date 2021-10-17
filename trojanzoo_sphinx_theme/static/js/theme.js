@@ -222,10 +222,6 @@ window.highlightNavigation = {
 },{}],4:[function(require,module,exports){
 window.mainMenuDropdown = {
   bind: function() {
-    $("[data-toggle='ecosystem-dropdown']").on("click", function() {
-      toggleDropdown($(this).attr("data-toggle"));
-    });
-
     $("[data-toggle='resources-dropdown']").on("click", function() {
       toggleDropdown($(this).attr("data-toggle"));
     });

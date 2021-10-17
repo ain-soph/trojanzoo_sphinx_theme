@@ -1,9 +1,5 @@
 window.mainMenuDropdown = {
   bind: function() {
-    $("[data-toggle='ecosystem-dropdown']").on("click", function() {
-      toggleDropdown($(this).attr("data-toggle"));
-    });
-
     $("[data-toggle='resources-dropdown']").on("click", function() {
       toggleDropdown($(this).attr("data-toggle"));
     });
