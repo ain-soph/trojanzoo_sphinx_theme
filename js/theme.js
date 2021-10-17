@@ -363,7 +363,7 @@ var lastId,
 
 $(window).scroll(function () {
   var fromTop = $(this).scrollTop() + topMenuHeight;
-  var article = "section";
+  var article = "section section";
 
   $(article).each(function (i) {
     var offsetScroll = $(this).offset().top - $(window).scrollTop();
