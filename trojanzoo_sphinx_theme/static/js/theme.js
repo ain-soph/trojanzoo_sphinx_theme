@@ -150,7 +150,7 @@ $(function() {
 // Modified from https://stackoverflow.com/a/32396543
 window.highlightNavigation = {
   navigationListItems: document.querySelectorAll("#sphinx-template-right-menu li"),
-  sections: document.querySelectorAll(".sphinx-template-article .section"),
+  sections: document.querySelectorAll(".sphinx-template-article section"),
   sectionIdTonavigationLink: {},
 
   bind: function() {
@@ -766,7 +766,7 @@ function ThemeNav () {
                 // Find associated id element, then its closest section
                 // in the document and try with that one.
                 var id_elt = $('.document [id="' + anchor.substring(1) + '"]');
-                var closest_section = id_elt.closest('div.section');
+                var closest_section = id_elt.closest('section');
                 link = vmenu.find('[href="#' + closest_section.attr("id") + '"]');
                 if (link.length === 0) {
                     // still not found in the sidebar. fall back to main section
@@ -1000,7 +1000,7 @@ var lastId,
 
 $(window).scroll(function () {
   var fromTop = $(this).scrollTop() + topMenuHeight;
-  var article = ".section";
+  var article = "section";
 
   $(article).each(function (i) {
     var offsetScroll = $(this).offset().top - $(window).scrollTop();
