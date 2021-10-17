@@ -368,8 +368,8 @@ $(window).scroll(function () {
   $(article).each(function (i) {
     var offsetScroll = $(this).offset().top - $(window).scrollTop();
     if (
-      offsetScroll <= topMenuHeight + 200 &&
-      offsetScroll >= topMenuHeight - 200 &&
+      offsetScroll <= 120 &&
+      offsetScroll >= -120 &&
       scrollItems[i] == "#" + $(this).attr("id") &&
       $(".hidden:visible")
     ) {
