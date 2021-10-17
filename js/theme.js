@@ -341,6 +341,7 @@ $(".stars-outer > i").on("click", function() {
 
 $("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", function (e) {
   var href = $(this).attr("href");
+  href.replace('.', '\\.');
   $('html, body').stop().animate({
     scrollTop: $(href).offset().top - 100
   }, 850);
