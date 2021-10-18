@@ -9649,9 +9649,6 @@ a.with-right-arrow, .btn.with-right-arrow {
 code, kbd, pre, samp {
   font-family: IBMPlexMono,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
-code span, kbd span, pre span, samp span {
-  font-family: IBMPlexMono,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
 
 pre {
   padding: 1.125rem;
@@ -9673,11 +9670,6 @@ code.highlighter-rouge {
 a:link code.highlighter-rouge,
 a:visited code.highlighter-rouge,
 a:hover code.highlighter-rouge {
-  color: #4974D1;
-}
-a:link.has-code,
-a:visited.has-code,
-a:hover.has-code {
   color: #4974D1;
 }
 
@@ -10464,10 +10456,18 @@ div.code-block-caption:hover > a.headerlink {
 } */
 
 
-a:link.has-code,
-a:hover.has-code,
-a:visited.has-code {
+a:link.has-code code,
+a:hover.has-code code,
+a:visited.has-code code {
   color: #4974D1;
+}
+
+.sphinx-template-left-menu code, .sphinx-template-right-menu code, .sphinx-template-breadcrumbs code,
+.toctree-l1 code, .toctree-l1 a:link.has-code code, .toctree-l1 a:hover.has-code code, .toctree-l1 a:visited.has-code code,
+h1 code, h1 a:link.has-code code, h1 a:hover.has-code code, h1 a:visited.has-code code {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
 article.sphinx-template-article ul,
@@ -10511,7 +10511,7 @@ article.sphinx-template-article p.caption {
   margin-top: 1.25rem;
 }
 
-article.sphinx-template-article section:first-of-type h1:first-of-type {
+article.sphinx-template-article h1:first-of-type {
   margin-top: 0;
 }
 
@@ -12299,6 +12299,16 @@ a:hover {
 }
 .fa.fa-arrow-circle-right:before {
   content: "\F0A9";
+}
+
+.toctree-wrapper .toctree-l2 a {
+  color: var(--lightning);
+}
+.toctree-wrapper .toctree-l2 .toctree-l3 a {
+  color: var(--google-green);
+}
+.toctree-wrapper .toctree-l2 .toctree-l3 .toctree-l4 a {
+  color: var(--readthedoc);
 }
 
 /*# sourceMappingURL=theme.css.map */
