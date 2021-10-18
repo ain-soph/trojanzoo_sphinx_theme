@@ -363,7 +363,6 @@ var lastId,
   }
 
 $(window).scroll(function () {
-  var fromTop = $(this).scrollTop() + topMenuHeight;
   var article = Object.keys(scrollItems).join(', ');
 
   $(article).each(function () {
