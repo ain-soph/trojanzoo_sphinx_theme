@@ -159,7 +159,6 @@ function ThemeNav () {
                         .addClass('current')
                         .attr('aria-expanded','true');
                 }
-                link[0].scrollIntoView();
             }
             $('.sphinx-template-menu-vertical li.toctree-l1')
                 .attr('aria-expanded','true');
