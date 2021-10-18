@@ -10460,6 +10460,7 @@ a:link.has-code code,
 a:hover.has-code code,
 a:visited.has-code code {
   color: #4974D1;
+  text-decoration: inherit;
 }
 
 .sphinx-template-left-menu code, .sphinx-template-right-menu code, .sphinx-template-breadcrumbs code,
