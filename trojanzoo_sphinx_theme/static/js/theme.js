@@ -150,7 +150,7 @@ $(function() {
 // Modified from https://stackoverflow.com/a/32396543
 window.highlightNavigation = {
   navigationListItems: document.querySelectorAll("#sphinx-template-right-menu li"),
-  sections: document.querySelectorAll(".sphinx-template-article section section"),
+  sections: document.querySelectorAll(".sphinx-template-article section section, .sig.sig-object"),
   sectionIdTonavigationLink: {},
 
   bind: function() {
@@ -989,29 +989,29 @@ var lastId,
   topMenu = $("#sphinx-template-side-scroll-right"),
   topMenuHeight = topMenu.outerHeight() + 1,
   // All sidenav items
-  menuItems = topMenu.find("a"),
+  menuItems = topMenu.find("a[href^='#']"),
   // Anchors for menu items
-  scrollItems = menuItems.map(function () {
-    var item = $(this).attr("href");
-    if (item.length) {
-      return item;
+  scrollItems = {};
+  for (var i = 0; i < menuItems.length; i++) {
+    var ref = menuItems[i].getAttribute("href").replaceAll('.', '\\.');
+    if (ref.length > 1 && $(ref).length) {
+      scrollItems[ref] = menuItems[i];
     }
-  });
+  }
 
 $(window).scroll(function () {
   var fromTop = $(this).scrollTop() + topMenuHeight;
-  var article = "section section";
+  var article = Object.keys(scrollItems).join(', ');
 
-  $(article).each(function (i) {
+  $(article).each(function () {
     var offsetScroll = $(this).offset().top - $(window).scrollTop();
     if (
       offsetScroll <= 120 &&
       offsetScroll >= -120 &&
-      scrollItems[i] == "#" + $(this).attr("id") &&
       $(".hidden:visible")
     ) {
       $(menuItems).removeClass("side-scroll-highlight");
-      $(menuItems[i]).addClass("side-scroll-highlight");
+      $(scrollItems['#' + this.id.replaceAll('.', '\\.')]).addClass("side-scroll-highlight");
     }
   });
 });

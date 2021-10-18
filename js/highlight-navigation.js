@@ -1,7 +1,7 @@
 // Modified from https://stackoverflow.com/a/32396543
 window.highlightNavigation = {
   navigationListItems: document.querySelectorAll("#sphinx-template-right-menu li"),
-  sections: document.querySelectorAll(".sphinx-template-article section section"),
+  sections: document.querySelectorAll(".sphinx-template-article section section, .sig.sig-object"),
   sectionIdTonavigationLink: {},
 
   bind: function() {
