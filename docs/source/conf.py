@@ -120,7 +120,7 @@ autodoc_typehints = 'none'
 # -- Options for HTML output ----------------------------------------------
 
 html_theme = 'trojanzoo_sphinx_theme'
-html_permalinks_icon = '\uf08e'  # '\uf0c1'  font-family = FontAwesome
+# html_permalinks_icon = '\uf08e'  # '\uf0c1'  font-family = FontAwesome
 html_favicon = 'images/favicon.ico'
 # html_static_path = ['_static']
 html_title = " ".join((project, version, "documentation"))
