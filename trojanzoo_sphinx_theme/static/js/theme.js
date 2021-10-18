@@ -766,7 +766,7 @@ function ThemeNav () {
                 // Find associated id element, then its closest section
                 // in the document and try with that one.
                 var id_elt = $('.document [id="' + anchor.substring(1) + '"]');
-                var closest_section = id_elt.closest('section section');
+                var closest_section = id_elt.closest('section section, .sig.sig-object');
                 link = vmenu.find('[href="#' + closest_section.attr("id") + '"]');
                 if (link.length === 0) {
                     // still not found in the sidebar. fall back to main section
