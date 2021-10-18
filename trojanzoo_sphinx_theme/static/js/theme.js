@@ -341,7 +341,7 @@ window.scrollToAnchor = {
       init: function() {
         this.scrollToCurrent();
         // This interferes with clicks below it, causing a double fire
-        // $(window).on('hashchange', $.proxy(this, 'scrollToCurrent'));
+        $(window).on('hashchange', $.proxy(this, 'scrollToCurrent'));
         $('body').on('click', 'a', $.proxy(this, 'delegateAnchors'));
         $('body').on('click', '#sphinx-template-right-menu li span', $.proxy(this, 'delegateSpans'));
       },
@@ -513,7 +513,7 @@ window.sideMenus = {
       sideMenus.handleNavBar();
       sideMenus.handleLeftMenu();
       if (sideMenus.rightMenuIsOnScreen()) {
-      sideMenus.handleRightMenu();
+        sideMenus.handleRightMenu();
       }
     }
 
