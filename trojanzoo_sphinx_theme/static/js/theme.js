@@ -425,8 +425,6 @@ window.sideMenus = {
   isFixedToBottom: false,
 
   bind: function() {
-    sideMenus.handleLeftMenu();
-
     var rightMenuLinks = document.querySelectorAll("#sphinx-template-right-menu li");
     var rightMenuHasLinks = rightMenuLinks.length > 1;
 
@@ -512,7 +510,11 @@ window.sideMenus = {
         }
       });
 
+      sideMenus.handleNavBar();
+      sideMenus.handleLeftMenu();
+      if (sideMenus.rightMenuIsOnScreen()) {
       sideMenus.handleRightMenu();
+      }
     }
 
     $(window).on('resize scroll', function(e) {
