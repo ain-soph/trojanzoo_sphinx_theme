@@ -106,23 +106,9 @@ window.utilities = {
    * Modify as appropriate to allow for dynamic calculations
    */
   getFixedOffset: function() {
-    var OFFSET_HEIGHT_PADDING = 20;
+    var OFFSET_HEIGHT_PADDING = 0;
     // TODO: this is a little janky. We should try to not rely on JS for this
     return document.getElementById("sphinx-template-page-level-bar").offsetHeight + OFFSET_HEIGHT_PADDING;
-  },
-
-  findParent: function(item) {
-    return $(item).parent().parent().siblings("a.reference.internal")
-  },
-  makeHighlight: function(item) {
-    if ($(item).hasClass("title-link")) {
-      return
-    }
-    $(item).addClass("side-scroll-highlight");
-    var parent = utilities.findParent(item);
-    if (~parent.hasClass("title-link")) {
-      utilities.makeHighlight(parent)
-    }
   }
 }
 
@@ -473,18 +459,30 @@ window.sideMenus = {
       }
 
       // Add + expansion signifiers to normal right menu links that have sub menus
-      var menuLinks = document.querySelectorAll(
-        "#sphinx-template-right-menu ul li ul li a.reference.internal"
-      );
-
-      for (var i = 0; i < menuLinks.length; i++) {
+      $('#sphinx-template-right-menu ul li ul li a.reference.internal').each(function () {
         if (
-          menuLinks[i].nextElementSibling &&
-          menuLinks[i].nextElementSibling.tagName === "UL"
+          this.nextElementSibling &&
+          this.nextElementSibling.tagName === "UL"
         ) {
-          menuLinks[i].classList.add("not-expanded");
+          var link = $(this)
+          var next = this.nextElementSibling
+          link.attr('aria-expanded', 'false');
+          var expand = $('<button class="toctree-expand" title="Open/close menu"></button>');
+          expand.on('click', function (ev) {
+            if (link.attr('aria-expanded')==='true') {
+              next.style.display = 'none';
+              link.attr('aria-expanded', 'false')
+            }
+            else {
+              next.style.display = 'block';
+              link.attr('aria-expanded', 'true')
+            }
+            ev.stopPropagation()
+            return false;
+          });
+          link.prepend(expand);
         }
-      }
+      });
 
       // If a hash is present on page load recursively expand menu items leading to selected item
       var linkWithHash =
@@ -500,8 +498,7 @@ window.sideMenus = {
           linkWithHash.nextElementSibling.children.length > 0
         ) {
           linkWithHash.nextElementSibling.style.display = "block";
-          linkWithHash.classList.remove("not-expanded");
-          linkWithHash.classList.add("expanded");
+          $(linkWithHash).attr('aria-expanded', 'true');
         }
 
         // Expand ancestor lists if any
@@ -510,15 +507,7 @@ window.sideMenus = {
 
       // Bind click events on right menu links
       $('#sphinx-template-right-menu').on('click', 'a.reference.internal', function() {
-        if (this.classList.contains("expanded")) {
-          this.nextElementSibling.style.display = "none";
-          this.classList.remove("expanded");
-          this.classList.add("not-expanded");
-        } else if (this.classList.contains("not-expanded")) {
-          this.nextElementSibling.style.display = "block";
-          this.classList.remove("not-expanded");
-          this.classList.add("expanded");
-        }
+        $(this).children("button").trigger("click");
       });
 
       sideMenus.handleNavBar();
@@ -572,8 +561,7 @@ window.sideMenus = {
          }
 
         closestParentList.style.display = "block";
-        closestParentLink.classList.remove("not-expanded");
-        closestParentLink.classList.add("expanded");
+        $(closestParentLink).attr('aria-expanded', 'true');
         sideMenus.expandClosestUnexpandedParentList(closestParentLink);
       }
     }
@@ -991,10 +979,13 @@ $(".stars-outer > i").on("click", function() {
 
 $("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", function (e) {
   var href = $(this).attr("href").replaceAll('.', '\\.');
-  $('html, body').stop().animate({
-    scrollTop: $(href).offset().top - utilities.getFixedOffset()
-  }, 850);
-  e.preventDefault;
+  var offset = 0
+  if (href !== "#"){
+    offset = $(href).offset().top - utilities.getFixedOffset()
+  }
+  $('html, body').stop().animate({scrollTop: offset}, 850);
+  e.preventDefault();
+  // e.stopPropagation();
 });
 
 topMenu = $("#sphinx-template-side-scroll-right"),
@@ -1009,22 +1000,61 @@ for (var i = 0; i < menuItems.length; i++) {
   }
 }
 
-highlightCurrent = function() {
-  var article = Object.keys(scrollItems).join(', ');
+findParent = function(item) {
+  return $(item).parent().parent().siblings("a.reference.internal")
+},
+makeHighlight = function(item) {
+  if ($(item).hasClass("title-link")) {
+    return
+  }
+  $(item).addClass("side-scroll-highlight");
+  var parent = findParent(item);
+  if (parent.length && !parent.hasClass("title-link")) {
+    makeHighlight(parent)
+  }
+},
+showHighlight = function(item) {
+  $(menuItems).removeClass("side-scroll-highlight");
+  $(menuItems).removeClass("current");
+  $(item).addClass("current")
+  makeHighlight(item);
+  $("#sphinx-template-right-menu ul li ul li a.reference.internal[aria-expanded='true']").each(function () {
+    this.nextElementSibling.style.display = 'none';
+    $(this).attr('aria-expanded', 'false');
+  });
+  sideMenus.expandClosestUnexpandedParentList(item);
+},
+initHighlight = function() {
+  item_list = $(Object.keys(scrollItems).join(', '))
+  if (item_list.length) {
+    var value = -1e10;
+    var idx = -1;
+    for (var i = 0; i < item_list.length; i++) {
+      var offset = $(item_list[i]).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
+      if (offset <= 50 && offset > value) {
+        value = offset;
+        idx = i;
+      }
+    }
+    if (idx !== -1) {
+      showHighlight(scrollItems['#' + item_list[idx].id.replaceAll('.', '\\.')])
+    }
+  }
+};
 
-  $(article).each(function () {
-    var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
-    if (
-      offsetScroll <= 50 &&
-      offsetScroll >= -50 &&
-      $(".hidden:visible")
-    ) {
-      $(menuItems).removeClass("side-scroll-highlight");
-      utilities.makeHighlight(scrollItems['#' + this.id.replaceAll('.', '\\.')]);
+$(window).scroll(function() {
+  $(Object.keys(scrollItems).join(', ')).each(function () {
+    var menu_item = scrollItems['#' + this.id.replaceAll('.', '\\.')]
+    if (!$(menu_item).hasClass("current")){
+      var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
+      if (offsetScroll <= 20 && offsetScroll >= -20) {
+        showHighlight(menu_item)
+      }
     }
   });
-}
-$(window).scroll(highlightCurrent);
-$(document).ready(highlightCurrent)
+});
+
+$(document).ready(initHighlight);
+$(window).on('hashchange', initHighlight);
 
 },{"jquery":"jquery"}]},{},[1,2,3,4,5,6,7,8,9,"sphinx-template-sphinx-theme"]);

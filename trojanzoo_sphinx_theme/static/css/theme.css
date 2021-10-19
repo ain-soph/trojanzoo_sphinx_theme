@@ -11871,13 +11871,20 @@ a:hover {
 .sphinx-template-right-menu a:hover span.pre {
   color: #6c6c6d;
 }
-.sphinx-template-right-menu a.reference.internal.expanded:before {
+.sphinx-template-right-menu a.reference.internal button {
+  display: block;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  color: inherit;
+}
+.sphinx-template-right-menu a.reference.internal[aria-expanded="true"] button:before {
   content: "-";
   font-family: monospace;
   position: absolute;
   left: -12px;
 }
-.sphinx-template-right-menu a.reference.internal.not-expanded:before {
+.sphinx-template-right-menu a.reference.internal[aria-expanded="false"] button:before {
   content: "+";
   font-family: monospace;
   position: absolute;
@@ -11952,8 +11959,17 @@ a:hover {
   position: relative;
 }
 
-#sphinx-template-right-menu .side-scroll-highlight {
+#sphinx-template-right-menu ul li ul li .side-scroll-highlight {
   color: var(--pytorch-red);
+}
+#sphinx-template-right-menu ul li ul li ul li .side-scroll-highlight {
+  color: var(--lightning);
+}
+#sphinx-template-right-menu ul li ul li ul li ul li .side-scroll-highlight {
+  color: var(--google-green);
+}
+#sphinx-template-right-menu ul li ul li ul li ul li ul li .side-scroll-highlight {
+  color: var(--readthedoc);
 }
 
 .header-container {

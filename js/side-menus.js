@@ -43,18 +43,30 @@ window.sideMenus = {
       }
 
       // Add + expansion signifiers to normal right menu links that have sub menus
-      var menuLinks = document.querySelectorAll(
-        "#sphinx-template-right-menu ul li ul li a.reference.internal"
-      );
-
-      for (var i = 0; i < menuLinks.length; i++) {
+      $('#sphinx-template-right-menu ul li ul li a.reference.internal').each(function () {
         if (
-          menuLinks[i].nextElementSibling &&
-          menuLinks[i].nextElementSibling.tagName === "UL"
+          this.nextElementSibling &&
+          this.nextElementSibling.tagName === "UL"
         ) {
-          menuLinks[i].classList.add("not-expanded");
+          var link = $(this)
+          var next = this.nextElementSibling
+          link.attr('aria-expanded', 'false');
+          var expand = $('<button class="toctree-expand" title="Open/close menu"></button>');
+          expand.on('click', function (ev) {
+            if (link.attr('aria-expanded')==='true') {
+              next.style.display = 'none';
+              link.attr('aria-expanded', 'false')
+            }
+            else {
+              next.style.display = 'block';
+              link.attr('aria-expanded', 'true')
+            }
+            ev.stopPropagation()
+            return false;
+          });
+          link.prepend(expand);
         }
-      }
+      });
 
       // If a hash is present on page load recursively expand menu items leading to selected item
       var linkWithHash =
@@ -70,8 +82,7 @@ window.sideMenus = {
           linkWithHash.nextElementSibling.children.length > 0
         ) {
           linkWithHash.nextElementSibling.style.display = "block";
-          linkWithHash.classList.remove("not-expanded");
-          linkWithHash.classList.add("expanded");
+          $(linkWithHash).attr('aria-expanded', 'true');
         }
 
         // Expand ancestor lists if any
@@ -80,15 +91,7 @@ window.sideMenus = {
 
       // Bind click events on right menu links
       $('#sphinx-template-right-menu').on('click', 'a.reference.internal', function() {
-        if (this.classList.contains("expanded")) {
-          this.nextElementSibling.style.display = "none";
-          this.classList.remove("expanded");
-          this.classList.add("not-expanded");
-        } else if (this.classList.contains("not-expanded")) {
-          this.nextElementSibling.style.display = "block";
-          this.classList.remove("not-expanded");
-          this.classList.add("expanded");
-        }
+        $(this).children("button").trigger("click");
       });
 
       sideMenus.handleNavBar();
@@ -142,8 +145,7 @@ window.sideMenus = {
          }
 
         closestParentList.style.display = "block";
-        closestParentLink.classList.remove("not-expanded");
-        closestParentLink.classList.add("expanded");
+        $(closestParentLink).attr('aria-expanded', 'true');
         sideMenus.expandClosestUnexpandedParentList(closestParentLink);
       }
     }
