@@ -406,10 +406,17 @@ initHighlight = function() {
 $(window).scroll(function() {
   $(Object.keys(scrollItems).join(', ')).each(function () {
     var menu_item = scrollItems['#' + this.id.replaceAll('.', '\\.')]
-    if (!$(menu_item).hasClass("current")){
-      var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
-      if (offsetScroll <= 20 && offsetScroll >= -20) {
+    var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
+    if (offsetScroll <= 20 && offsetScroll >= -20) {
+      if (!$(menu_item).hasClass("side-scroll-highlight")){
         showHighlight(menu_item)
+      }
+      else if (!$(menu_item).hasClass("current")) {
+        $(menuItems).removeClass("current");
+        $(menu_item).addClass("current")
+        var item_list = menu_item.nextElementSibling
+        $(item_list).find("a.reference.internal").removeClass("side-scroll-highlight");
+        $(item_list).find("ul").attr('display', 'none').attr('aria-expanded', 'false');
       }
     }
   });
