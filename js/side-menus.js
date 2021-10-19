@@ -61,7 +61,7 @@ window.sideMenus = {
               next.style.display = 'block';
               link.attr('aria-expanded', 'true')
             }
-            ev.stopPropagation()
+            ev.stopPropagation();
             return false;
           });
           link.prepend(expand);
@@ -88,11 +88,6 @@ window.sideMenus = {
         // Expand ancestor lists if any
         sideMenus.expandClosestUnexpandedParentList(linkWithHash);
       }
-
-      // Bind click events on right menu links
-      $('#sphinx-template-right-menu').on('click', 'a.reference.internal', function() {
-        $(this).children("button").trigger("click");
-      });
 
       sideMenus.handleNavBar();
       sideMenus.handleLeftMenu();

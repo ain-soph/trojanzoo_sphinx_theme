@@ -339,14 +339,17 @@ $(".stars-outer > i").on("click", function() {
 })
 
 $("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", function (e) {
-  var href = $(this).attr("href").replaceAll('.', '\\.');
+  var link = $(this)
+  var href = link.attr("href").replaceAll('.', '\\.');
   var offset = 0
   if (href !== "#"){
     offset = $(href).offset().top - utilities.getFixedOffset()
   }
-  $('html, body').stop().animate({scrollTop: offset}, 850);
+  $('html').stop().animate({scrollTop: offset}, 850, function (){
+    link.children("button").trigger("click");
+  });
   e.preventDefault();
-  // e.stopPropagation();
+  e.stopPropagation();
 });
 
 topMenu = $("#sphinx-template-side-scroll-right"),

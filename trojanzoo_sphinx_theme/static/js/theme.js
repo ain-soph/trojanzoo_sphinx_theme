@@ -477,7 +477,7 @@ window.sideMenus = {
               next.style.display = 'block';
               link.attr('aria-expanded', 'true')
             }
-            ev.stopPropagation()
+            ev.stopPropagation();
             return false;
           });
           link.prepend(expand);
@@ -504,11 +504,6 @@ window.sideMenus = {
         // Expand ancestor lists if any
         sideMenus.expandClosestUnexpandedParentList(linkWithHash);
       }
-
-      // Bind click events on right menu links
-      $('#sphinx-template-right-menu').on('click', 'a.reference.internal', function() {
-        $(this).children("button").trigger("click");
-      });
 
       sideMenus.handleNavBar();
       sideMenus.handleLeftMenu();
@@ -978,14 +973,17 @@ $(".stars-outer > i").on("click", function() {
 })
 
 $("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", function (e) {
-  var href = $(this).attr("href").replaceAll('.', '\\.');
+  var link = $(this)
+  var href = link.attr("href").replaceAll('.', '\\.');
   var offset = 0
   if (href !== "#"){
     offset = $(href).offset().top - utilities.getFixedOffset()
   }
-  $('html, body').stop().animate({scrollTop: offset}, 850);
+  $('html').stop().animate({scrollTop: offset}, 850, function (){
+    link.children("button").trigger("click");
+  });
   e.preventDefault();
-  // e.stopPropagation();
+  e.stopPropagation();
 });
 
 topMenu = $("#sphinx-template-side-scroll-right"),
