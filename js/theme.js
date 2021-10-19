@@ -373,7 +373,7 @@ makeHighlight = function(item) {
   }
   $(item).addClass("side-scroll-highlight");
   var parent = findParent(item);
-  if (parent.length && !parent.hasClass("title-link")) {
+  if (parent.length) {
     makeHighlight(parent)
   }
 },
@@ -408,9 +408,9 @@ initHighlight = function() {
 
 $(window).scroll(function() {
   $(Object.keys(scrollItems).join(', ')).each(function () {
-    var menu_item = scrollItems['#' + this.id.replaceAll('.', '\\.')]
     var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
-    if (offsetScroll <= 20 && offsetScroll >= -20) {
+    if (offsetScroll <= 30 && offsetScroll >= -30) {
+      var menu_item = scrollItems['#' + this.id.replaceAll('.', '\\.')]
       if (!$(menu_item).hasClass("side-scroll-highlight")){
         showHighlight(menu_item)
       }
