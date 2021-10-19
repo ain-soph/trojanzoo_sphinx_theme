@@ -99,7 +99,17 @@ window.utilities = {
     return window.innerHeight ||
            document.documentElement.clientHeight ||
            document.body.clientHeight;
-  }
+  },
+
+  /**
+   * Return the offset amount to deduct from the normal scroll position.
+   * Modify as appropriate to allow for dynamic calculations
+   */
+  getFixedOffset: function() {
+    var OFFSET_HEIGHT_PADDING = 20;
+    // TODO: this is a little janky. We should try to not rely on JS for this
+    return utilities.headersHeight() + OFFSET_HEIGHT_PADDING;
+  },
 }
 
 },{}],2:[function(require,module,exports){
@@ -329,12 +339,6 @@ window.scrollToAnchor = {
 
     var anchorScrolls = {
       ANCHOR_REGEX: /^#[^ ]+$/,
-      offsetHeightPx: function() {
-        var OFFSET_HEIGHT_PADDING = 20;
-        // TODO: this is a little janky. We should try to not rely on JS for this
-        return utilities.headersHeight() + OFFSET_HEIGHT_PADDING;
-      },
-
       /**
        * Establish events, and fix initial scroll position if a hash is provided.
        */
@@ -346,13 +350,6 @@ window.scrollToAnchor = {
         $('body').on('click', '#sphinx-template-right-menu li span', $.proxy(this, 'delegateSpans'));
       },
 
-      /**
-       * Return the offset amount to deduct from the normal scroll position.
-       * Modify as appropriate to allow for dynamic calculations
-       */
-      getFixedOffset: function() {
-        return this.offsetHeightPx();
-      },
 
       /**
        * If the provided href is an anchor which resolves to an element on the
@@ -370,7 +367,7 @@ window.scrollToAnchor = {
         match = document.getElementById(href.slice(1));
 
         if(match) {
-          var anchorOffset = $(match).offset().top - this.getFixedOffset();
+          var anchorOffset = $(match).offset().top - utilities.getFixedOffset();
 
           $('html, body').scrollTop(anchorOffset);
 
@@ -981,7 +978,7 @@ $(".stars-outer > i").on("click", function() {
 $("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", function (e) {
   var href = $(this).attr("href").replaceAll('.', '\\.');
   $('html, body').stop().animate({
-    scrollTop: $(href).offset().top - 100
+    scrollTop: $(href).offset().top - utilities.getFixedOffset()
   }, 850);
   e.preventDefault;
 });
@@ -1004,10 +1001,10 @@ $(window).scroll(function () {
   var article = Object.keys(scrollItems).join(', ');
 
   $(article).each(function () {
-    var offsetScroll = $(this).offset().top - $(window).scrollTop();
+    var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
     if (
-      offsetScroll <= 120 &&
-      offsetScroll >= -120 &&
+      offsetScroll <= 50 &&
+      offsetScroll >= -50 &&
       $(".hidden:visible")
     ) {
       $(menuItems).removeClass("side-scroll-highlight");
