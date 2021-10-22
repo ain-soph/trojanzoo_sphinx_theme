@@ -979,8 +979,10 @@ $("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", func
   if (href !== "#"){
     offset = $(href).offset().top - utilities.getFixedOffset()
   }
+  prev_offset = $(window).scrollTop() - utilities.getFixedOffset()
   $('html').stop().animate({scrollTop: offset}, 850, function (){
-    link.children("button").trigger("click");
+    if (offset > prev_offset)
+      link.children("button").trigger("click");
   });
   e.preventDefault();
   e.stopPropagation();
@@ -1040,8 +1042,9 @@ initHighlight = function() {
   }
 };
 
+ArticleItems = $(Object.keys(scrollItems).join(', '))
 $(window).scroll(function() {
-  $(Object.keys(scrollItems).join(', ')).each(function () {
+  ArticleItems.each(function () {
     var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
     if (offsetScroll <= 30 && offsetScroll >= -30) {
       var menu_item = scrollItems['#' + this.id.replaceAll('.', '\\.')]

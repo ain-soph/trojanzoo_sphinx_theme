@@ -345,8 +345,10 @@ $("#sphinx-template-side-scroll-right").on("click", "a.reference.internal", func
   if (href !== "#"){
     offset = $(href).offset().top - utilities.getFixedOffset()
   }
+  prev_offset = $(window).scrollTop() - utilities.getFixedOffset()
   $('html').stop().animate({scrollTop: offset}, 850, function (){
-    link.children("button").trigger("click");
+    if (offset > prev_offset)
+      link.children("button").trigger("click");
   });
   e.preventDefault();
   e.stopPropagation();
