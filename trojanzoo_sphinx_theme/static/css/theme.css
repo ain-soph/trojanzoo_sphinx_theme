@@ -11650,6 +11650,10 @@ a:hover {
   padding-left: 0;
   padding-right: 0;
 }
+.search li code {
+  font-family: inherit;
+  font-size: inherit;
+}
 .sphinx-template-left-menu li span.toctree-expand,
 .sphinx-template-right-menu li span.toctree-expand {
   display: block;
