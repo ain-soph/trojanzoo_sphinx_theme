@@ -1000,6 +1000,7 @@ for (var i = 0; i < menuItems.length; i++) {
   }
 }
 
+ArticleItems = $(Object.keys(scrollItems).join(', '))
 findParent = function(item) {
   return $(item).parent().parent().siblings("a.reference.internal")
 },
@@ -1025,28 +1026,26 @@ showHighlight = function(item) {
   sideMenus.expandClosestUnexpandedParentList(item);
 },
 initHighlight = function() {
-  item_list = $(Object.keys(scrollItems).join(', '))
-  if (item_list.length) {
+  if (ArticleItems.length) {
     var value = -1e10;
     var idx = -1;
-    for (var i = 0; i < item_list.length; i++) {
-      var offset = $(item_list[i]).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
+    for (var i = 0; i < ArticleItems.length; i++) {
+      var offset = $(ArticleItems[i]).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
       if (offset <= 50 && offset > value) {
         value = offset;
         idx = i;
       }
     }
     if (idx !== -1) {
-      showHighlight(scrollItems['#' + item_list[idx].id.replaceAll('.', '\\.')])
+      showHighlight(scrollItems['#' + ArticleItems[idx].id.replaceAll('.', '\\.')])
     }
   }
 };
-
-ArticleItems = $(Object.keys(scrollItems).join(', '))
 $(window).scroll(function() {
+  var offset = $(window).scrollTop() + utilities.getFixedOffset();
   ArticleItems.each(function () {
-    var offsetScroll = $(this).offset().top - $(window).scrollTop() - utilities.getFixedOffset();
-    if (offsetScroll <= 30 && offsetScroll >= -30) {
+    var offsetScroll = Math.abs($(this).offset().top - offset);
+    if (offsetScroll < 30) {
       var menu_item = scrollItems['#' + this.id.replaceAll('.', '\\.')]
       if (!$(menu_item).hasClass("side-scroll-highlight")){
         showHighlight(menu_item)
