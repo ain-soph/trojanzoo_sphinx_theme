@@ -10427,10 +10427,10 @@ ul.sphinx-template-breadcrumbs a {
   font-size: 60%;
   margin: 0 0.2em;
 }
-.rst-content a.reference.external code {
+.rst-content :not(h1, h2, h3, h4, h5, h6) > a.reference.external code {
   color: var(--readthedoc);
 }
-.rst-content a.reference.internal code {
+.rst-content :not(h1, h2, h3, h4, h5, h6) > a.reference.internal code {
   color: var(--lightning);
 }
 
