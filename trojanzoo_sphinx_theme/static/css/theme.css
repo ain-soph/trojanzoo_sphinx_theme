@@ -11710,6 +11710,7 @@ a:hover {
 .sphinx-template-left-menu li.toctree-l2 > a,
 .sphinx-template-right-menu li.toctree-l2 > a {
   left: 15px;
+  font-size: 1rem;
 }
 @media screen and (min-width: 1101px) {
   .sphinx-template-left-menu li.toctree-l2 > a,
