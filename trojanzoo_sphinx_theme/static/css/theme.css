@@ -10412,6 +10412,13 @@ ul.sphinx-template-breadcrumbs a {
 .rst-content footer div[role="contentinfo"] p {
   margin-bottom: 0;
 }
+.rst-content .highlighted {
+  background: var(--yellow);
+  box-shadow: 0 0 0 2 var(--yellow);
+  display: inline;
+  font-weight: bold;
+  margin-bottom: 0;
+}
 
 h1 {
   font-size: 2rem;
