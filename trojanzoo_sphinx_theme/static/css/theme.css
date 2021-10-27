@@ -10427,6 +10427,12 @@ ul.sphinx-template-breadcrumbs a {
   font-size: 60%;
   margin: 0 0.2em;
 }
+.rst-content a.reference.external code {
+  color: var(--readthedoc);
+}
+.rst-content a.reference.internal code {
+  color: var(--lightning);
+}
 
 
 h1 {
