@@ -10427,10 +10427,12 @@ ul.sphinx-template-breadcrumbs a {
   font-size: 60%;
   margin: 0 0.2em;
 }
-.rst-content :not(h1, h2, h3, h4, h5, h6) > a.reference.external code {
+.rst-content :not(h1, h2, h3, h4, h5, h6, 
+.toctree-l1, .toctree-l2, .toctree-l3, .toctree-l4) > a.reference.external code {
   color: var(--google-blue);
 }
-.rst-content :not(h1, h2, h3, h4, h5, h6) > a.reference.internal code {
+.rst-content :not(h1, h2, h3, h4, h5, h6, 
+.toctree-l1, .toctree-l2, .toctree-l3, .toctree-l4) > a.reference.internal code {
   color: var(--google-green);
 }
 
