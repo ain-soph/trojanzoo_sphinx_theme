@@ -10419,6 +10419,15 @@ ul.sphinx-template-breadcrumbs a {
   font-weight: bold;
   margin-bottom: 0;
 }
+.rst-content .style-external-links a.reference.external:after {
+  font-family: FontAwesome;
+  content: "\f08e";
+  color: var(--readthedoc);
+  vertical-align: super;
+  font-size: 60%;
+  margin: 0 0.2em;
+}
+
 
 h1 {
   font-size: 2rem;
