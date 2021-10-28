@@ -213,7 +213,7 @@ function ThemeNav () {
                 .removeClass('current')
                 .attr('aria-expanded','false');
             parent_li
-                .toggleClass('current')
+                .addClass('current')
                 .attr('aria-expanded', function(i, old) {
                     return old == 'true' ? 'false' : 'true';
                 });
