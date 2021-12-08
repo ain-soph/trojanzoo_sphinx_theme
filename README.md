@@ -10,6 +10,7 @@ Sphinx theme for [TrojanZoo Docs](https://ain-soph.github.io/trojanzoo) based on
 This work removes all pytorch-related things and support many customizations. It also removes all other unnecessary items to make it a pure doc template.  
 See demos at:  
 https://ain-soph.github.io/trojanzoo_sphinx_theme/  
+https://ain-soph.github.io/alpsplot/  
 https://ain-soph.github.io/trojanzoo/
 
 ## Local Development
