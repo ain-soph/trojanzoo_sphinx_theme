@@ -18,7 +18,8 @@ https://ain-soph.github.io/trojanzoo/
 Run python setup:
 
 ```
-python setup.py install
+git clone https://github.com/ain-soph/trojanzoo_sphinx_theme
+pip install -e trojanzoo_sphinx_theme
 ```
 
 and install the dependencies using `pip install -r requirements.txt`
@@ -42,5 +43,3 @@ Run grunt to build the html site and enable live reloading of the demo app at `l
 ```
 grunt
 ```
-
-The resulting site is a demo.
