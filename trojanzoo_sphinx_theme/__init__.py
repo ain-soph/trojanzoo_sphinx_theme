@@ -2,9 +2,13 @@
 
 from .version import __version__
 
-from os import path
+import docutils.nodes as nodes
+import docutils.parsers.rst.directives.admonitions as admonitions
+from docutils.parsers.rst.roles import set_classes
 from sphinx.util import isurl
 from sphinx.util.fileutil import copy_asset
+
+from os import path
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
@@ -58,6 +62,31 @@ def build_finished(app: 'Sphinx', exception: Exception):
             copy_asset(path.join(app.confdir, v),
                        path.join(app.outdir, '_static', 'logo'))
 
+class Deprecated(admonitions.BaseAdmonition):
+
+    node_class = nodes.admonition
+
+    def run(self):
+        set_classes(self.options)
+        self.assert_has_content()
+        text = '\n'.join(self.content)
+        admonition_node = self.node_class(text, **self.options)
+        self.add_name(admonition_node)
+
+        title_text = 'Deprecation'
+        textnodes, messages = self.state.inline_text(title_text,
+                                                        self.lineno)
+        title = nodes.title(title_text, '', *textnodes)
+        title.source, title.line = (
+                self.state_machine.get_source_and_line(self.lineno))
+        admonition_node += title
+        admonition_node += messages
+        if not 'classes' in self.options:
+            admonition_node['classes'] += [nodes.make_id(title_text)]
+
+        self.state.nested_parse(self.content, self.content_offset,
+                                admonition_node)
+        return [admonition_node]
 
 def setup(app: 'Sphinx'):
     # See https://www.sphinx-doc.org/en/master/development/theming.html
@@ -66,4 +95,5 @@ def setup(app: 'Sphinx'):
     app.connect('config-inited', config_initiated)
     app.connect('html-page-context', html_page_context)
     app.connect('build-finished', build_finished)
+    app.add_directive('deprecated', Deprecated, override=True)
     return {'parallel_read_safe': True, 'parallel_write_safe': True}

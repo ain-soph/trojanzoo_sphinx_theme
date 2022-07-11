@@ -10782,6 +10782,7 @@ article.sphinx-template-article table {
 
 article.sphinx-template-article .note,
 article.sphinx-template-article .warning,
+article.sphinx-template-article .deprecation,
 article.sphinx-template-article .tip,
 article.sphinx-template-article .seealso,
 article.sphinx-template-article .hint,
@@ -10796,6 +10797,7 @@ article.sphinx-template-article .error {
 }
 article.sphinx-template-article .note .admonition-title,
 article.sphinx-template-article .warning .admonition-title,
+article.sphinx-template-article .deprecation .admonition-title,
 article.sphinx-template-article .tip .admonition-title,
 article.sphinx-template-article .seealso .admonition-title,
 article.sphinx-template-article .hint .admonition-title,
@@ -10814,6 +10816,7 @@ article.sphinx-template-article .error .admonition-title {
 }
 article.sphinx-template-article .note .admonition-title:before,
 article.sphinx-template-article .warning .admonition-title:before,
+article.sphinx-template-article .deprecation .admonition-title:before,
 article.sphinx-template-article .tip .admonition-title:before,
 article.sphinx-template-article .seealso .admonition-title:before,
 article.sphinx-template-article .hint .admonition-title:before,
@@ -10830,6 +10833,7 @@ article.sphinx-template-article .error .admonition-title:before {
 }
 article.sphinx-template-article .note p:nth-child(n + 2),
 article.sphinx-template-article .warning p:nth-child(n + 2),
+article.sphinx-template-article .deprecation p:nth-child(n + 2),
 article.sphinx-template-article .tip p:nth-child(n + 2),
 article.sphinx-template-article .seealso p:nth-child(n + 2),
 article.sphinx-template-article .hint p:nth-child(n + 2),
@@ -10842,6 +10846,7 @@ article.sphinx-template-article .error p:nth-child(n + 2) {
 }
 article.sphinx-template-article .note table,
 article.sphinx-template-article .warning table,
+article.sphinx-template-article .deprecation table,
 article.sphinx-template-article .tip table,
 article.sphinx-template-article .seealso table,
 article.sphinx-template-article .hint table,
@@ -10855,6 +10860,7 @@ article.sphinx-template-article .error table {
 }
 article.sphinx-template-article .note :not(dt) > code,
 article.sphinx-template-article .warning :not(dt) > code,
+article.sphinx-template-article .deprecation :not(dt) > code,
 article.sphinx-template-article .tip :not(dt) > code,
 article.sphinx-template-article .seealso :not(dt) > code,
 article.sphinx-template-article .hint :not(dt) > code,
@@ -10871,6 +10877,7 @@ article.sphinx-template-article .error :not(dt) > code {
 }
 article.sphinx-template-article .note :not(dt) > code .pre,
 article.sphinx-template-article .warning :not(dt) > code .pre,
+article.sphinx-template-article .deprecation :not(dt) > code .pre,
 article.sphinx-template-article .tip :not(dt) > code .pre,
 article.sphinx-template-article .seealso :not(dt) > code .pre,
 article.sphinx-template-article .hint :not(dt) > code .pre,
@@ -10884,6 +10891,7 @@ article.sphinx-template-article .error :not(dt) > code .pre {
 }
 article.sphinx-template-article .note pre,
 article.sphinx-template-article .warning pre,
+article.sphinx-template-article .deprecation pre,
 article.sphinx-template-article .tip pre,
 article.sphinx-template-article .seealso pre,
 article.sphinx-template-article .hint pre,
@@ -10896,6 +10904,7 @@ article.sphinx-template-article .error pre {
 }
 article.sphinx-template-article .note .highlight,
 article.sphinx-template-article .warning .highlight,
+article.sphinx-template-article .deprecation .highlight,
 article.sphinx-template-article .tip .highlight,
 article.sphinx-template-article .seealso .highlight,
 article.sphinx-template-article .hint .highlight,
@@ -10910,6 +10919,8 @@ article.sphinx-template-article .note ul,
 article.sphinx-template-article .note ol,
 article.sphinx-template-article .warning ul,
 article.sphinx-template-article .warning ol,
+article.sphinx-template-article .deprecation ul,
+article.sphinx-template-article .deprecation ol,
 article.sphinx-template-article .tip ul,
 article.sphinx-template-article .tip ol,
 article.sphinx-template-article .seealso ul,
@@ -10932,6 +10943,8 @@ article.sphinx-template-article .note ul li,
 article.sphinx-template-article .note ol li,
 article.sphinx-template-article .warning ul li,
 article.sphinx-template-article .warning ol li,
+article.sphinx-template-article .deprecation ul li,
+article.sphinx-template-article .deprecation ol li,
 article.sphinx-template-article .tip ul li,
 article.sphinx-template-article .tip ol li,
 article.sphinx-template-article .seealso ul li,
@@ -10952,6 +10965,7 @@ article.sphinx-template-article .error ol li {
 }
 article.sphinx-template-article .note p,
 article.sphinx-template-article .warning p,
+article.sphinx-template-article .deprecation p,
 article.sphinx-template-article .tip p,
 article.sphinx-template-article .seealso p,
 article.sphinx-template-article .hint p,
@@ -10967,6 +10981,9 @@ article.sphinx-template-article .note .admonition-title {
 }
 article.sphinx-template-article .warning .admonition-title {
   background: #e94f3b;
+}
+article.sphinx-template-article .deprecation .admonition-title {
+  background: var(--lightning);
 }
 article.sphinx-template-article .tip .admonition-title {
   background: #6bcebb;
