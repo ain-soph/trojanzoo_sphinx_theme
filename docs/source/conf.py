@@ -78,7 +78,7 @@ intersphinx_mapping = {
 
 # -- General default configuration ------------------------------------------------
 
-needs_sphinx = '4.0.2'
+needs_sphinx = '4.2.0'
 templates_path = ['_templates']
 source_suffix = '.rst'  # ['.rst', '.md']
 root_doc = 'index'
