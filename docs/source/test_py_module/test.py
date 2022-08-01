@@ -107,5 +107,7 @@ class Foo:
             This was added in 1.0
         .. versionchanged:: 2.0
             This was changed in 2.0
+        .. deprecated:: 3.0
+            This is deprecated since 3.0
         """
         return sum(kwargs.values()) / len(kwargs), a + b
