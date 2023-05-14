@@ -97,6 +97,9 @@ autodoc_docstring_signature = True
 autodoc_inherit_docstrings = False
 autodoc_typehints = 'none'
 
+toc_object_entries = True
+toc_object_entries_show_parents = "hide"
+
 # autosummary options
 # autosummary_generate = True
 # numpydoc_show_class_members = False
