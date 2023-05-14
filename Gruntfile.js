@@ -103,7 +103,7 @@ module.exports = function (grunt) {
                 dest: 'trojanzoo_sphinx_theme/static/js/theme.js'
             }
         },
-        uglify: {
+        terser: {
             dist: {
                 options: {
                     sourceMap: false,
@@ -164,5 +164,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-browserify');
 
     grunt.registerTask('default', ['clean', 'copy:fonts', 'copy:images', 'copy:vendor', 'browserify:dev', 'exec:build_sphinx', 'connect', 'open', 'watch']);
-    grunt.registerTask('build', ['clean', 'copy:fonts', 'copy:images', 'copy:vendor', 'browserify:build', 'uglify']);
+    grunt.registerTask('build', ['clean', 'copy:fonts', 'copy:images', 'copy:vendor', 'browserify:build', 'terser']);
+    grunt.registerTask('js', ['clean', 'copy:fonts', 'copy:images', 'copy:vendor', 'browserify:build', 'terser']);
 }

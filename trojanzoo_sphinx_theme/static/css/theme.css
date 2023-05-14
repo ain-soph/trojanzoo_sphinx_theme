@@ -11910,7 +11910,7 @@ a:hover {
   padding-left: 0;
 }
 
-.sphinx-template-right-menu a:link,
+/* .sphinx-template-right-menu a:link,
 .sphinx-template-right-menu a:visited,
 .sphinx-template-right-menu a:hover {
   color: #6c6c6d;
@@ -11919,7 +11919,7 @@ a:hover {
 .sphinx-template-right-menu a:visited span.pre,
 .sphinx-template-right-menu a:hover span.pre {
   color: #6c6c6d;
-}
+} */
 .sphinx-template-right-menu a.reference.internal button {
   display: block;
   padding: 0;

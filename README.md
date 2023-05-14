@@ -1,5 +1,8 @@
 # TrojanZoo Sphinx Theme
 
+
+![sphinx>=7.0](https://img.shields.io/badge/sphinx->=7.0-informational.svg)
+
 [![demo](https://github.com/ain-soph/trojanzoo_sphinx_theme/workflows/demo/badge.svg)](https://ain-soph.github.io/trojanzoo_sphinx_theme/)
 [![release](https://img.shields.io/github/v/release/ain-soph/trojanzoo_sphinx_theme)](https://github.com/ain-soph/trojanzoo_sphinx_theme/releases)
 [![pypi](https://img.shields.io/pypi/v/trojanzoo_sphinx_theme)](https://pypi.org/project/trojanzoo_sphinx_theme/)

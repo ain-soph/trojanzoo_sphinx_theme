@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from .version import __version__
+from .version import __version__  # noqa: F401
 
 from os import path
 from sphinx.util import isurl
