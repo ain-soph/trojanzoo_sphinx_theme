@@ -59,6 +59,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.intersphinx',
     'sphinx.ext.linkcode',  # viewcode
+    'sphinxcontrib.jquery',
     'sphinx_copybutton',
 ]
 
@@ -86,7 +87,7 @@ root_doc = 'index'
 release = pkg_version
 version = release if release.find('a') == -1 else release[:release.find('a')]
 
-language = None
+language = 'en'
 exclude_patterns = []
 
 # -- General default extension configuration ------------------------------
