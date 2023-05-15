@@ -7,6 +7,9 @@ on:
 jobs:
   pypi:
     runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/trojanzoo_sphinx_theme
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -19,6 +22,6 @@ jobs:
           python -m build
       - name: Publish
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        # with:
+        #   user: __token__
+        #   password: ${{ secrets.PYPI_API_TOKEN }}
