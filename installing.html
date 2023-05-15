@@ -1,0 +1,404 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; trojanzoo_sphinx_theme 1.0.3 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+
+  
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Configuration" href="configuring.html" />
+  <link rel="prev" title="Demo documentation" href="index.html" /> 
+
+  <!-- Preload the theme fonts -->
+
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/FreightSans/freight-sans-medium-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="_static/fonts/IBMPlexMono/IBMPlexMono-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+<!-- Preload the katex fonts -->
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Math-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Main-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size1-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size4-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size2-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Size3-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/fonts/KaTeX_Caligraphic-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+</head>
+
+
+<div class="container-fluid header-holder docs-header" id="header-holder">
+  <div class="container">
+    <div class="header-container">
+      <a class="header-logo" href="/" aria-label="trojanzoo_sphinx_theme"></a>
+      <div class="main-menu">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+
+          <li class="active docs-active">
+            <div id="resourcesDropdownButton" data-toggle="resources-dropdown" class="resources-dropdown">
+              <a class="resource-option with-down-orange-arrow">
+                Docs
+              </a>
+              <div class="resources-dropdown-menu">
+                  <a class="doc-dropdown-option nav-dropdown-item" href="/alpsplot">
+                  <span class="dropdown-title">AlpsPlot</span>
+                  <p></p>
+                </a>
+                  <a class="doc-dropdown-option nav-dropdown-item" href="/trojanzoo">
+                  <span class="dropdown-title">TrojanZoo</span>
+                  <p></p>
+                </a>
+                  <a class="doc-dropdown-option nav-dropdown-item active" href="/trojanzoo_sphinx_theme">
+                  <span class="dropdown-title">trojanzoo_sphinx_theme</span>
+                  <p></p>
+                </a>
+                  <a class="doc-dropdown-option nav-dropdown-item" href="https://github.com/ain-soph/base">
+                  <span class="dropdown-title">base</span>
+                  <p></p>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="https://github.com/ain-soph/trojanzoo_sphinx_theme/">GitHub</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="main-menu-open-button" href="#" data-behavior="open-mobile-menu"></a>
+    </div>
+  </div>
+</div>
+
+<body class="sphinx-template-body">
+
+   
+
+  
+
+  <div class="table-of-contents-link-wrapper">
+    <span>Table of Contents</span>
+    <a href="#" class="toggle-table-of-contents" data-behavior="toggle-table-of-contents"></a>
+  </div>
+
+  <nav data-toggle="sphinx-template-nav-shift" class="sphinx-template-left-menu" id="sphinx-template-left-menu">
+    <div class="sphinx-template-side-scroll">
+      <div class="sphinx-template-menu sphinx-template-menu-vertical" data-spy="affix" role="navigation"
+        aria-label="main navigation">
+        <div class="sphinx-template-left-menu-search">
+          
+
+          
+          
+          
+          <div class="version">
+            1.0.3
+          </div>
+          
+          
+
+          
+
+
+<div role="search">
+  <form id="rtd-search-form" class="sphinx-template-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search Docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        
+        
+        
+        
+        
+        <p class="caption" role="heading"><span class="caption-text">Theme Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuring.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demo Documents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html">1. Structural Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html#structural-elements-2">2. Structural Elements 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/demo.html">3. Paragraph Level Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/lists_tables.html">4. Lists &amp; Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/api.html">5. <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_py_module</span></code></a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is an incredibly long caption for a long menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/long.html">1. Long Sticky Nav</a></li>
+</ul>
+
+        
+        
+      </div>
+    </div>
+  </nav>
+
+  <div class="sphinx-template-container">
+    <div class="sphinx-template-page-level-bar" id="sphinx-template-page-level-bar">
+      <div class="sphinx-template-breadcrumbs-wrapper">
+        <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="sphinx-template-breadcrumbs">
+      <li><a href="index.html" class="fa fa-large fa-home">Docs</a> &gt;</li>
+      <li>Installation</li>
+      <li class="sphinx-template-breadcrumbs-aside">
+              <a href="https://github.com/ain-soph/trojanzoo_sphinx_theme/blob/main/docs/source/installing.rst" class="fa fa-large fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+</div>
+      </div>
+
+      <div class="sphinx-template-shortcuts-wrapper" id="sphinx-template-shortcuts-wrapper">
+        Shortcuts
+      </div>
+    </div>
+
+    <section data-toggle="sphinx-template-nav-shift" id="sphinx-template-content-wrap" class="sphinx-template-content-wrap">
+      <div class="sphinx-template-content-left">
+        
+          <div class="rst-content">
+            
+            <div role="main" class="main-content" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <article itemprop="articleBody" id="sphinx-template-article" class="sphinx-template-article">
+                
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
+<section id="via-git-or-download">
+<h2>Via Git or Download<a class="headerlink" href="#via-git-or-download" title="Permalink to this heading">¶</a></h2>
+<p>Symlink or subtree the <code class="docutils literal notranslate"><span class="pre">trojanzoo_sphinx_theme</span></code> repository into your documentation at
+<code class="docutils literal notranslate"><span class="pre">docs/_themes/trojanzoo_sphinx_theme</span></code> then add the following two settings to your Sphinx
+<code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;trojanzoo_sphinx_theme&quot;</span>
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_themes&quot;</span><span class="p">,</span> <span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+              </article>
+              
+            </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="configuring.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Next <img src="_static/images/chevron-right-orange.svg" class="next-page"></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Demo documentation" accesskey="p" rel="prev"><img src="_static/images/chevron-right-orange.svg" class="previous-page"> Previous</a>
+      
+    </div>
+  
+  
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, ain-soph.
+
+    </p>
+  </div>
+    
+      <div>
+        Built with <a href="http://sphinx-doc.org/">Sphinx</a> using <a href="https://github.com/ain-soph/trojanzoo_sphinx_theme">trojanzoo_sphinx_theme</a> (modified from  <a href="https://github.com/ain-soph/pytorch_sphinx_theme">pytorch_sphinx_theme</a>).
+      </div>
+     
+
+</footer>
+
+          </div>
+        </div>
+
+        <div class="sphinx-template-content-right" id="sphinx-template-content-right">
+          <div class="sphinx-template-right-menu" id="sphinx-template-right-menu">
+            <div class="sphinx-template-side-scroll" id="sphinx-template-side-scroll-right">
+              <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#via-git-or-download">Via Git or Download</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+
+  
+
+  
+
+  
+  <script src="_static/jquery.js"></script>
+  <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+  <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+  <script src="_static/doctools.js"></script>
+  <script src="_static/sphinx_highlight.js"></script>
+  <script src="_static/clipboard.min.js"></script>
+  <script src="_static/copybutton.js"></script>
+  
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  <script type="text/javascript">
+    jQuery(function () {
+      $('.header-logo').css('background-image', 'url(_static/logo/trojanzoo-logo.svg)');
+      $('.docs-header .header-logo').css('background-image', 'url(_static/logo/trojanzoo-logo-dark.svg)');
+      $('.footer-logo').css('background-image', 'url(_static/logo/trojanzoo-logo-icon.svg)');
+      });
+  </script>
+  <script script type="text/javascript">
+    var collapsedSections = [];
+  </script>
+  
+
+  <!-- Begin Footer -->
+
+  <div class="container-fluid docs-resources" id="docs-resources">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h2>Docs</h2>
+          <p>Access comprehensive developer documentation for trojanzoo_sphinx_theme</p>
+          <a class="with-right-arrow" href="index.html">View Docs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-logo-wrapper">
+        <a href="/" class="footer-logo"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End Footer -->
+
+  <!-- Begin Mobile Menu -->
+
+  <div class="mobile-main-menu">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="mobile-main-menu-header-container">
+          <a class="header-logo" href="/" aria-label="trojanzoo_sphinx_theme"></a>
+          <a class="main-menu-close-button" href="#" data-behavior="close-mobile-menu"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-main-menu-links-container">
+      <div class="main-menu">
+        <ul>
+
+          <li>
+            <a href="/">Home</a>
+          </li>
+
+          <li class="active resources-mobile-menu-title">
+            <a href="./">Docs</a>
+          </li>
+          <ul class="resources-mobile-menu-items">
+              <li>
+              <a href="/alpsplot">AlpsPlot</a>
+            </li>
+              <li>
+              <a href="/trojanzoo">TrojanZoo</a>
+            </li>
+              <li class="active">
+              <a href="/trojanzoo_sphinx_theme">trojanzoo_sphinx_theme</a>
+            </li>
+              <li>
+              <a href="https://github.com/ain-soph/base">base</a>
+            </li>
+          </ul>
+          
+          <li>
+            <a href="https://github.com/ain-soph/trojanzoo_sphinx_theme/">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Mobile Menu -->
+
+  <script type="text/javascript" src="_static/js/vendor/anchor.min.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      mobileMenu.bind();
+      mobileTOC.bind();
+      trojanzooAnchors.bind();
+      sideMenus.bind();
+      scrollToAnchor.bind();
+      highlightNavigation.bind();
+      mainMenuDropdown.bind();
+
+      // Add class to links that have code blocks, since we cannot create links in code blocks
+      $("article.sphinx-template-article a span.pre").each(function (e) {
+        $(this).closest("a").addClass("has-code");
+      });
+    })
+  </script>
+</body>
+
+</html>
